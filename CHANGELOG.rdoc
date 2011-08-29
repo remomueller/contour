@@ -1,3 +1,5 @@
+== 0.1.0
+
 == 0.0.0
 
 * Skeleton files to compile gem and make it available on rubygems.org
