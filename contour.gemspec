@@ -20,5 +20,11 @@ Gem::Specification.new do |s|
   
   s.description = "Basic Rails Framework files and assets for layout and authentication"
   
-  s.files = ["CHANGELOG.rdoc","LICENSE","README","lib/contour.rb", "lib/contour/version.rb"]
+  s.files = ["CHANGELOG.rdoc","LICENSE","README.rdoc",
+             "app/controllers/contour/samples_controller.rb",
+             "app/views/contour/layouts/application.html.erb",
+             "app/views/contour/samples/index.html.erb",
+             "lib/contour.rb",
+             "lib/contour/engine.rb",
+             "lib/contour/version.rb"]
 end

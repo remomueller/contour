@@ -1,5 +1,8 @@
 == 0.1.0
 
+* Enhancements
+  * Contour can now be used as a default template for the application layout
+
 == 0.0.0
 
 * Skeleton files to compile gem and make it available on rubygems.org

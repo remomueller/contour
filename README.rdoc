@@ -2,6 +2,22 @@
 
 Basic Rails framework files and assets for layout and authentication
 
+== Installation
+
+Contour can be installed from rubygems.org using:
+
+  gem install contour
+  
+Or update your Gemfile to include:
+
+  gem 'contour'
+
+== Getting started
+
+Contour uses a template to generate your application layout. You can add the following in your application_controller.rb
+
+  layout "contour/layouts/application"
+
 == Contributing to contour
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
