@@ -1,27 +1,30 @@
+<% display = ['not_signed_in', 'always'] %>
 <% if user_signed_in? -%>
+  <% display = ['signed_in', 'always'] %>
+<% end %>
 
-<% else %>
-
-  <% Contour.menu_left.each do |menu_item| %>
-    <% if menu_item.display == 'not_signed_in' %>
-      <div style="float:left">
-        <%= link_to_function menu_item[:name], "$('#menu_#{menu_item[:id]}').show();", :onmouseover => "$('#menu_#{menu_item[:id]}').show();" %>
-        <div style="position:relative;">
-          <div id="menu_<%= menu_item[:id] %>" class="menu_dropdown_left" style="display:none">
-            <% menu_item.links.each do |link| %>
-              <% if link.html.blank? %>
-                <div><%= link_to link[:name], link[:path] %></div>
-              <% else %>
-                <%= link.html %>
-              <% end %>
+<% Contour.menu_items.each do |menu_item| %>
+  <% if display.include?(menu_item[:display]) %>
+    <div style="float:<%= menu_item[:position] %>">
+      <%= link_to_function (menu_item[:eval] ? eval(menu_item[:name]) : menu_item[:name]), "$('#menu_#{menu_item[:id]}').show();", :onmouseover => "$('#menu_#{menu_item[:id]}').show();" %>
+      <div style="position:relative;">
+        <div id="menu_<%= menu_item[:id] %>" class="menu_dropdown_<%= menu_item[:position_class] %>" style="display:none">
+          <% menu_item[:links].each do |link| %>
+            <% if link[:html].blank? %>
+              <div style="white-space:nowrap">
+                <%= link_to (link[:eval] ? eval(link[:name]) : link[:name]), eval(link[:path]), :class => 'noicon' %>
+              </div>
+            <% else %>
+              <%= link[:eval] ? eval(link[:html]).html_safe : link[:html].html_safe %>
             <% end %>
-            
-          </div>
+          <% end %>
         </div>
       </div>
-    <% end %>
+    </div>
   <% end %>
-
 <% end %>
+
+<% ids = Contour.menu_items.select{|mi| display.include?(mi[:display])}.collect{|mi| mi[:id]} %>
+<%= javascript_tag "hideOnMouseOut([#{ids.collect{|id| "'#menu_#{id}'"}.join(',')}]);" %>
 
 <div style="clear:both"></div>
