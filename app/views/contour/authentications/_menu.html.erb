@@ -1,3 +1,25 @@
 <% PROVIDERS.each do |provider| %>
-  <%= provider %>
+
+  <% url_params = (provider == :google_apps) ? '?domain=gmail.com' : '' %>
+  <% if provider == :open_id %>
+    <% provider_name = 'OpenID' %>
+    <% image_name = 'openid' %>
+  <% elsif provider == :linked_in %>
+    <% provider_name = 'LinkedIn' %>
+    <% image_name = 'linkedin' %>
+  <% elsif [:LDAP, :CAS].include?(provider) %>
+    <% provider_name = provider.to_s.upcase %>
+    <% image_name = provider.to_s.downcase %>
+  <% else %>
+    <% provider_name = provider.to_s.titleize %>
+    <% image_name = provider.to_s.downcase %>
+  <% end %>
+  <div style="float:right;margin-right:15px;width:32px;position:relative">&nbsp;
+      <div style="position:absolute;top:-4px">
+        <a href="<%= SITE_URL %>/<%= OmniAuth.config.path_prefix.split('/').last.to_s %>/<%= provider.to_s.downcase %><%= url_params %>" class="noicon">
+          <%= image_tag "authbuttons/#{image_name}_32.png", :align => 'absmiddle', :size => "28x28", :title => provider_name %>
+        </a>
+      </div>
+  </div>
+
 <% end %>

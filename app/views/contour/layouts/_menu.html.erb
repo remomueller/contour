@@ -27,4 +27,6 @@
 <% ids = Contour.menu_items.select{|mi| display.include?(mi[:display])}.collect{|mi| mi[:id]} %>
 <%= javascript_tag "hideOnMouseOut([#{ids.collect{|id| "'#menu_#{id}'"}.join(',')}]);" %>
 
+<%= render :partial => 'contour/authentications/menu' unless user_signed_in? %>
+
 <div style="clear:both"></div>
