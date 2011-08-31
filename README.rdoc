@@ -14,9 +14,22 @@ Or update your Gemfile to include:
 
 == Getting started
 
-Contour uses a template to generate your application layout. You can add the following in your application_controller.rb
+Contour depends on a config initializer.  To install a template you can run:
+
+  rails generate contour:install
+
+Contour uses a template to generate your application layout. You can add the following in your application_controller.rb:
 
   layout "contour/layouts/application"
+  
+Contour also provides a custom jquery-ui and BlueTrip CSS Framework.  To include these, add the following to your application.css manifest:
+
+  *= require jquery-ui-1.8.10.custom
+  *= require bluetrip-screen
+
+In order to get registration working, you can use the modified Contour Authentications controller which overrides the default devise controller of the same name:
+
+  devise_for :users, :controllers => {:registrations => 'contour/registrations'}, :path_names => { :sign_up => 'register', :sign_in => 'login' }
 
 == Contributing to contour
  

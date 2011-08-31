@@ -1,14 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= Contour.application_name %></title>
+  <title><%= [Contour.application_name, @title].compact.join(' - ').html_safe %></title>
+  <%= favicon_link_tag %>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= javascript_tag "var root_url='#{SITE_URL + '/'}';var auth_token='#{form_authenticity_token}';" %>
+  <div id="header" class="container" style="background-image: url(<%= SITE_URL %>/assets/<%= Contour.header_background_image %>);">
+    <div id="version" style="position:relative;display:none">
+      <span style="position:absolute;top:-15px;left:82px;font-size:0.5em;font-variant:normal" class="quiet"><%= Contour.application_version %></span>
+    </div>
+    <%= image_tag(Contour.header_title_image, :alt => '', :style => 'vertical-align:middle') unless Contour.header_title_image.blank? %>
+    <%= link_to DEFAULT_APP_NAME, root_path, :style => 'text-decoration:none;color:#404040;', :onmouseover => "$('#version').show();", :onmouseout => "$('#version').hide();" %>
+  </div>
 
-<%= yield %>
+  <div class="container" style="position:relative">
+    <div id="message">
+      <%= render :partial => 'contour/layouts/message' %>
+    </div>
+  </div>
 
+  <div style="height:29px">
+    <div id="menu" class="container">
+      <%= render :partial => 'layouts/menu' %>
+    </div>
+  </div>
+
+  <div id="content" class="container">
+    <%= yield %>
+  </div>
+  
+  <div id="popup" style="overflow-y: hidden;">
+    <div id="popup_header" style="padding: 12px;">
+      <div style="float:right;margin-right:10px; margin-top:-4px"><%= image_tag(Contour.header_title_image, :alt => '') %></div>
+      <a id="popup_close">x</a>
+      <h1 id="popup_title"></h1>
+    </div>
+    <div id="popup_content"></div>
+  </div>
+  
+  <div id="background_popup"></div>
 </body>
 </html>

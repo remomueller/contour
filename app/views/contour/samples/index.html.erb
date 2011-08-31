@@ -1,1 +1,27 @@
-Contour::Samples Controller! <%= Contour::VERSION %> <%= Contour.application_name %>
+<h1>Contour Details</h1>
+
+<p>
+  <b>Contour Version:</b>
+  <%= Contour::VERSION %>
+</p>
+
+<h2>Application Details</h2>
+
+These items can all be specified in:<br />
+<br />
+<code style="margin-left:10px">config/initializers/contour.rb</code><br />
+<br />
+If the file does not exist run:<br />
+<br />
+<code style="margin-left:10px">rails generate contour:install</code><br />
+<br />
+<% ['application_name', 'application_version', 'header_background_image', 'header_title_image'].each do |attribute| %>
+  <p>
+    <b><%= attribute.titleize %>:</b>
+    <% if Contour.send(attribute).blank? %>
+      <span class="quiet">NULL</span>
+    <% else %>
+      <%= Contour.send(attribute) %>
+    <% end %>
+  </p>
+<% end %>
