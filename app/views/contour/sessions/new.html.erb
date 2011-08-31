@@ -17,7 +17,9 @@
 
 <%= render :partial => "devise/shared/links" %>
 
+<% if false %>
 <% unless PROVIDERS.blank? %>
   <h3>Don't want to remember a new login and password? Sign in using one of your existing accounts!</h3>
   <%= render :partial => 'contour/authentications/index' %>
+<% end %>
 <% end %>
