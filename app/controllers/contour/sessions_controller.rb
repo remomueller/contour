@@ -1,5 +1,3 @@
-class Contour::SessionsController < ApplicationController
-  def new
-    
-  end
+class Contour::SessionsController < Devise::SessionsController
+  
 end
