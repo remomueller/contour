@@ -29,6 +29,12 @@ Contour also provides a custom jquery-ui and BlueTrip CSS Framework.  To include
 
 In order to get registration working, you can use the modified Contour Authentications controller which overrides the default devise controller of the same name:
 
+  match '/auth/failure' => 'contour/authentications#failure'
+  match '/auth/:provider/callback' => 'contour/authentications#create'
+  match '/auth/:provider' => 'contour/authentications#passthru'
+
+  resources :authentications, :controller => 'contour/authentications'
+
   devise_for :users, :controllers => {:registrations => 'contour/registrations'}, :path_names => { :sign_up => 'register', :sign_in => 'login' }
 
 == Contributing to contour
