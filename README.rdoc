@@ -24,8 +24,7 @@ Contour uses a template to generate your application layout. You can add the fol
   
 Contour also provides a custom jquery-ui and BlueTrip CSS Framework.  To include these, add the following to your application.css manifest:
 
-  *= require jquery-ui-1.8.10.custom
-  *= require bluetrip-screen
+  *= require contour
   
 Contour provides custom JavaScript.  In order to make the application layout function properly include the following at the beginning of your application.js:
 
