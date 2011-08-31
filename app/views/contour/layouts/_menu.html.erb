@@ -1,0 +1,27 @@
+<% if user_signed_in? -%>
+
+<% else %>
+
+  <% Contour.menu_left.each do |menu_item| %>
+    <% if menu_item.display == 'not_signed_in' %>
+      <div style="float:left">
+        <%= link_to_function menu_item[:name], "$('#menu_#{menu_item[:id]}').show();", :onmouseover => "$('#menu_#{menu_item[:id]}').show();" %>
+        <div style="position:relative;">
+          <div id="menu_<%= menu_item[:id] %>" class="menu_dropdown_left" style="display:none">
+            <% menu_item.links.each do |link| %>
+              <% if link.html.blank? %>
+                <div><%= link_to link[:name], link[:path] %></div>
+              <% else %>
+                <%= link.html %>
+              <% end %>
+            <% end %>
+            
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+
+<% end %>
+
+<div style="clear:both"></div>
