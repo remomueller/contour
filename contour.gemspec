@@ -19,8 +19,8 @@ Gem::Specification.new do |s|
   s.authors = ["Remo Mueller"]
   s.description = "Basic Rails Framework files and assets for layout and authentication"
 
-  s.add_dependency("devise", "= 1.3.4")
-  s.add_dependency("omniauth", "= 0.2.6")
+  s.add_dependency("devise", "~> 1.3.4")
+  s.add_dependency("omniauth", "~> 0.2.6")
   
   s.files = `git ls-files`.split("\n")
 end

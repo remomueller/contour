@@ -1,3 +1,8 @@
+== 0.2.1
+
+* Bug Fix
+  * Apparently add_dependency doesn't work with (= ) signs either
+
 == 0.2.0
 
 * Enhancements
