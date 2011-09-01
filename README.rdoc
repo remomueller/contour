@@ -38,7 +38,7 @@ In order to get registration working, you can use the modified Contour Authentic
 
   resources :authentications, :controller => 'contour/authentications'
 
-  devise_for :users, :controllers => {:registrations => 'contour/registrations'}, :path_names => { :sign_up => 'register', :sign_in => 'login' }
+  devise_for :users, :controllers => {:registrations => 'contour/registrations', :sessions => 'contour/sessions', :passwords => 'contour/passwords'}, :path_names => { :sign_up => 'register', :sign_in => 'login' }
 
 == Contributing to contour
  

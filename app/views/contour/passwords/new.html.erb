@@ -1,0 +1,19 @@
+<% @title = 'Forgot your password?' %>
+
+<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+  <%= devise_error_messages! %>
+  <fieldset style="width:235px">
+    <legend><%= @title %></legend>
+    
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.text_field :email %>
+    </div>
+  </fieldset>
+  <div class="actions">
+    <% form_name = 'user_new' %>
+    <%= link_to_function image_tag('stock/tick.png', :alt => '') + "Send me reset password instructions", "$('##{form_name}').submit();", :class => "button positive" %>
+  </div>
+<% end %>
+
+<%= render :partial => "devise/shared/links" %>
