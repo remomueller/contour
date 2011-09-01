@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
 
   # s.add_development_dependency "rails",   "~> 3.0"
   s.add_dependency("devise", "~> 1.3.4")
-  s.add_dependency("omniauth", "0.2.6")
+  s.add_dependency("omniauth", "~> 0.2.6")
   
   s.files = `git ls-files`.split("\n")
 end

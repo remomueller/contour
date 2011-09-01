@@ -1,3 +1,8 @@
+== 0.1.1
+
+* Bug Fix
+  * Apparently add_dependency doesn't currently work without ~> Set Omniauth dependency to increment on bug fix revision
+
 == 0.1.0
 
 * Enhancements
