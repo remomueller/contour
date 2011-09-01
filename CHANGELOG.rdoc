@@ -2,7 +2,7 @@
 
 * Enhancements
   * Stock assets added
-  * Sign in page redesigned
+  * Sign in, password reset, and registration pages redesigned
 
 == 0.1.1
 
