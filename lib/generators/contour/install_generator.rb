@@ -22,6 +22,10 @@ module Contour
         template "omniauth_fix.rb", "config/initializers/omniauth_fix.rb"
       end
       
+      def copy_rack_fix
+        template "rack_fix.rb", "config/initializers/rack_fix.rb"
+      end
+      
       # def copy_locale
       #   copy_file "../../../config/locales/en.yml", "config/locales/contour.en.yml"
       # end
