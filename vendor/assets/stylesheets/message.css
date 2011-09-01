@@ -1,0 +1,27 @@
+/**************************************/
+/*              MESSAGE               */
+/**************************************/
+
+#message {
+  position:absolute;
+  left:-5px;
+  top:-30px;  
+}
+
+.notice, .error {
+  float:left;
+  margin:0 4px 0 0;
+  padding:2px 8px;
+  border-bottom:0px;
+  white-space:nowrap;
+}
+
+.notice, .error {
+  border-top-left-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  -webkit-border-radius-topleft: 8px;
+  
+  border-top-right-radius: 8px;
+  -moz-border-radius-topright: 8px;
+  -webkit-border-radius-topright: 8px;
+}

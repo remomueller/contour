@@ -1,0 +1,77 @@
+/**************************************/
+/*             NAVIGATION             */
+/**************************************/
+
+#menu {
+	background:#404040;
+	padding:5px;
+	color: #fff;
+}
+
+.sticky {
+  position:fixed;
+  top:0;
+  width:950px;
+  margin:0 auto;
+  z-index:100;
+}
+
+#menu a {
+  color: #fff;
+  text-decoration: none;
+	padding:0 5px;
+}
+
+#menu a:hover {
+  color: #EB6C20;
+}
+
+div.menu_dropdown_right, div.menu_dropdown_right_center {
+  background-color: #fff;
+  position:absolute;
+  border: 2px solid #0E7799;
+  color: #404040;
+  border-top: 0px;
+  top:-2em;
+  padding:5px;
+  padding-right:8px;
+  right:-5px;
+  z-index:10;
+  text-align:right;
+}
+
+div.menu_dropdown_left, div.menu_dropdown_left_center {
+  background-color: #fff;
+  position:absolute;
+  border: 2px solid #0E7799;
+  color: #404040;
+  border-top: 0px;
+  top:-2em;
+  padding:5px;
+  padding-left:8px;
+  left:-5px;
+  z-index:10;
+  text-align: left;
+}
+
+#menu div.menu_dropdown_left a, #menu div.menu_dropdown_left_center a, #menu div.menu_dropdown_right a, #menu div.menu_dropdown_right_center a {
+  color: #057080;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#menu div.menu_dropdown_left a:hover, #menu div.menu_dropdown_left_center a:hover, #menu div.menu_dropdown_right a:hover, #menu div.menu_dropdown_right_center a:hover {
+  color: #EB6C20;
+}
+
+#menu, div.menu_dropdown_right {
+  border-bottom-right-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-radius-bottomright: 8px;
+}
+
+#menu, div.menu_dropdown_left {
+  border-bottom-left-radius: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-radius-bottomleft: 8px;
+}
