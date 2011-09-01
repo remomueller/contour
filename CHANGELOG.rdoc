@@ -4,6 +4,7 @@
   * Contour can now be used as a default template for the application layout
   * Contour provides assets, (images, css, and javascript), to provide an easy authentication system built on top of Devise and Omniauth
   * Contour provides CSS based on Bluetrip to provide cross-browser compatiblity
+  * Contour rails generator provides fixes to Rack and Omniauth to allow correct reverse proxy (chaining) authentication to machines behind firewalls
 
 == 0.0.0
 
