@@ -1,25 +1,27 @@
 <% @title = 'Login' %>
-<h2><%= @title %></h2>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <p><%= f.label :email %><br />
-  <%= f.text_field :email %></p>
-
-  <p><%= f.label :password %><br />
-  <%= f.password_field :password %></p>
-
-  <% if devise_mapping.rememberable? -%>
-    <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
-  <% end -%>
-
-  <p><%= f.submit "Sign in" %></p>
-<% end %>
-
-<%= render :partial => "devise/shared/links" %>
-
-<% if false %>
-<% unless PROVIDERS.blank? %>
-  <h3>Don't want to remember a new login and password? Sign in using one of your existing accounts!</h3>
-  <%= render :partial => 'contour/authentications/index' %>
-<% end %>
+  <fieldset style="width:235px">
+    <legend><%= @title %></legend>
+    
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <%= f.label :password %><br />
+      <%= f.password_field :password %>
+    </div>
+  </fieldset>
+  <div class="actions">
+    <% form_name = 'user_new' %>
+    <%= link_to_function image_tag('stock/tick.png', :alt => '') + "Sign in", "$('##{form_name}').submit();", :class => "button positive" %>
+    <% if devise_mapping.rememberable? -%>
+      <div style="padding-top:5px;padding-bottom:4px;"><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+    <% end -%>
+    <% if devise_mapping.recoverable? && controller_name != 'passwords' %>
+      <div style="clear:both"></div><br />
+      <%= link_to "Forgot your password?", new_password_path(resource_name) %>
+    <% end %>
+  </div>
 <% end %>
