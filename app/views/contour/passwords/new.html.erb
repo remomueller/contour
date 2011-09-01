@@ -13,7 +13,7 @@
   <div class="actions">
     <% form_name = 'user_new' %>
     <%= link_to_function image_tag('stock/tick.png', :alt => '') + "Send me reset password instructions", "$('##{form_name}').submit();", :class => "button positive" %>
+    <div style="clear:both"></div><br />
+    <%= link_to "Login here!", new_session_path(resource_name) %> or <%= link_to "Register here!", new_registration_path(resource_name) %>
   </div>
 <% end %>
-
-<%= render :partial => "devise/shared/links" %>
