@@ -14,7 +14,7 @@ Or update your Gemfile to include:
 
 == Getting started
 
-Contour depends on a config initializer.  To install a template you can run:
+Contour depends on a config initializer. The config initializer is used to set various default settings in the layout, and also allows the menu to be created using a ruby hash.  To install a template you can run:
 
   rails generate contour:install
 

@@ -10,6 +10,18 @@ module Contour
         template "contour.rb", "config/initializers/contour.rb"
       end
 
+      def copy_devise
+        template "devise.rb", "config/initializers/devise.rb"
+      end
+
+      def copy_omniauth
+        template "omniauth.rb", "config/initializers/omniauth.rb"
+      end
+
+      def copy_omniauth_fix
+        template "omniauth_fix.rb", "config/initializers/omniauth_fix.rb"
+      end
+      
       # def copy_locale
       #   copy_file "../../../config/locales/en.yml", "config/locales/contour.en.yml"
       # end
