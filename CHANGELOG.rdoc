@@ -5,7 +5,10 @@
   * Menu items are now rendered using html_safe
   * Links and menu items can now have a :condition parameter passed to it which is a string that can be evaluated to true or false
     * ex: :condition => 'current_user.admin?'
-  
+
+* Testing
+  * Created limited tests for authentications controller and registrations
+
 == 0.2.1
 
 * Bug Fix
