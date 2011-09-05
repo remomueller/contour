@@ -2,6 +2,9 @@
 
 * Enhancements
   * Update dependencies to Devise 1.4.4, (needed for Rails 3.1.0)
+  * Menu items are now rendered using html_safe
+  * Links and menu items can now have a :condition parameter passed to it which is a string that can be evaluated to true or false
+    * ex: :condition => 'current_user.admin?'
   
 == 0.2.1
 

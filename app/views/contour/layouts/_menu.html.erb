@@ -4,18 +4,20 @@
 <% end %>
 
 <% Contour.menu_items.each do |menu_item| %>
-  <% if display.include?(menu_item[:display]) %>
+  <% if display.include?(menu_item[:display]) and (menu_item[:condition].blank? or eval(menu_item[:condition])) %>
     <div style="float:<%= menu_item[:position] %>">
       <%= link_to_function (menu_item[:eval] ? eval(menu_item[:name]) : menu_item[:name]), "$('#menu_#{menu_item[:id]}').show();", :onmouseover => "$('#menu_#{menu_item[:id]}').show();" %>
       <div style="position:relative;">
         <div id="menu_<%= menu_item[:id] %>" class="menu_dropdown_<%= menu_item[:position_class] %>" style="display:none">
           <% menu_item[:links].each do |link| %>
-            <% if link[:html].blank? %>
-              <div style="white-space:nowrap">
-                <%= link_to (link[:eval] ? eval(link[:name]) : link[:name]), eval(link[:path]), :class => 'noicon' %>
-              </div>
-            <% else %>
-              <%= link[:eval] ? eval(link[:html]).html_safe : link[:html].html_safe %>
+            <% if link[:condition].blank? or eval(link[:condition]) %>
+              <% if link[:html].blank? %>
+                <div style="white-space:nowrap">
+                  <%= link_to (link[:eval] ? eval(link[:name]) : link[:name].html_safe), eval(link[:path]), :class => 'noicon' %>
+                </div>
+              <% else %>
+                <%= link[:eval] ? eval(link[:html]).html_safe : link[:html].html_safe %>
+              <% end %>
             <% end %>
           <% end %>
         </div>
