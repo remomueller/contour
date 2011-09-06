@@ -1,7 +1,7 @@
 == 0.3.2
 
 * Bug Fix
-  * Fixing asset paths in production and development by using asset_path helper
+  * Fixing asset paths in production and development by restructuring asset (image and stylesheet) relative placement
 
 == 0.3.1
 
