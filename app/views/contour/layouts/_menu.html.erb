@@ -13,7 +13,7 @@
             <% if link[:condition].blank? or eval(link[:condition]) %>
               <% if link[:html].blank? %>
                 <div style="white-space:nowrap">
-                  <%= link_to (link[:eval] ? eval(link[:name]) : link[:name].html_safe), eval(link[:path]), :class => 'noicon' %>
+                  <%= link_to (link[:eval] ? eval(link[:name]) : link[:name].html_safe), eval(link[:path]), :class => 'noicon', :target => link[:target] %>
                 </div>
               <% else %>
                 <%= link[:eval] ? eval(link[:html]).html_safe : link[:html].html_safe %>

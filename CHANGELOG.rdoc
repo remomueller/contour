@@ -2,7 +2,8 @@
 
 * Enhancements
   * Added new image assets
-
+  * :target allowed as a parameter for a link in the menu, ex: :target => '_blank'
+  
 == 0.3.2
 
 * Bug Fix
