@@ -9,7 +9,7 @@
     <div class="authentications">
       <% for authentication in @authentications %>
         <div class="authentication">
-          <%= image_tag "authbuttons/#{authentication.provider}_32.png", :size => "32x32" %>
+          <%= image_tag "contour/#{authentication.provider}_32.png", :size => "32x32" %>
           <div class="provider"><%= authentication.provider.titleize %></div>
           <div class="uid"><%= authentication.uid %></div>
           <%= link_to "X", authentication, :confirm => 'Are you sure you want to remove this authentication option?', :method => :delete, :class => "remove" %>
