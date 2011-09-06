@@ -36,6 +36,10 @@ table.blank, table.blank tr, table.blank td, table.blank th {
   padding:0px;
 }
 
+table.padded td, table.padded.th {
+  padding:5px;
+}
+
 .field_with_errors, .field_with_errors_cleared {
   display: inline;
 }
