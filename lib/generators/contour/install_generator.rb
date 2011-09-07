@@ -4,7 +4,7 @@ module Contour
       source_root File.expand_path("../../templates", __FILE__)
 
       desc "Creates a Contour initializer"
-      class_option :orm
+      # class_option :orm
 
       def copy_initializer
         template "contour.rb", "config/initializers/contour.rb"
@@ -24,6 +24,17 @@ module Contour
       
       def copy_rack_fix
         template "rack_fix.rb", "config/initializers/rack_fix.rb"
+      end
+
+      def add_contour_route
+        contour_routes = []
+        contour_routes << "match '/auth/failure' => 'contour/authentications#failure'"
+        contour_routes << "match '/auth/:provider/callback' => 'contour/authentications#create'"
+        contour_routes << "match '/auth/:provider' => 'contour/authentications#passthru'"
+        contour_routes << "resources :authentications, :controller => 'contour/authentications'"
+        contour_routes << "devise_for :users, :controllers => {:registrations => 'contour/registrations', :sessions => 'contour/sessions', :passwords => 'contour/passwords'}, :path_names => { :sign_up => 'register', :sign_in => 'login' }"
+        # route "root :to => 'welcome'"
+        route contour_routes.join("\n")
       end
       
       # def copy_locale

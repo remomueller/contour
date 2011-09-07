@@ -1,5 +1,8 @@
 == 0.5.0
 
+* Enhancements
+  * rails generate contour:install now appends routes
+
 == 0.4.0
 
 * Enhancements
