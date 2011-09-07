@@ -4,6 +4,7 @@
   * Added new image assets
   * :target allowed as a parameter for a link in the menu, ex: :target => '_blank'
   * Added application_name_html configuration so that users can specify the html for the application name
+  * :image and :image_options can now be passed to links to specify an image that appears to the right of the link
   
 == 0.3.2
 

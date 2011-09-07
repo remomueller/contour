@@ -10,6 +10,9 @@ Contour.setup do |config|
   # Enter your application version here. Do not include a trailing backslash. Recommend using a predefined constant
   # config.application_version = ''
   
+  # Enter the url of your site without a trailing slash, ex: http://localhost/app_root
+  # config.application_site_url = 'http://localhost'
+  
   # Enter your application header background image here.
   # config.header_background_image = 'rails.png'
 
@@ -26,8 +29,8 @@ Contour.setup do |config|
   #   :links => [{:html => '"<div style=\"white-space:nowrap\">"+current_user.name+"</div>"', :eval => true}, {:html => '"<div class=\"small quiet\">"+current_user.email+"</div>"', :eval => true}, {:name => 'Authentications', :path => 'authentications_path'}, {:html => "<hr>"}, {:name => 'Logout', :path => 'destroy_user_session_path'}]
   # },
   # {
-  #   :name => 'Home', :id => 'home', :display => 'always', :position => 'left', :position_class => 'left', :condition => 'true',
-  #   :links => [{:name => 'Home', :path => 'root_path'}, {:html => "<hr>"}, {:name => 'About', :path => 'about_path'}]
+  #   :name => 'Home', :id => 'home', :display => 'always', :position => 'left', :position_class => 'left', :condition => 'true', :image => '', :image_options => {},
+  #   :links => [{:name => 'Home', :path => 'root_path', :image => '', :image_options => {}}, {:html => "<hr>"}, {:name => 'About', :path => 'about_path'}]
   # }]
   
 end

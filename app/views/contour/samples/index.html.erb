@@ -15,7 +15,7 @@ If the file does not exist run:<br />
 <br />
 <code style="margin-left:10px">rails generate contour:install</code><br />
 <br />
-<% ['application_name', 'application_version', 'header_background_image', 'header_title_image'].each do |attribute| %>
+<% (Contour.class_variables.collect{|v| v.to_s.gsub('@@','')} - ['menu_items']).each do |attribute| %>
   <p>
     <b><%= attribute.titleize %>:</b>
     <% if Contour.send(attribute).blank? %>

@@ -13,6 +13,10 @@ module Contour
   mattr_accessor :application_version
   @@application_version = nil
 
+  # Default Application Site URL
+  mattr_accessor :application_site_url
+  @@application_site_url = 'http://localhost'
+
   # Default Application Version
   mattr_accessor :header_background_image
   @@header_background_image = 'rails.png'
