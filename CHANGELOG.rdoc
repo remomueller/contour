@@ -3,6 +3,7 @@
 * Enhancements
   * Added new image assets
   * :target allowed as a parameter for a link in the menu, ex: :target => '_blank'
+  * Added application_name_html configuration so that users can specify the html for the application name
   
 == 0.3.2
 

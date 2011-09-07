@@ -14,7 +14,7 @@
       <span style="position:absolute;top:-15px;left:82px;font-size:0.5em;font-variant:normal" class="quiet"><%= Contour.application_version %></span>
     </div>
     <%= image_tag(Contour.header_title_image, :alt => '', :style => 'vertical-align:middle') unless Contour.header_title_image.blank? %>
-    <%= link_to DEFAULT_APP_NAME, root_path, :style => 'text-decoration:none;color:#404040;', :onmouseover => "$('#version').show();", :onmouseout => "$('#version').hide();" %>
+    <%= link_to (Contour.application_name_html.blank? ? Contour.application_name : Contour.application_name_html.html_safe), root_path, :style => 'text-decoration:none;color:#404040;', :onmouseover => "$('#version').show();", :onmouseout => "$('#version').hide();" %>
   </div>
 
   <div class="container" style="position:relative">

@@ -5,6 +5,9 @@ module Contour
   # Default Application Name
   mattr_accessor :application_name
   @@application_name = nil
+  
+  mattr_accessor :application_name_html
+  @@application_name_html = nil
 
   # Default Application Version
   mattr_accessor :application_version
