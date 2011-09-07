@@ -1,0 +1,18 @@
+
+===============================================================================
+
+Contour may require some additional setup:
+
+  1. Add the following line to your application_controller.rb
+  
+       layout "contour/layouts/application"
+  
+  2. Edit your application.js manifest to use Contour JavaScript
+  
+       //= require contour
+  
+  3. Edit your application.css manifest to use Contour CSS
+       
+       *= require contour
+       
+===============================================================================
