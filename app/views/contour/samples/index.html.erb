@@ -15,6 +15,11 @@ If the file does not exist run:<br />
 <br />
 <code style="margin-left:10px">rails generate contour:install</code><br />
 <br />
+<% unless request.script_name.blank? %>
+  <p><b>Subdomain:</b>
+    <%= request.script_name %>
+  </p>
+<% end %>
 <% (Contour.class_variables.collect{|v| v.to_s.gsub('@@','')} - ['menu_items']).each do |attribute| %>
   <p>
     <b><%= attribute.titleize %>:</b>

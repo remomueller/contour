@@ -1,6 +1,7 @@
 module Rack
   class Request
     def scheme
+      Rails.logger.debug "Contour::Rack::Request::scheme"
       if @env['HTTPS'] == 'on'
         'https'
       elsif @env['HTTP_X_FORWARDED_SSL'] == 'on'
