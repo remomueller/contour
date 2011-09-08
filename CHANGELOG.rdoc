@@ -9,6 +9,7 @@
 
 * Bug Fix
   * Removed registration page requirement for first_name and last_name
+  * Incorrect redirect on LDAP authentication failure for Rails apps on subdomains fixed
 
 == 0.4.0
 
