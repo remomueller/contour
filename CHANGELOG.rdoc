@@ -2,6 +2,9 @@
 
 * Enhancements
   * rails generate contour:install now appends routes
+  * Authentication icons can be overridden in the application if the application has a contour folder in the assets directory
+    * ex: if the web app contains a special logo for LDAP authentication, the app/assets/images/contour folder would contain specialized ldap_64.png and ldap_32.png where 64 and 32 represent the height
+  * Removing reliance on Contour.application_site_url and using request.script_name instead
 
 == 0.4.0
 

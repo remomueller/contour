@@ -8,8 +8,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= javascript_tag "var root_url='#{Contour.application_site_url + '/'}';var auth_token='#{form_authenticity_token}';" %>
-  <div id="header" class="container" style="background-image: url(<%= Contour.application_site_url %>/assets/<%= Contour.header_background_image %>);">
+  <%#= javascript_tag "var root_url='#{Contour.application_site_url + '/'}';var auth_token='#{form_authenticity_token}';" %>
+  <%= javascript_tag "var root_url='#{request.script_name + '/'}';var auth_token='#{form_authenticity_token}';" %>
+  <div id="header" class="container" style="background-image: url(<%#= Contour.application_site_url %><%= request.script_name %>/assets/<%= Contour.header_background_image %>);">
     <div id="version" style="position:relative;display:none">
       <span style="position:absolute;top:-15px;left:82px;font-size:0.5em;font-variant:normal" class="quiet"><%= Contour.application_version %></span>
     </div>
