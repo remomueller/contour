@@ -1,9 +1,8 @@
 require 'contour/engine' if defined?(Rails)
+require 'contour/fixes'
 require 'contour/version'
 
 module Contour
-  autoload :Rack, 'contour/rack'
-  
   # Default Application Name
   mattr_accessor :application_name
   @@application_name = 'Application Name'
