@@ -5,6 +5,7 @@
   * Authentication icons can be overridden in the application if the application has a contour folder in the assets directory
     * ex: if the web app contains a special logo for LDAP authentication, the app/assets/images/contour folder would contain specialized ldap_64.png and ldap_32.png where 64 and 32 represent the height
   * Removing reliance on Contour.application_site_url and using request.script_name instead
+  * Contour now handles fixes to other libraries in the background, no longer needs to add omniauth_fix.rb and rack_fix.rb to the config/initializers folder
 
 == 0.4.0
 

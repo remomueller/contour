@@ -1,6 +1,10 @@
+require 'omniauth'
+
+# Overwriting methods from Rack
 module OmniAuth
   module Strategies
     class LDAP
+      # include OmniAuth::Strategy
       
       def initialize(app, options = {}, &block)
         Rails.logger.debug "Contour::Fixes => Omniauth::Strategies::LDAP::initialize"

@@ -18,14 +18,6 @@ module Contour
         template "omniauth.rb", "config/initializers/omniauth.rb"
       end
 
-      def copy_omniauth_fix
-        template "omniauth_fix.rb", "config/initializers/omniauth_fix.rb"
-      end
-      
-      def copy_rack_fix
-        template "rack_fix.rb", "config/initializers/rack_fix.rb"
-      end
-
       def add_contour_route
         contour_routes = []
         contour_routes << "match '/auth/failure' => 'contour/authentications#failure'"
