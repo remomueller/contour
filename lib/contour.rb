@@ -4,7 +4,7 @@ require 'contour/version'
 module Contour
   # Default Application Name
   mattr_accessor :application_name
-  @@application_name = nil
+  @@application_name = 'Application Name'
   
   mattr_accessor :application_name_html
   @@application_name_html = nil
@@ -38,7 +38,7 @@ module Contour
     },
     {
       :name => 'Home', :id => 'home', :display => 'always', :position => 'left', :position_class => 'left',
-      :links => [{:name => 'Home', :path => 'root_path'}, {:html => "<hr>"}, {:name => 'About', :path => 'about_path'}]
+      :links => [{:name => 'Home', :path => 'root_path'}]
     }
   ]
     

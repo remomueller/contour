@@ -14,5 +14,9 @@ Contour may require some additional setup:
   3. Edit your application.css manifest to use Contour CSS
        
        *= require contour
+  
+  4. Make sure to remove any scaffold.css files that exist in your application
+  
+  5. Make sure your user model has first_name and last_name
        
 ===============================================================================

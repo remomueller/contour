@@ -46,6 +46,10 @@ module Contour
         generate("devise", model_name)
       end
 
+      def add_contour_devise_route
+        route "devise_for :users, :controllers => {:registrations => 'contour/registrations', :sessions => 'contour/sessions', :passwords => 'contour/passwords'}, :path_names => { :sign_up => 'register', :sign_in => 'login' }"
+      end
+
       def show_readme
         readme "README" if behavior == :invoke
       end
