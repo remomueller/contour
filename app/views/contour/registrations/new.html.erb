@@ -5,22 +5,26 @@
   <fieldset style="width:235px">
     <legend><%= @title %></legend>
     
-    <div class="field">
-      <%= f.label :first_name %><br />
-      <%= f.text_field :first_name  %>
-    </div>
+    <% if resource.methods.include?(:first_name) %>
+      <div class="field">
+        <%= f.label :first_name %><br />
+        <%= f.text_field :first_name  %>
+      </div>
+    <% end %>
   
-    <div class="field">
-      <%= f.label :last_name %><br />
-      <%= f.text_field :last_name  %>
-    </div>
+    <% if resource.methods.include?(:last_name) %>
+      <div class="field">
+        <%= f.label :last_name %><br />
+        <%= f.text_field :last_name  %>
+      </div>
+    <% end %>
 
     <div class="field">
       <%= f.label :email %><br />
       <%= f.text_field :email %>
     </div>
 
-    <% if @user.password_required? %>
+    <% if resource.password_required? %>
       <div class="field">
         <%= f.label :password %><br />
         <%= f.password_field :password %>
@@ -33,7 +37,7 @@
     <% end %>
   </fieldset>
   <div class="actions">
-    <% form_name = 'user_new' %>
+    <% form_name = "#{resource.class.name.underscore}_new" %>
     <%= link_to_function image_tag('contour/tick.png', :alt => '') + "Sign up", "$('##{form_name}').submit();", :class => "button positive" %>
     <div style="clear:both"></div><br />
     <%= link_to "Already signed up? Login here!", new_session_path(resource_name) %>
