@@ -40,6 +40,109 @@ In order to get registration working, you can use the modified Contour Authentic
 
   devise_for :users, :controllers => {:registrations => 'contour/registrations', :sessions => 'contour/sessions', :passwords => 'contour/passwords'}, :path_names => { :sign_up => 'register', :sign_in => 'login' }
 
+== Setting up a new project with quick authentication
+
+Make sure you have Rails 3.1.0
+
+  rails -v
+  
+  rails new blank_rails_project
+  
+  cd blank_rails_project
+  
+Modify Gemfile and add
+
+  gem 'contour', '~> 0.5.0'          # Basic Layout and Assets
+  gem 'devise',  '~> 1.4.4'          # User Authorization
+  gem 'omniauth',   '0.2.6'          # User Multi-Authentication  
+
+Run Bundle install
+
+  bundle install
+  
+Install contour files
+
+  rails generate contour:install
+
+Add the following line to your app/controllers/application_controller.rb
+
+  layout "contour/layouts/application"
+
+Edit your app/assets/javascripts/application.js manifest to use Contour JavaScript (Replace jquery and jquery_ujs)
+
+  //= require contour
+
+Edit your app/assets/stylesheets/application.css manifest to use Contour CSS (after self, before tree)
+
+  *= require contour
+
+Remove any scaffold.css files that exist in your application
+
+Add the authentication model
+
+  rails generate model Authentication user_id:integer provider:string uid:string
+
+Add first_name and last_name to user model  
+
+  rails generate migration AddFirstNameAndLastNameToUsers first_name:string last_name:string
+
+Migrate your database
+
+  bundle exec rake db:create
+  
+  bundle exec rake db:migrate
+
+Remove the public/index.html
+
+  rm public/index.html
+  
+Create a sample controller
+
+  rails generate controller welcome index
+  
+Create a root in your config/routes.rb
+
+  root :to => 'welcome#index'
+
+Add the following to your app/models/user.rb
+
+  attr_accessible :first_name, :last_name
+
+  # Model Validation
+  validates_presence_of     :first_name
+  validates_presence_of     :last_name
+
+  # Model Relationships
+  has_many :authentications
+
+  def name
+    "#{first_name} #{last_name}"
+  end
+
+  def apply_omniauth(omniauth)
+    unless omniauth['user_info'].blank?
+      self.email = omniauth['user_info']['email'] if email.blank?
+      self.first_name = omniauth['user_info']['first_name'] if first_name.blank?
+      self.last_name = omniauth['user_info']['last_name'] if last_name.blank?
+    end
+    authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
+  end
+
+  def password_required?
+    (authentications.empty? || !password.blank?) && super
+  end
+
+Make sure the devise line in config/routes.rb looks as follows
+
+  devise_for :users, :controllers => {:registrations => 'contour/registrations', :sessions => 'contour/sessions', :passwords => 'contour/passwords'}, :path_names => { :sign_up => 'register', :sign_in => 'login' }
+  
+If there is a line that just says 'devise_for :users' or a duplicate, remove it
+
+Start your server and navigate to localhost:3000/users/login
+
+  rails s
+
+
 == Contributing to contour
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
