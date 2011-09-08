@@ -7,6 +7,9 @@
   * Removing reliance on Contour.application_site_url and using request.script_name instead
   * Contour now handles fixes to other libraries in the background, no longer needs to add omniauth_fix.rb and rack_fix.rb to the config/initializers folder
 
+* Bug Fix
+  * Removed registration page requirement for first_name and last_name
+
 == 0.4.0
 
 * Enhancements
