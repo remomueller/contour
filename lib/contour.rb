@@ -35,7 +35,7 @@ module Contour
     },
     {
       :name => 'current_user.name', :eval => true, :id => 'auth', :display => 'signed_in', :position => 'right', :position_class => 'right',
-      :links => [{:html => '"<div style=\"white-space:nowrap\">"+current_user.name+"</div>"', :eval => true}, {:html => '"<div class=\"small quiet\">"+current_user.email+"</div>"', :eval => true}, {:name => 'Authentications', :path => 'authentications_path'}, {:html => "<hr>"}, {:name => 'Logout', :path => 'destroy_user_session_path'}]
+      :links => [{:html => '"<div style=\"white-space:nowrap\">"+(current_user.methods.include?(:name) ? current_user.name.to_s : "")+"</div>"', :eval => true}, {:html => '"<div class=\"small quiet\">"+current_user.email+"</div>"', :eval => true}, {:name => 'Authentications', :path => 'authentications_path'}, {:html => "<hr>"}, {:name => 'Logout', :path => 'destroy_user_session_path'}]
     },
     {
       :name => 'Home', :id => 'home', :display => 'always', :position => 'left', :position_class => 'left',

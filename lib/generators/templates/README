@@ -1,7 +1,7 @@
 
 ===============================================================================
 
-Contour may require some additional setup:
+Contour requires some additional setup:
 
   1. Add the following line to your application_controller.rb
   
@@ -15,8 +15,14 @@ Contour may require some additional setup:
        
        *= require contour
   
-  4. Make sure to remove any scaffold.css files that exist in your application
+  4. Remove any scaffold.css files that exist in your application
   
-  5. Make sure your user model has first_name and last_name
+  5. Make a migration for Authentications
+  
+       rails generate model Authentication user_id:integer provider:string uid:string
+  
+  6. Add first_name and last_name to User model
+  
+       rails generate migration AddFirstNameAndLastNameToUsers first_name:string last_name:string
        
 ===============================================================================
