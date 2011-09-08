@@ -35,6 +35,8 @@ module OmniAuth
       
       # Includes addition of a "domain"
       def callback_phase
+        failure_temp_path = "#{@env['SCRIPT_NAME']}/#{OmniAuth.config.path_prefix.split('/').last}/failure?message=invalid_credentials"
+        
         begin
           creds = session['omniauth.ldap']
           session.delete 'omniauth.ldap'
@@ -43,9 +45,9 @@ module OmniAuth
             creds['username'] = @domain.to_s + '\\' + creds['username'] unless @domain.blank?
             @adaptor.bind(:bind_dn => creds['username'], :password => creds['password'])
           rescue Exception => e
-            Rails.logger.info "Exception #{e.inspect}"
-            Rails.logger.info "failed to bind with the default credentials: " + e.message
-            return fail!(:invalid_credentials, e)
+            Rails.logger.info "Failed to bind with the default credentials: " + e.message
+            return redirect failure_temp_path
+            # return fail!(:invalid_credentials, e)
           end
           
           @ldap_user_info = @adaptor.search(:base => @adaptor.base, :filter => Net::LDAP::Filter.eq(@adaptor.uid, creds['username'].split('\\').last.to_s),:limit => 1)
@@ -61,8 +63,9 @@ module OmniAuth
           
           @env['omniauth.auth'] = {'provider' => 'ldap', 'uid' => @user_info['uid'], 'user_info' => @user_info, 'bla' => 5}
         rescue Exception => e
-          Rails.logger.info "Exception #{e.inspect}"
-          return fail!(:invalid_credentials, e)
+          Rails.logger.info "Exception in callback_phase: #{e.inspect}"
+          return redirect failure_temp_path
+          # return fail!(:invalid_credentials, e)
         end
         
         call_app!
