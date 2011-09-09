@@ -150,6 +150,11 @@ Make sure the devise line in config/routes.rb looks as follows
   
 If there is a line that just says 'devise_for :users' or a duplicate, remove it
 
+Edit config/initializers/devise.rb and comment out the sign_out_via delete line
+
+  # The default HTTP method used to sign out a resource. Default is :delete.
+  # config.sign_out_via = :delete
+
 Start your server and navigate to localhost:3000/users/login
 
   rails s
