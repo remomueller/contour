@@ -1,5 +1,11 @@
 == 0.5.1
 
+* Refactoring
+  * Removed debug output
+
+* Documentation
+  * Contour Walkthrough from an empty Rails 3.1 application now works correctly (# Devise.config.sign_out_via = :delete)
+
 == 0.5.0
 
 * Enhancements

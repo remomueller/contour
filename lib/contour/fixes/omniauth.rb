@@ -7,7 +7,7 @@ module OmniAuth
       # include OmniAuth::Strategy
       
       def initialize(app, options = {}, &block)
-        Rails.logger.debug "Contour::Fixes => Omniauth::Strategies::LDAP::initialize"
+        # Rails.logger.debug "Contour::Fixes => Omniauth::Strategies::LDAP::initialize"
         super(app, options[:name] || :ldap, options.dup, &block)
         @name_proc = (@options.delete(:name_proc) || Proc.new {|name| name})
         @adaptor = OmniAuth::Strategies::LDAP::Adaptor.new(options)
@@ -19,13 +19,13 @@ module OmniAuth
       # Reroutes directly to callback_phase instead of redirecting to callback_path
       # TODO: Possibility that this could be removed in the future.
       def request_phase
-        Rails.logger.info "Request Phase Hook"
+        # Rails.logger.info "Contour::Fixes => Omniauth::Strategies::LDAP::request_phase Request Phase Hook"
         if env['REQUEST_METHOD'] == 'GET'
           get_credentials
         else
           session['omniauth.ldap'] = {'username' => request['username'], 'password' => request['password']}
           if true
-            Rails.logger.info "Skipping Redirect"
+            # Rails.logger.info "Contour::Fixes => Omniauth::Strategies::LDAP::request_phase Skipping Redirect"
             callback_phase # Added
           else
             redirect callback_path

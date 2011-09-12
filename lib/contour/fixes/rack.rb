@@ -2,7 +2,7 @@
 module Rack
   class Request
     def scheme
-      Rails.logger.debug "Contour::Fixes => Rack::Request::scheme"
+      # Rails.logger.debug "Contour::Fixes => Rack::Request::scheme"
       if @env['HTTPS'] == 'on'
         'https'
       elsif @env['HTTP_X_FORWARDED_SSL'] == 'on'
@@ -20,7 +20,8 @@ module Rack
 
     def host_with_port
       if forwarded = @env["HTTP_X_FORWARDED_HOST"]
-        Rails.logger.debug "@env[HTTP_X_FORWARDED_HOST]: #{@env["HTTP_X_FORWARDED_HOST"]} USING => #{forwarded.split(/,\s?/).first}"
+        Rails.logger.info "\n\nContour::Fixes => Rack::Request::host_with_port"
+        Rails.logger.info "@env[HTTP_X_FORWARDED_HOST]: #{@env["HTTP_X_FORWARDED_HOST"]} USING => #{forwarded.split(/,\s?/).first}\n\n"
         # forwarded.split(/,\s?/).last
         # changed forwarded to first since we don't want the internal IP.
         forwarded.split(/,\s?/).first
