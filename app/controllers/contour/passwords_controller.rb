@@ -1,3 +1,3 @@
-class Contour::PasswordsController < Devise::SessionsController
+class Contour::PasswordsController < Devise::PasswordsController
   
 end
