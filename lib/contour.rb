@@ -42,7 +42,11 @@ module Contour
       :links => [{:name => 'Home', :path => 'root_path'}]
     }
   ]
-    
+   
+  # Default news feed
+  mattr_accessor :news_feed
+  @@news_feed = nil
+  
   def self.setup
     yield self
   end

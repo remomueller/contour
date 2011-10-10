@@ -30,4 +30,7 @@ Contour.setup do |config|
   #   :links => [{:name => 'Home', :path => 'root_path', :image => '', :image_options => {}}]
   # }]
   
+  # Enter an address of a valid RSS Feed if you would like to see news on the sign in page.
+  # config.news_feed = ''
+  
 end

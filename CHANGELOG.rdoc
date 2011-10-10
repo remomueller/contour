@@ -2,6 +2,7 @@
 
 * Enhancements
   * Added arrow.png image asset
+  * Added config.news_feed options that allows users to specify an RSS feed that is displayed on the login page
 
 * Refactoring
   * Code cleanup and additional logger information for Devise Registrations (Omniauth) controller
