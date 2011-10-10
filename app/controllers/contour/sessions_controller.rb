@@ -1,3 +1,6 @@
+require 'rss/2.0'
+require 'open-uri'
+
 class Contour::SessionsController < Devise::SessionsController
   
   def new
@@ -9,7 +12,7 @@ class Contour::SessionsController < Devise::SessionsController
           @news_feed = RSS::Parser.parse(response, false)
         end
       rescue => e
-        logger.info "\n\nRSS Feed #{NEWS_FEED.to_s}\nRSS Feed Error: #{e}\n\n"
+        logger.info "\n\nRSS Feed #{Contour.news_feed}\nRSS Feed Error: #{e}\n\n"
       end
     end
     

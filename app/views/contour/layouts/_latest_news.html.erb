@@ -1,14 +1,14 @@
 <% unless @news_feed.blank? %>
   <fieldset>
-    <legend>Latest News!</legend>
+    <legend>Latest News</legend>
     
-    <h4><%= link_to @news_feed.channel.title, @result.channel.link %></h4>
+    <h4><%= link_to @news_feed.channel.title, @news_feed.channel.link, :target => '_blank' %></h4>
     <br />
     <% @news_feed.items.each_with_index do |item, i| %>
-      <% if i < 10 %>
+      <% if i < Contour.news_feed_items.to_i %>
         <div class="field">
-          <label><%= link_to item.title, item.link %></label><br />
-          <ul style="list-style: none"><li><%= item.description.gsub("[...]", link_to('[read more]', item.link)).html_safe %></li></ul>
+          <label><%= link_to item.title, item.link, :target => '_blank' %></label><br />
+          <ul style="list-style: none"><li><%= item.description.gsub("[...]", link_to('[read more]', item.link, :target => '_blank')).html_safe %></li></ul>
         </div>
       <% end %>
     <% end %>

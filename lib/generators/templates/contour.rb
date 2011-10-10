@@ -33,4 +33,7 @@ Contour.setup do |config|
   # Enter an address of a valid RSS Feed if you would like to see news on the sign in page.
   # config.news_feed = ''
   
+  # Enter the max number of items you want to see in the news feed.
+  # config.news_feed_items = 5
+  
 end

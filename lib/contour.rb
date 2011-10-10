@@ -47,6 +47,10 @@ module Contour
   mattr_accessor :news_feed
   @@news_feed = nil
   
+  # Default max number of items displayed in the news feed
+  mattr_accessor :news_feed_items
+  @@news_feed_items = 5
+  
   def self.setup
     yield self
   end
