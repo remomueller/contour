@@ -28,4 +28,9 @@ class Contour::RegistrationsController < Devise::RegistrationsController
       @user.valid?
     end
   end
+  
+  def after_inactive_sign_up_path_for(resource)
+    new_session_path(resource) # root_path
+  end
+  
 end

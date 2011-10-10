@@ -1,5 +1,8 @@
 == 0.5.5
 
+* Bug Fix
+  * after_inactive_sign_up_path_for is now set to redirect to new_session_path(resource) to avoid redirect when the root_path is not publicly available
+
 == 0.5.4
 
 * Enhancements
