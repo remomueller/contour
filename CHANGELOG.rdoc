@@ -1,10 +1,16 @@
 == 0.5.4
 
+* Enhancements
+  * Added arrow.png image asset
+
+* Refactoring
+  * Code cleanup and additional logger information for Devise Registrations (Omniauth) controller
+
 == 0.5.3
 
 * Enhancements
   * Added warning.png image asset
-
+  
 == 0.5.2
 
 * Bug Fix
