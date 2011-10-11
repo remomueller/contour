@@ -1,5 +1,8 @@
 == 0.5.6
 
+* Bug Fix
+  * SSL Verify Mode set to VERIFY_NONE so that RSS feeds using https can be read and parsed
+
 == 0.5.5
 
 * Bug Fix

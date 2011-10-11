@@ -1,3 +1,3 @@
 module Contour
-  VERSION = "0.5.6.pre"
+  VERSION = "0.5.6"
 end
