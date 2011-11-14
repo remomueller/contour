@@ -4,6 +4,9 @@
   * Underlying HighCharts Library updated to 2.1.9 to work with jQuery 1.7.0
   * Added jquery-rails ~> 1.0.17 as a dependency
 
+* Bug Fix
+  * CSS classes negative and positive now properly apply color to their corresponding links
+
 == 0.5.7
 
 * Enhancements
