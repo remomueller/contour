@@ -8,6 +8,14 @@ a:link { color: #057080; }
 a:hover { color: #EB6C20; }
 hr { margin:0px; }
 
+a:link.negative {
+  color: #D12F19;
+}
+
+a:link.positive {
+  color: #529214;
+}
+
 #content {
   padding: 4px;
   background-color: #FFF;

@@ -21,9 +21,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency('devise', '~> 1.4.9')
   s.add_dependency('omniauth', '=0.2.6')
-  # jquery-rails 1.0.17 switches to jQuery 1.7.0
-  # HighCharts 2.1.4 requires jQuery 1.6.4
-  s.add_dependency('jquery-rails', '>= 1.0.0', '<= 1.0.16')
+  s.add_dependency('jquery-rails', '~> 1.0.17')
   
   s.files = `git ls-files`.split("\n")
 end

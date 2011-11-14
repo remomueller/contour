@@ -42,7 +42,7 @@ In order to get registration working, you can use the modified Contour Authentic
 
 == Setting up a new project with quick authentication
 
-Make sure you have Rails 3.1.0
+Make sure you have Rails 3.1.1
 
   rails -v
   
@@ -52,9 +52,9 @@ Make sure you have Rails 3.1.0
   
 Modify Gemfile and add
 
-  gem 'contour', '~> 0.5.0'          # Basic Layout and Assets
-  gem 'devise',  '~> 1.4.4'          # User Authorization
-  gem 'omniauth',   '0.2.6'          # User Multi-Authentication  
+  gem 'contour', '~> 0.6.0'          # Basic Layout and Assets
+  gem 'devise'                       # User Authorization
+  gem 'omniauth'                     # User Multi-Authentication  
 
 Run Bundle install
 
