@@ -11,7 +11,7 @@ require 'contour/version'
 
 Gem::Specification.new do |s|
   s.name = 'contour'
-  s.version = Contour::VERSION.dup
+  s.version = Contour::VERSION::STRING
   s.platform = Gem::Platform::RUBY
   s.summary = 'Basic Rails framework files and assets for layout and authentication'
   s.email = 'remosm@gmail.com'
