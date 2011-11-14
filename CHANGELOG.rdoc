@@ -1,5 +1,8 @@
 == 0.6.1
 
+* Bug Fix
+  * Samples Index page now correctly displays the Contour version number
+
 == 0.6.0
 
 * Enhancements
