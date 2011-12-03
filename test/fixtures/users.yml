@@ -1,0 +1,70 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+valid:
+  first_name: FirstName
+  last_name: LastName
+  deleted: false
+  email: test@example.com
+  encrypted_password: MyString
+  password_salt: MyString
+  reset_password_token: ResetTokenOne
+  remember_token: MyString
+  remember_created_at: MyDate
+  sign_in_count: 0
+  current_sign_in_at: MyDate
+  last_sign_in_at: MyDate
+  current_sign_in_ip: MyString
+  last_sign_in_ip: MyString
+  confirmation_token: ConfirmationTokenOne
+  confirmed_at: MyDate
+  confirmation_sent_at: MyDate
+  failed_attempts: 0
+  unlock_token: UnlockTokenOne
+  locked_at: MyDate
+  authentication_token: MyString
+
+invalid:
+  first_name: MyString
+  last_name: MyString
+  deleted: false
+  email: EmailTwo
+  encrypted_password: MyString
+  password_salt: MyString
+  reset_password_token: ResetTokenTwo
+  remember_token: MyString
+  remember_created_at: MyDate
+  sign_in_count: 0
+  current_sign_in_at: MyDate
+  last_sign_in_at: MyDate
+  current_sign_in_ip: MyString
+  last_sign_in_ip: MyString
+  confirmation_token: ConfirmationTokenTwo
+  confirmed_at: MyDate
+  confirmation_sent_at: MyDate
+  failed_attempts: 0
+  unlock_token: UnlockTokenTwo
+  locked_at: MyDate
+  authentication_token: MyString
+
+deleted:
+  first_name: Deleted
+  last_name: User
+  deleted: true
+  email: deleted@example.com
+  encrypted_password: MyString
+  password_salt: MyString
+  reset_password_token: ResetTokenFive
+  remember_token: MyString
+  remember_created_at: 2011-02-23
+  sign_in_count: 0
+  current_sign_in_at: 2011-02-23
+  last_sign_in_at: 2011-02-23
+  current_sign_in_ip: MyString
+  last_sign_in_ip: MyString
+  confirmation_token: ConfirmationTokenFive
+  confirmed_at: 2011-02-23
+  confirmation_sent_at: 2011-02-23
+  failed_attempts: 0
+  unlock_token: UnlockTokenFive
+  locked_at: 2011-02-23
+  authentication_token: MyString

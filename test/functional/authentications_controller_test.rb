@@ -2,7 +2,7 @@ require 'test_helper'
 
 class AuthenticationsControllerTest < ActionController::TestCase
   setup do
-    login(users(:valid))
+    # login(users(:valid))
     @request.env["omniauth.auth"] = {'provider' => 'google_apps', 'user_info'=> {'email' => 'test@example.com'}}
     @authentication = authentications(:one)
   end
