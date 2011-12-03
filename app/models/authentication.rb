@@ -5,7 +5,7 @@ class Authentication < ActiveRecord::Base
     if provider == 'open_id'
       "OpenID"
     else
-      provider.titleize
+      provider.to_s.titleize
     end
   end
 end
