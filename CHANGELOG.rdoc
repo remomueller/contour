@@ -1,5 +1,11 @@
 == 0.7.0
 
+* Enhancements
+  * Restructuring gem to be more in line with a gem created by 'rails plugin new'
+
+* Testing
+  * Adding dummy app and tests
+
 == 0.6.1
 
 * Bug Fix
