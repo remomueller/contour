@@ -1,10 +1,10 @@
 require 'test_helper'
 
-class AuthenticationsControllerTest < ActionController::TestCase
+class Contour::AuthenticationsControllerTest < ActionController::TestCase
   setup do
-    # login(users(:valid))
+    login(users(:valid))
     @request.env["omniauth.auth"] = {'provider' => 'google_apps', 'user_info'=> {'email' => 'test@example.com'}}
-    @authentication = authentications(:one)
+    @authentication = authentications(:open_id)
   end
 
   test "should get index" do

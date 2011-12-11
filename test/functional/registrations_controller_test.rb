@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class RegistrationsControllerTest < ActionController::TestCase
+class Contour::RegistrationsControllerTest < ActionController::TestCase
   setup do
     login(users(:admin))
     request.env["devise.mapping"] = Devise.mappings[:user]

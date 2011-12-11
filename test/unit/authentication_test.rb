@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class AuthenticationTest < ActiveSupport::TestCase
-  fixtures :all
-  
   test "should get provider name and handle OpenID special case" do
     assert_equal 'OpenID', authentications(:open_id).provider_name
   end

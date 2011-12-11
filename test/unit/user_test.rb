@@ -3,8 +3,6 @@ require 'test_helper'
 # SimpleCov.command_name "test:units"
 
 class UserTest < ActiveSupport::TestCase
-  fixtures :all
-  
   test "should get reverse name" do
     assert_equal 'LastName, FirstName', users(:valid).reverse_name
   end
