@@ -30,16 +30,20 @@ module Contour
   mattr_accessor :menu_items
   @@menu_items = [
     {
-      :name => 'Login', :id => 'auth', :display => 'not_signed_in', :position => 'right', :position_class => 'right',
-      :links => [{:name => 'Login', :path => 'new_user_session_path'}, {:html => "<hr>"}, {:name => 'Sign Up', :path => 'new_user_registration_path'}]
+      :name => 'Login', :id => 'auth', :display => 'not_signed_in', :path => 'new_user_session_path', :position => 'right',
+      :links => [{:name => 'Sign Up', :path => 'new_user_registration_path'}]
     },
     {
-      :name => 'current_user.name', :eval => true, :id => 'auth', :display => 'signed_in', :position => 'right', :position_class => 'right', :condition => 'true',
-      :links => [{:html => '"<div style=\"white-space:nowrap\">"+(current_user.methods.include?(:name) ? current_user.name.to_s : "")+"</div>"', :eval => true}, {:html => '"<div class=\"small quiet\">"+current_user.email+"</div>"', :eval => true}, {:name => 'Authentications', :path => 'authentications_path', :condition => 'not PROVIDERS.blank?'}, {:html => "<hr>"}, {:name => 'Logout', :path => 'destroy_user_session_path'}]
+      :name => 'current_user.name', :eval => true, :id => 'auth', :display => 'signed_in', :path => 'user_path(current_user)', :position => 'right', :condition => 'true',
+      links: [{ :html => '"<div class=\"small\" style=\"color:#bbb\">"+current_user.email+"</div>"', :eval => true },
+              { :name => 'Settings', :path => 'settings_path' },
+              { :name => 'Authentications', :path => 'authentications_path', :condition => 'not PROVIDERS.blank?' },
+              { :html => "<br />" },
+              { :name => 'Logout', :path => 'destroy_user_session_path' }]
     },
     {
-      :name => 'Home', :id => 'home', :display => 'always', :position => 'left', :position_class => 'left',
-      :links => [{:name => 'Home', :path => 'root_path'}]
+      :name => 'Home', :id => 'home', :display => 'always', :path => 'root_path', :position => 'left',
+      :links => []
     }
   ]
    

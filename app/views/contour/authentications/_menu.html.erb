@@ -13,7 +13,7 @@
     <% provider_name = provider.to_s.titleize %>
     <% image_name = provider.to_s.downcase %>
   <% end %>
-  <li class="parent li_right" style="top:-4px;height:20px">
+  <li class="parent li_right" style="top:-4px;height:20px;"> <%# margin-right:15px;padding-left:0px;padding-right:0px %>
     <a href="<%= request.script_name %><%= "/" + OmniAuth.config.path_prefix.split('/').last.to_s %><%= "/" + provider.to_s.downcase %><%= url_params %>" class="noicon">
       <%= image_tag "contour/#{image_name}_32.png", :align => 'absmiddle', :height => "28px", :title => provider_name %>
     </a>

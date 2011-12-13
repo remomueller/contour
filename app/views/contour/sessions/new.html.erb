@@ -2,7 +2,7 @@
 
 <table class="blank padded">
   <tr>
-    <td valign="middle">
+    <td style="vertical-align:top">
       <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
         <fieldset style="width:235px">
           <legend><%= @title %></legend>
@@ -29,7 +29,7 @@
         </div>
       <% end %>
     </td>
-    <td>
+    <td style="vertical-align:top">
       <%= render :partial => 'contour/layouts/latest_news' %>
     </td>
   </tr>
