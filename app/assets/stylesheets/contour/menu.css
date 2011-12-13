@@ -35,9 +35,9 @@
 #menu ul.ul-menu li ul {
   list-style: none;
   position: relative;
-  top: 19px;
+  top: 16px;
   
-  padding: 5px;
+  padding: 8px 5px 5px 5px;
   margin: 0px -5px;
   
   border-bottom-right-radius: 8px;
@@ -48,9 +48,9 @@
   -moz-border-radius-bottomleft: 8px;
   -webkit-border-radius-bottomleft: 8px;
   
-  -moz-box-shadow: 0px 5px 10px #666;
-  -webkit-box-shadow: 0px 5px 10px #666;
-  box-shadow: 0px 5px 10px #666;
+  -moz-box-shadow: 0px 5px 5px #666;
+  -webkit-box-shadow: 0px 5px 5px #666;
+  box-shadow: 0px 5px 5px #666;
 }
 
 #menu ul.ul-menu li.li_left ul {
@@ -59,7 +59,6 @@
 /*  border: 1px solid #404040;*/
   background-color: #404040;
   position: absolute;
-  padding-top: 2px;
   display: none;
 }
 
@@ -69,7 +68,6 @@
 /*  border: 1px solid #404040;*/
   background-color: #404040;
   position: absolute;
-  padding-top: 2px;
   display: none;
   text-align: right;
 }
@@ -85,6 +83,18 @@
 	background:#404040;
   padding:5px;
 	color: #fff;
+	
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-radius-bottomright: 8px;
+	border-bottom-right-radius: 8px;
+  
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-radius-bottomleft: 8px;
+  border-bottom-left-radius: 8px;
+  
+	-moz-box-shadow: 0px 5px 5px #666;
+  -webkit-box-shadow: 0px 5px 5px #666;
+  box-shadow: 0px 5px 5px #666;  
 }
 
 .sticky {
@@ -142,15 +152,3 @@
 #menu div.menu_dropdown_left a:hover, #menu div.menu_dropdown_left_center a:hover, #menu div.menu_dropdown_right a:hover, #menu div.menu_dropdown_right_center a:hover {
   color: #EB6C20;
 }*/
-
-#menu, div.menu_dropdown_right {
-  border-bottom-right-radius: 8px;
-  -moz-border-radius-bottomright: 8px;
-  -webkit-border-radius-bottomright: 8px;
-}
-
-#menu, div.menu_dropdown_left {
-  border-bottom-left-radius: 8px;
-  -moz-border-radius-bottomleft: 8px;
-  -webkit-border-radius-bottomleft: 8px;
-}
