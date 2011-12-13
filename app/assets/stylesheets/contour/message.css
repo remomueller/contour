@@ -3,12 +3,20 @@
 /**************************************/
 
 #message {
-  position:absolute;
-  left:-5px;
-  top:-30px;  
+  position: absolute;
+  left: -5px;
+  top: -28px;
+}
+
+.error {
+  background: #FBC2C4;
+}
+.notice {
+  background: #FFF493;
 }
 
 .notice, .error {
+  border-width: 0px;
   float:left;
   margin:0 4px 0 0;
   padding:2px 8px;
@@ -24,4 +32,8 @@
   border-top-right-radius: 8px;
   -moz-border-radius-topright: 8px;
   -webkit-border-radius-topright: 8px;
+  
+  -moz-box-shadow: 0px 0px 5px #666;
+  -webkit-box-shadow: 0px 0px 5px #666;
+  box-shadow: 0px 0px 5px #666;
 }

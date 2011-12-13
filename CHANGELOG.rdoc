@@ -3,6 +3,7 @@
 * Enhancements
   * Restructuring gem to be more in line with a gem created by 'rails plugin new'
   * Menu system updated to use embedded ul and li tags, and jQuery to capture mouseenter and mouseleave
+  * GUI updates for alert and notice popups
 
 * Testing
   * Adding dummy app and tests
