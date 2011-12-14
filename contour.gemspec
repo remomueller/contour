@@ -26,6 +26,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'jquery-rails',  '~> 1.0.17'
   
   s.files = Dir["{app,config,db,lib}/**/*"] + ["CHANGELOG.rdoc", "contour.gemspec", "LICENSE", "Rakefile", "README.rdoc"]
-  # s.files = `git ls-files`.split("\n")
   s.test_files = Dir["test/**/*"]
 end
