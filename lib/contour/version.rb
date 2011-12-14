@@ -3,7 +3,7 @@ module Contour
     MAJOR = 0
     MINOR = 7
     TINY = 1
-    BUILD = "pre" # nil, "pre", "rc", "rc2"
+    BUILD = nil # nil, "pre", "rc", "rc2"
 
     STRING = [MAJOR, MINOR, TINY, BUILD].compact.join('.')
   end
