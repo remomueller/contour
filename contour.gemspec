@@ -20,10 +20,10 @@ Gem::Specification.new do |s|
   
   s.platform = Gem::Platform::RUBY
   
-  s.add_dependency 'rails',         '~> 3.1.3'
+  s.add_dependency 'rails',         '~> 3.2.0.pre'
   s.add_dependency 'devise',        '~> 1.4.9'
   s.add_dependency 'omniauth',      '=0.2.6'
-  s.add_dependency 'jquery-rails',  '~> 1.0.17'
+  s.add_dependency 'jquery-rails',  '~> 2.0.0'
   
   s.files = Dir["{app,config,db,lib}/**/*"] + ["CHANGELOG.rdoc", "contour.gemspec", "LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
