@@ -1,5 +1,8 @@
 == 0.7.2
 
+* Bug Fix
+  * Print layouts can now be specified using @media print{} block in CSS
+
 == 0.7.1
 
 * Bug Fix
