@@ -8,6 +8,7 @@
       # With
         provider :open_id, OpenID::Store::Filesystem.new('/tmp'), :name => 'google_apps', :identifier => 'https://www.google.com/accounts/o8/id'
   * Added icons from gentleface.com (see LICENSE in /app/assets/images/contour/gentleface/LICENSE)
+  * Added qTip2, http://craigsworks.com/projects/qtip2/, distributed under http://creativecommons.org/licenses/by/3.0/
 
 * Bug Fix
   * Fixed Rails 3.2.x deprecation warning due to passing the format in the template name for render :template
