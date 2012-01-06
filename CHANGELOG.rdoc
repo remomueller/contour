@@ -1,5 +1,8 @@
 == 0.8.1
 
+* Bug Fix
+  * rake assets:precompile now works due to Sprockets 2.1.2 incorrectly assuming that .src was a x-wais-source file instead of a javascript file
+
 == 0.8.0
 
 * Enhancements
