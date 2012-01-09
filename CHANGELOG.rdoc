@@ -1,5 +1,11 @@
 == 0.8.3
 
+* Enhancements
+  * Added icons from gentleface.com (see LICENSE in /app/assets/images/gentleface/LICENSE)
+    * You can reference icons using
+      <%= image_tag('gentleface/[16|32|48]/checkmark.png')
+    * Note: in 0.9.0 the images/contour/gentleface icons will be removed and be moved to images/gentleface
+
 == 0.8.2
 
 * Bug Fix
