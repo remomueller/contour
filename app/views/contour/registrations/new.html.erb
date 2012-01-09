@@ -37,7 +37,7 @@
     <% end %>
   </fieldset>
   <div class="actions">
-    <% form_name = "#{resource.class.name.underscore}_new" %>
+    <% form_name = "new_#{resource.class.name.underscore}" %>
     <%= link_to_function image_tag('contour/tick.png', :alt => '') + "Sign up", "$('##{form_name}').submit();", :class => "button positive" %>
     <div style="clear:both"></div><br />
     <%= link_to "Already signed up? Login here!", new_session_path(resource_name) %>

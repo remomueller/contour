@@ -11,7 +11,7 @@
     </div>
   </fieldset>
   <div class="actions">
-    <% form_name = "#{resource.class.name.underscore}_new" %>
+    <% form_name = "new_#{resource.class.name.underscore}" %>
     <%= link_to_function image_tag('contour/tick.png', :alt => '') + "Send me reset password instructions", "$('##{form_name}').submit();", :class => "button positive" %>
     <div style="clear:both"></div><br />
     <%= link_to "Login here!", new_session_path(resource_name) %> or <%= link_to "Register here!", new_registration_path(resource_name) %>

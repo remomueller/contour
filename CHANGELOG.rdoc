@@ -1,5 +1,8 @@
 == 0.8.2
 
+* Bug Fix
+  * Submit buttons on new registration, new session, and new password have been fixed
+
 == 0.8.1
 
 * Bug Fix
