@@ -32,7 +32,7 @@ Contour provides custom JavaScript.  In order to make the application layout fun
 
 In order to get registration working, you can use the modified Contour Authentications controller which overrides the default devise controller of the same name:
 
-  devise_for :users, :controllers => {:registrations => 'contour/registrations', :sessions => 'contour/sessions', :passwords => 'contour/passwords'}, :path_names => { :sign_up => 'register', :sign_in => 'login' }
+  devise_for :users, controllers: { registrations: 'contour/registrations', sessions: 'contour/sessions', passwords: 'contour/passwords' }, path_names: { sign_up: 'register', sign_in: 'login' }
 
 == Setting up a new project with quick authentication
 
@@ -46,7 +46,7 @@ Make sure you have Rails 3.2.0
   
 Modify Gemfile and add
 
-  gem 'contour', '~> 0.8.1'          # Basic Layout and Assets
+  gem 'contour', '~> 0.8.3'          # Basic Layout and Assets
 
 Run Bundle install
 
