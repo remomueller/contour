@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
   
   s.add_dependency 'rails',         '~> 3.2.0.rc2'
-  s.add_dependency 'devise',        '~> 1.4.9'
+  s.add_dependency 'devise',        '~> 1.5.3'
   s.add_dependency 'omniauth',      '=0.2.6'
   s.add_dependency 'jquery-rails',  '~> 2.0.0'
   
