@@ -96,6 +96,12 @@ Create a root in your config/routes.rb
 
   root to: 'welcome#index'
 
+Make sure the devise line in config/routes.rb looks as follows
+
+  devise_for :users, controllers: { registrations: 'contour/registrations', sessions: 'contour/sessions', passwords: 'contour/passwords' }, path_names: { sign_up: 'register', sign_in: 'login' }
+
+If there is a line that just says 'devise_for :users' or a duplicate, remove it
+
 Add the following to your app/models/user.rb
 
   attr_accessible :first_name, :last_name
@@ -136,12 +142,6 @@ Add the following to your app/models/authentication.rb
     end
   end
 
-Make sure the devise line in config/routes.rb looks as follows
-
-  devise_for :users, controllers: { registrations: 'contour/registrations', sessions: 'contour/sessions', passwords: 'contour/passwords' }, path_names: { sign_up: 'register', sign_in: 'login' }
-  
-If there is a line that just says 'devise_for :users' or a duplicate, remove it
-
 Edit config/initializers/devise.rb and comment out the sign_out_via delete line
 
   # The default HTTP method used to sign out a resource. Default is :delete.
@@ -150,6 +150,8 @@ Edit config/initializers/devise.rb and comment out the sign_out_via delete line
 Start your server and navigate to localhost:3000/users/login
 
   rails s
+  
+You can then sign in using your google account (click on the google link), or by registering for an account at localhost:3000/users/register
 
 
 == Contributing to contour
