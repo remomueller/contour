@@ -164,5 +164,5 @@ Start your server and navigate to localhost:3000/users/login
 
 == Copyright
 
-Copyright (c) 2011 Remo Mueller. See LICENSE for further details.
+Copyright (c) 2012 Remo Mueller. See LICENSE for further details.
 
