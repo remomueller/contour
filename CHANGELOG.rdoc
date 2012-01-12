@@ -1,5 +1,8 @@
 == 0.8.4
 
+* Bug Fix
+  * OmniAuth Builder updated to work with Rack 1.4.0
+
 * Testing
   * Dummy Application tests added:
     * Functional Tests for Authentication Controller
