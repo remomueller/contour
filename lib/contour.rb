@@ -34,7 +34,7 @@ module Contour
       links: [{ name: 'Sign Up', path: 'new_user_registration_path' }]
     },
     {
-      name: 'current_user.name', eval: true, display: 'signed_in', path: 'user_path(current_user)', position: 'right', condition: 'true',
+      name: 'current_user.name', eval: true, display: 'signed_in', position: 'right', condition: 'true',
       links: [{ html: '"<div class=\"small\" style=\"color:#bbb\">"+current_user.email+"</div>"', eval: true },
               { name: 'Authentications', path: 'authentications_path', condition: 'not PROVIDERS.blank?' },
               { html: "<br />" },

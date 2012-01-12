@@ -1,12 +1,12 @@
 require 'openid/store/filesystem'
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :open_id, OpenID::Store::Filesystem.new('/tmp'), :name => 'google_apps', :identifier => 'https://www.google.com/accounts/o8/id'
+  provider :open_id, OpenID::Store::Filesystem.new('/tmp'), name: 'google_apps', identifier: 'https://www.google.com/accounts/o8/id'
   provider :twitter, 'CONSUMER_KEY', 'CONSUMER_SECRET'
   provider :facebook, 'APP_ID', 'APP_SECRET'
   provider :linked_in, 'CONSUMER_KEY', 'CONSUMER_SECRET'
   provider :open_id, OpenID::Store::Filesystem.new('/tmp')
-  provider :CAS, :cas_server => 'https://www.example.com/cas'
-  provider :LDAP, :host => 'ldap.example.com', :port => 389, :method => :simple, :base => 'cn=users,dc=example,dc=com', :uid => 'sAMAccountName', :try_sasl => true, :sasl_mechanisms => "GSS-SPNEGO", :domain => ''
+  provider :CAS, cas_server: 'https://www.example.com/cas'
+  provider :LDAP, host: 'ldap.example.com', port: 389, method: :simple, base: 'cn=users,dc=example,dc=com', uid: 'sAMAccountName', try_sasl: true, sasl_mechanisms: "GSS-SPNEGO", domain: ''
 end
 
 # This list will show the first choice as the default, and the rest as potential secondary login methods.

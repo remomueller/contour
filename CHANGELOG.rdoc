@@ -2,6 +2,8 @@
 
 * Bug Fix
   * OmniAuth Builder updated to work with Rack 1.4.0
+  * Menu Items no longer require a path (url link) to be specified and the option can now be omitted as it is optional
+  * Silent 404 no longer occurs when the Contour.header_title_image is left blank
 
 * Testing
   * Dummy Application tests added:

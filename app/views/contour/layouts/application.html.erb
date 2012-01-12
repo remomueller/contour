@@ -10,7 +10,7 @@
 <body>
   <%#= javascript_tag "var root_url='#{Contour.application_site_url + '/'}';var auth_token='#{form_authenticity_token}';" %>
   <%= javascript_tag "var root_url='#{request.script_name + '/'}';var auth_token='#{form_authenticity_token}';" %>
-  <div id="header" class="container" style="background-image: url(<%#= Contour.application_site_url %><%= request.script_name %>/assets/<%= Contour.header_background_image %>);">
+  <div id="header" class="container" <%= "style='background-image: url(#{request.script_name}/assets/#{Contour.header_background_image});'" unless Contour.header_background_image.blank? %>>
     <div id="version" style="position:relative;display:none">
       <span style="position:absolute;top:-15px;left:82px;font-size:0.5em;font-variant:normal" class="quiet"><%= Contour.application_version %></span>
     </div>
@@ -34,7 +34,7 @@
   
   <div id="popup" style="overflow-y: hidden;">
     <div id="popup_header" style="padding: 12px;">
-      <div style="float:right;margin-right:10px; margin-top:-4px"><%= image_tag(Contour.header_title_image, :alt => '') %></div>
+      <div style="float:right;margin-right:10px; margin-top:-4px"><%= image_tag(Contour.header_title_image, :alt => '') unless Contour.header_title_image.blank?  %></div>
       <a id="popup_close">x</a>
       <h1 id="popup_title"></h1>
     </div>
