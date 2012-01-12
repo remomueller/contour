@@ -46,7 +46,7 @@ Make sure you have Rails 3.2.0
   
 Modify Gemfile and add
 
-  gem 'contour', '~> 0.8.3'          # Basic Layout and Assets
+  gem 'contour', '~> 0.8.4'          # Basic Layout and Assets
 
 Run Bundle install
 
