@@ -17,16 +17,17 @@ ActiveRecord::Schema.define(:version => 20111203203307) do
     t.integer  "user_id"
     t.string   "provider"
     t.string   "uid"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.boolean  "deleted",                             :default => false, :null => false
-    t.string   "email",                               :default => "",    :null => false
-    t.string   "encrypted_password",   :limit => 128, :default => "",    :null => false
+    t.string   "status",                              :default => "pending", :null => false
+    t.boolean  "deleted",                             :default => false,     :null => false
+    t.string   "email",                               :default => "",        :null => false
+    t.string   "encrypted_password",   :limit => 128, :default => "",        :null => false
     t.string   "reset_password_token"
     t.string   "remember_token"
     t.datetime "remember_created_at"
@@ -35,8 +36,8 @@ ActiveRecord::Schema.define(:version => 20111203203307) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                                 :null => false
+    t.datetime "updated_at",                                                 :null => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

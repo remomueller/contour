@@ -1,5 +1,13 @@
 == 0.8.4
 
+* Testing
+  * Dummy Application tests added:
+    * Functional Tests for Authentication Controller
+    * Functional Tests for Registration Controller
+    * Integration Tests for Navigation
+    * Unit Tests for Authentication Model
+    * Unit Tests for User Model
+
 == 0.8.3
 
 * Enhancements

@@ -3,10 +3,10 @@
 valid:
   first_name: FirstName
   last_name: LastName
+  status: active
   deleted: false
-  email: test@example.com
+  email: valid@example.com
   encrypted_password: MyString
-  # password_salt: MyString
   reset_password_token: ResetTokenOne
   remember_token: MyString
   remember_created_at: MyDate
@@ -26,10 +26,10 @@ valid:
 invalid:
   first_name: MyString
   last_name: MyString
+  status: inactive
   deleted: false
   email: EmailTwo
   encrypted_password: MyString
-  # password_salt: MyString
   reset_password_token: ResetTokenTwo
   remember_token: MyString
   remember_created_at: MyDate
@@ -49,10 +49,10 @@ invalid:
 deleted:
   first_name: Deleted
   last_name: User
+  status: active
   deleted: true
   email: deleted@example.com
   encrypted_password: MyString
-  # password_salt: MyString
   reset_password_token: ResetTokenFive
   remember_token: MyString
   remember_created_at: 2011-02-23
@@ -66,5 +66,28 @@ deleted:
   # confirmation_sent_at: 2011-02-23
   # failed_attempts: 0
   # unlock_token: UnlockTokenFive
+  # locked_at: 2011-02-23
+  # authentication_token: MyString
+
+pending:
+  first_name: MyString
+  last_name: MyString
+  status: pending
+  deleted: false
+  email: pending@example.com
+  encrypted_password: MyString
+  reset_password_token: ResetTokenFour
+  remember_token: MyString
+  remember_created_at: 2011-02-23
+  sign_in_count: 0
+  current_sign_in_at: 2011-02-23
+  last_sign_in_at: 2011-02-23
+  current_sign_in_ip: MyString
+  last_sign_in_ip: MyString
+  # confirmation_token: ConfirmationTokenFour
+  # confirmed_at: 2011-02-23
+  # confirmation_sent_at: 2011-02-23
+  # failed_attempts: 0
+  # unlock_token: UnlockTokenFour
   # locked_at: 2011-02-23
   # authentication_token: MyString

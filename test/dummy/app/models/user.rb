@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
 
   # Overriding Devise built-in active? method
   def active_for_authentication?
-    super # and self.status == 'active' and not self.deleted?
+    super and self.status == 'active' and not self.deleted?
   end
   
   def apply_omniauth(omniauth)
