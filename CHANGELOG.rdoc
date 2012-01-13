@@ -9,6 +9,7 @@
       * OmniAuth Facebook
       * OmniAuth LinkedIn
       * OmniAuth CAS
+    * Authentication provider names now rely on the OmniAuth camelizations
 
 * Testing
   * SimpleCov testing updated to show gem test coverage

@@ -135,11 +135,7 @@ Add the following to your app/models/authentication.rb
   belongs_to :user
 
   def provider_name
-    if provider == 'open_id'
-      "OpenID"
-    else
-      provider.titleize
-    end
+    OmniAuth.config.camelizations[provider.to_s.downcase] || provider.to_s.titleize
   end
 
 Edit config/initializers/devise.rb and comment out the sign_out_via delete line
