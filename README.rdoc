@@ -118,10 +118,10 @@ Add the following to your app/models/user.rb
   end
 
   def apply_omniauth(omniauth)
-    unless omniauth['user_info'].blank?
-      self.email = omniauth['user_info']['email'] if email.blank?
-      self.first_name = omniauth['user_info']['first_name'] if first_name.blank?
-      self.last_name = omniauth['user_info']['last_name'] if last_name.blank?
+    unless omniauth['info'].blank?
+      self.email = omniauth['info']['email'] if email.blank?
+      self.first_name = omniauth['info']['first_name'] if first_name.blank?
+      self.last_name = omniauth['info']['last_name'] if last_name.blank?
     end
     authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
   end

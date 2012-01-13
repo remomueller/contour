@@ -5,7 +5,7 @@ SimpleCov.command_name "test:functionals"
 class Contour::AuthenticationsControllerTest < ActionController::TestCase
   setup do
     login(users(:valid))
-    @request.env["omniauth.auth"] = {'provider' => 'google_apps', 'user_info'=> {'email' => 'test@example.com'}}
+    @request.env["omniauth.auth"] = {'provider' => 'google_apps', 'info'=> {'email' => 'test@example.com'}}
     @authentication = authentications(:open_id)
   end
 

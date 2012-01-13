@@ -1,5 +1,18 @@
 == 0.9.0
 
+* Enhancements
+  * Updated Contour to work with OmniAuth 1.0
+    * Contour will now provide support for the following providers:
+      * OmniAuth OpenID
+      * OmniAuth LDAP
+      * OmniAuth Twitter
+      * OmniAuth Facebook
+      * OmniAuth LinkedIn
+      * OmniAuth CAS
+
+* Testing
+  * SimpleCov testing updated to show gem test coverage
+
 == 0.8.4
 
 * Bug Fix

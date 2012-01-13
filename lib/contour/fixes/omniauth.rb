@@ -13,11 +13,11 @@ module OmniAuth
     def on_failure(&block)
       OmniAuth.config.on_failure = block
     end
-
+  
     def configure(&block)
       OmniAuth.configure(&block)
     end
-
+  
     def provider(klass, *args, &block)
       if klass.is_a?(Class)
         middleware = klass
@@ -28,10 +28,10 @@ module OmniAuth
           raise LoadError, "Could not find matching strategy for #{klass.inspect}. You may need to install an additional gem (such as omniauth-#{klass})."
         end
       end
-
+  
       use middleware, *args, &block
     end
-
+  
     def call(env)
       to_app.call(env)
     end
@@ -85,18 +85,18 @@ module OmniAuth
             # return fail!(:invalid_credentials, e)
           end
           
-          @ldap_user_info = @adaptor.search(:base => @adaptor.base, :filter => Net::LDAP::Filter.eq(@adaptor.uid, creds['username'].split('\\').last.to_s),:limit => 1)
+          @ldap_user_info = @adaptor.search( base: @adaptor.base, filter: Net::LDAP::Filter.eq(@adaptor.uid, creds['username'].split('\\').last.to_s), limit: 1 )
           @ldap_user_info.each do |key, val|
             @ldap_user_info[key] = val.first if val.class == Array and val.size == 1
           end
           
           @user_info = self.class.map_user(@@config, @ldap_user_info)
-
+  
           @env['REQUEST_METHOD'] = 'GET'
           # @env['PATH_INFO'] = callback_path
           @env['PATH_INFO'] = "#{OmniAuth.config.path_prefix.split('/').last}/#{name}/callback"
           
-          @env['omniauth.auth'] = {'provider' => 'ldap', 'uid' => @user_info['uid'], 'user_info' => @user_info, 'bla' => 5}
+          @env['omniauth.auth'] = { 'provider' => 'ldap', 'uid' => @user_info['uid'], 'info' => @user_info }
         rescue Exception => e
           Rails.logger.info "Exception in callback_phase: #{e.inspect}"
           return redirect failure_temp_path

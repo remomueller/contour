@@ -8,6 +8,6 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "should apply omniauth" do
-    assert_not_nil users(:valid).apply_omniauth({'user_info' => {'email' => 'Email', 'first_name' => 'FirstName', 'last_name' => 'LastName'}})
+    assert_not_nil users(:valid).apply_omniauth({'info' => {'email' => 'Email', 'first_name' => 'FirstName', 'last_name' => 'LastName'}})
   end
 end

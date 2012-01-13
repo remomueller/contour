@@ -4,11 +4,11 @@ class Contour::AuthenticationsController < ApplicationController
   end
 
   def passthru
-    render :file => "#{Rails.root}/public/404", :formats => [:html], :status => 404, :layout => false
+    render file: "#{Rails.root}/public/404", formats: [:html], status: 404, layout: false
   end
 
   def failure
-    redirect_to new_user_session_path, :alert => params[:message].blank? ? nil : params[:message].humanize
+    redirect_to new_user_session_path, alert: params[:message].blank? ? nil : params[:message].humanize
   end
 
   def create
@@ -18,10 +18,10 @@ class Contour::AuthenticationsController < ApplicationController
     
     if omniauth
     
-      omniauth['uid'] = omniauth['user_info']['email'] if omniauth['provider'] == 'google_apps' and omniauth['user_info']
+      omniauth['uid'] = omniauth['info']['email'] if omniauth['provider'] == 'google_apps' and omniauth['info']
       authentication = Authentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'])
       logger.info "OMNI AUTH INFO: #{omniauth.inspect}"
-      omniauth['user_info']['email'] = omniauth['extra']['user_hash']['email'] if omniauth['user_info'] and omniauth['user_info']['email'].blank? and omniauth['extra'] and omniauth['extra']['user_hash']
+      omniauth['info']['email'] = omniauth['extra']['raw_info']['email'] if omniauth['info'] and omniauth['info']['email'].blank? and omniauth['extra'] and omniauth['extra']['raw_info']
       if authentication
         logger.info "Existing authentication found."
         session["user_return_to"] = request.env["action_dispatch.request.unsigned_session_cookie"]["user_return_to"] if request.env and request.env["action_dispatch.request.unsigned_session_cookie"] and request.env["action_dispatch.request.unsigned_session_cookie"]["user_return_to"] and session["user_return_to"].blank?
@@ -29,8 +29,8 @@ class Contour::AuthenticationsController < ApplicationController
         sign_in_and_redirect(:user, authentication.user)
       elsif current_user
         logger.info "Logged in user found, creating associated authentication."
-        current_user.authentications.create!(:provider => omniauth['provider'], :uid => omniauth['uid'])
-        redirect_to authentications_path, :notice => "Authentication successful."
+        current_user.authentications.create!( provider: omniauth['provider'], uid: omniauth['uid'] )
+        redirect_to authentications_path, notice: "Authentication successful."
       else
         logger.info "Creating new user with new authentication."
         user = User.new(params[:user])
@@ -49,7 +49,7 @@ class Contour::AuthenticationsController < ApplicationController
       request.env.keys.each do |key|
         logger.info "request.env[#{key}]: #{request.env[key]}"
       end
-      redirect_to authentications_path, :alert => "Authentication not successful."
+      redirect_to authentications_path, alert: "Authentication not successful."
     end
     
   end
