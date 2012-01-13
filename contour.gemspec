@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails',                   '~> 3.2.0.rc2'
   s.add_dependency 'jquery-rails',            '~> 2.0.0'
   s.add_dependency 'devise',                  '~> 1.5.3'
-  s.add_dependency 'omniauth',                '~> 1.0.1' #'=0.2.6'
+  s.add_dependency 'omniauth',                '~> 1.0.1'
   s.add_dependency 'omniauth-openid',         '~> 1.0.1'
   s.add_dependency 'omniauth-ldap',           '~> 1.0.2'
   s.add_dependency 'omniauth-twitter',        '~> 0.0.7'
