@@ -1,5 +1,8 @@
 == 0.9.2
 
+* Bug Fix
+  * HTTP Basic Auth failure fix for Devise added, (Do not use ActiveSupport::Base64, https://github.com/plataformatec/devise/commit/9549a32500301c0a60a41bc31311b6198a8f0670)
+
 == 0.9.1
 
 * Bug Fix

@@ -43,4 +43,16 @@ class NavigationTest < ActionDispatch::IntegrationTest
     assert_equal '/logged_in_page', path
     assert_equal I18n.t('devise.sessions.signed_in'), flash[:notice]
   end
+  
+  test "valid users should be able to login using basic http" do
+    get logged_in_page_path( format: :json ), {}, "HTTP_AUTHORIZATION" => "Basic #{Base64.encode64("#{users(:valid).email}:password")}"
+    assert_equal({ name: 'Name', count: 5 }.to_json, @response.body)
+    assert_response :success
+  end
+  
+  test "valid users should not be able to login using basic http and wrong password" do
+    get logged_in_page_path( format: :json ), {}, "HTTP_AUTHORIZATION" => "Basic #{Base64.encode64("#{users(:valid).email}:wrongpassword")}"
+    assert_equal({ error: "Invalid email or password." }.to_json, @response.body)
+    assert_response 401
+  end
 end

@@ -4,7 +4,7 @@ Dummy::Application.routes.draw do
   
   resources :users
   
-  match "/logged_in_page" => "welcome#logged_in_page", :as => :settings
+  match "/logged_in_page" => "welcome#logged_in_page", :as => :logged_in_page
   
   root :to => 'welcome#index'
   
