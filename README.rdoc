@@ -138,10 +138,10 @@ Add the following to your app/models/authentication.rb
     OmniAuth.config.camelizations[provider.to_s.downcase] || provider.to_s.titleize
   end
 
-Edit config/initializers/devise.rb and comment out the sign_out_via delete line
+Edit config/initializers/devise.rb to use :get for devise sign_out_via
 
   # The default HTTP method used to sign out a resource. Default is :delete.
-  # config.sign_out_via = :delete
+  config.sign_out_via = :get
 
 Start your server and navigate to localhost:3000/users/login
 
