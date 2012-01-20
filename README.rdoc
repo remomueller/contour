@@ -7,7 +7,7 @@ Basic Rails framework files and assets for layout and authentication
 Contour can be installed from rubygems.org using:
 
   gem install contour
-  
+
 Or update your Gemfile to include:
 
   gem 'contour'
@@ -21,11 +21,11 @@ Contour depends on a config initializer. The config initializer is used to set v
 Contour uses a template to generate your application layout. You can add the following in your application_controller.rb:
 
   layout "contour/layouts/application"
-  
+
 Contour also provides a custom jquery-ui and BlueTrip CSS Framework.  To include these, add the following to your application.css manifest (after "*= require_self" and before "*= require_tree ."):
 
   *= require contour
-  
+
 Contour provides custom JavaScript.  In order to make the application layout function properly include the following at the beginning of your application.js (before "//= require_tree ." replacing "//= require jquery" and "//= require jquery_ujs"):
 
   //= require contour
@@ -39,11 +39,11 @@ In order to get registration working, you can use the modified Contour Authentic
 Make sure you have Rails 3.2.0
 
   rails -v
-  
+
   rails new blank_rails_project
-  
+
   cd blank_rails_project
-  
+
 Modify Gemfile and add
 
   gem 'contour', '~> 0.9.0'          # Basic Layout and Assets
@@ -51,10 +51,36 @@ Modify Gemfile and add
 Run Bundle install
 
   bundle install
-  
+
 Install contour files
 
   rails generate contour:install
+
+Add the authentication model
+
+  rails generate model Authentication user_id:integer provider:string uid:string
+
+Add first_name and last_name to user model
+
+  rails generate migration AddFirstNameAndLastNameToUsers first_name:string last_name:string
+
+Migrate your database
+
+  bundle exec rake db:create
+
+  bundle exec rake db:migrate
+
+Create a sample controller
+
+  rails generate controller welcome index
+
+Remove any scaffold.css files that may exist in your application
+
+  rm app/assets/stylesheets/scaffold.css*
+
+Remove the public/index.html
+
+  rm public/index.html
 
 Add the following line to your app/controllers/application_controller.rb
 
@@ -68,39 +94,15 @@ Edit your app/assets/stylesheets/application.css manifest to use Contour CSS (af
 
   *= require contour
 
-Remove any scaffold.css files that exist in your application
-
-Add the authentication model
-
-  rails generate model Authentication user_id:integer provider:string uid:string
-
-Add first_name and last_name to user model  
-
-  rails generate migration AddFirstNameAndLastNameToUsers first_name:string last_name:string
-
-Migrate your database
-
-  bundle exec rake db:create
-  
-  bundle exec rake db:migrate
-
-Remove the public/index.html
-
-  rm public/index.html
-  
-Create a sample controller
-
-  rails generate controller welcome index
-  
-Create a root in your config/routes.rb
-
-  root to: 'welcome#index'
-
 Make sure the devise line in config/routes.rb looks as follows
 
   devise_for :users, controllers: { registrations: 'contour/registrations', sessions: 'contour/sessions', passwords: 'contour/passwords' }, path_names: { sign_up: 'register', sign_in: 'login' }
 
-If there is a line that just says 'devise_for :users' or a duplicate, remove it
+<b>If there is a line that just says 'devise_for :users' or a duplicate, <i>REMOVE it</i></b>
+
+Create a root in your config/routes.rb
+
+  root to: 'welcome#index'
 
 Add the following to your app/models/user.rb
 
@@ -123,7 +125,7 @@ Add the following to your app/models/user.rb
       self.first_name = omniauth['info']['first_name'] if first_name.blank?
       self.last_name = omniauth['info']['last_name'] if last_name.blank?
     end
-    authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
+    authentications.build( provider: omniauth['provider'], uid: omniauth['uid'] )
   end
 
   def password_required?
@@ -146,12 +148,12 @@ Edit config/initializers/devise.rb to use :get for devise sign_out_via
 Start your server and navigate to localhost:3000/users/login
 
   rails s
-  
+
 You can then sign in using your google account (click on the google link), or by registering for an account at localhost:3000/users/register
 
 
 == Contributing to contour
- 
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
 * Fork the project

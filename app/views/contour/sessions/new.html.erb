@@ -3,10 +3,10 @@
 <table class="blank padded">
   <tr>
     <td style="vertical-align:top">
-      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <fieldset style="width:235px">
           <legend><%= @title %></legend>
-    
+
           <div class="field">
             <%= f.label :email %><br />
             <%= f.text_field :email %>
@@ -18,7 +18,7 @@
         </fieldset>
         <div class="actions">
           <% form_name = "new_#{resource.class.name.underscore}" %>
-          <%= link_to_function image_tag('contour/tick.png', :alt => '') + "Login", "$('##{form_name}').submit();", :class => "button positive" %>
+          <%= link_to_function image_tag('contour/tick.png', alt: '') + "Login", "$('##{form_name}').submit();", class: "button positive" %>
           <% if devise_mapping.rememberable? -%>
             <div style="padding-top:5px;padding-bottom:4px;"><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
           <% end -%>
@@ -30,7 +30,7 @@
       <% end %>
     </td>
     <td style="vertical-align:top">
-      <%= render :partial => 'contour/layouts/latest_news' %>
+      <%= render partial: 'contour/layouts/latest_news' %>
     </td>
   </tr>
 </table>

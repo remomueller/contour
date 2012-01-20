@@ -12,15 +12,10 @@ class Contour::AuthenticationsController < ApplicationController
   end
 
   def create
-    logger.info "request #{request.env["omniauth.auth"].inspect}"
     omniauth = request.env["omniauth.auth"]
-    logger.info "omniauth: #{omniauth.inspect}"
-    
     if omniauth
-    
       omniauth['uid'] = omniauth['info']['email'] if omniauth['provider'] == 'google_apps' and omniauth['info']
       authentication = Authentication.find_by_provider_and_uid(omniauth['provider'], omniauth['uid'])
-      logger.info "OMNI AUTH INFO: #{omniauth.inspect}"
       omniauth['info']['email'] = omniauth['extra']['raw_info']['email'] if omniauth['info'] and omniauth['info']['email'].blank? and omniauth['extra'] and omniauth['extra']['raw_info']
       if authentication
         logger.info "Existing authentication found."
@@ -44,14 +39,9 @@ class Contour::AuthenticationsController < ApplicationController
           redirect_to new_user_registration_path
         end
       end
-
     else
-      request.env.keys.each do |key|
-        logger.info "request.env[#{key}]: #{request.env[key]}"
-      end
       redirect_to authentications_path, alert: "Authentication not successful."
     end
-    
   end
 
   def destroy

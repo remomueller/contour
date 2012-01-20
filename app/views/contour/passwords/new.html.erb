@@ -1,10 +1,10 @@
 <% @title = 'Forgot your password?' %>
 
-<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= devise_error_messages! %>
   <fieldset style="width:235px">
     <legend><%= @title %></legend>
-    
+
     <div class="field">
       <%= f.label :email %><br />
       <%= f.text_field :email %>
@@ -12,7 +12,7 @@
   </fieldset>
   <div class="actions">
     <% form_name = "new_#{resource.class.name.underscore}" %>
-    <%= link_to_function image_tag('contour/tick.png', :alt => '') + "Send me reset password instructions", "$('##{form_name}').submit();", :class => "button positive" %>
+    <%= link_to_function image_tag('contour/tick.png', alt: '') + "Send me reset password instructions", "$('##{form_name}').submit();", class: "button positive" %>
     <div style="clear:both"></div><br />
     <%= link_to "Login here!", new_session_path(resource_name) %> or <%= link_to "Register here!", new_registration_path(resource_name) %>
   </div>

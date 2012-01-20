@@ -12,9 +12,9 @@ gem 'sqlite3'
 # Testing
 group :test do
   # Pretty printed test output
-  gem 'win32console', :platforms => [:mswin, :mingw]
-  gem 'turn', '~> 0.8.3', :require => false
-  gem 'simplecov', :require => false
+  gem 'win32console',     platforms: [:mswin, :mingw]
+  gem 'turn', '~> 0.8.3', require: false
+  gem 'simplecov',        require: false
 end
 
 # Declare any dependencies that are still in development here instead of in
@@ -23,4 +23,4 @@ end
 # your gem to rubygems.org.
 
 # To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+# gem 'ruby-debug19', require: 'ruby-debug'

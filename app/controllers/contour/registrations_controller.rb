@@ -1,6 +1,6 @@
 class Contour::RegistrationsController < Devise::RegistrationsController
-  prepend_before_filter :require_no_authentication, :only => [ :new ]
-  
+  prepend_before_filter :require_no_authentication, only: [ :new ]
+
   def create
     if user_signed_in?
       params[:user][:password] = params[:user][:password_confirmation] = Digest::SHA1.hexdigest(Time.now.usec.to_s)[0..19]
@@ -9,18 +9,18 @@ class Contour::RegistrationsController < Devise::RegistrationsController
         [:pp_committee, :pp_committee_secretary, :steering_committee, :steering_committee_secretary, :system_admin, :status].each do |attribute|
           @user.update_attribute attribute, params[:user][attribute]
         end
-        redirect_to(@user, :notice => 'User was successfully created.')
+        redirect_to @user, notice: 'User was successfully created.'
       else
-        render :action => "/users/new"
+        render action: "/users/new"
       end
     else
       super
       session[:omniauth] = nil unless @user.new_record?
     end
   end
-    
+
   private
-  
+
   def build_resource(*args)
     super
     if session[:omniauth]
@@ -28,9 +28,9 @@ class Contour::RegistrationsController < Devise::RegistrationsController
       @user.valid?
     end
   end
-  
+
   def after_inactive_sign_up_path_for(resource)
     new_session_path(resource) # root_path
   end
-  
+
 end

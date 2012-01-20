@@ -1,5 +1,11 @@
 == 0.9.3
 
+* Enhancements
+  * Dependency for Rails updated to 3.2.0 and OmniAuth 1.0.2
+
+* Refactoring
+  * Removed debug logging information
+
 == 0.9.2
 
 * Bug Fix
@@ -68,7 +74,7 @@
       # Replace
         provider :google_apps, OpenID::Store::Filesystem.new('/tmp')
       # With
-        provider :open_id, OpenID::Store::Filesystem.new('/tmp'), :name => 'google_apps', :identifier => 'https://www.google.com/accounts/o8/id'
+        provider :open_id, OpenID::Store::Filesystem.new('/tmp'), name: 'google_apps', identifier: 'https://www.google.com/accounts/o8/id'
   * Added icons from gentleface.com (see LICENSE in /app/assets/images/contour/gentleface/LICENSE)
   * Added qTip2, http://craigsworks.com/projects/qtip2/, distributed under http://creativecommons.org/licenses/by/3.0/
 
@@ -179,7 +185,7 @@
 
 * Enhancements
   * Added new image assets
-  * :target allowed as a parameter for a link in the menu, ex: :target => '_blank'
+  * :target allowed as a parameter for a link in the menu, ex: target: '_blank'
   * Added application_name_html configuration so that users can specify the html for the application name
   * :image and :image_options can now be passed to links to specify an image that appears to the right of the link
 
@@ -199,7 +205,7 @@
   * Update dependencies to Devise 1.4.4, (needed for Rails 3.1.0)
   * Menu items are now rendered using html_safe
   * Links and menu items can now have a :condition parameter passed to it which is a string that can be evaluated to true or false
-    * ex: :condition => 'current_user.admin?'
+    * ex: condition: 'current_user.admin?'
 
 * Testing
   * Created limited tests for authentications controller and registrations

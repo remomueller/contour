@@ -3,7 +3,7 @@
 <head>
   <title><%= [Contour.application_name, @title].compact.join(' - ').html_safe %></title>
   <%= favicon_link_tag %>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
@@ -14,33 +14,33 @@
     <div id="version" style="position:relative;display:none">
       <span style="position:absolute;top:-15px;left:82px;font-size:0.5em;font-variant:normal" class="quiet"><%= Contour.application_version %></span>
     </div>
-    <%= image_tag(Contour.header_title_image, :alt => '', :style => 'vertical-align:middle') unless Contour.header_title_image.blank? %>
-    <%= link_to (Contour.application_name_html.blank? ? Contour.application_name : Contour.application_name_html.html_safe), root_path, :style => 'text-decoration:none;color:#404040;', :onmouseover => "$('#version').show();", :onmouseout => "$('#version').hide();" %>
+    <%= image_tag(Contour.header_title_image, alt: '', style: 'vertical-align:middle') unless Contour.header_title_image.blank? %>
+    <%= link_to (Contour.application_name_html.blank? ? Contour.application_name : Contour.application_name_html.html_safe), root_path, style: 'text-decoration:none;color:#404040;', onmouseover: "$('#version').show();", onmouseout: "$('#version').hide();" %>
   </div>
 
   <div class="container" style="position:relative">
     <div id="message">
-      <%= render :partial => 'contour/layouts/message' %>
+      <%= render partial: 'contour/layouts/message' %>
     </div>
   </div>
 
   <div id="menu" class="container shadow">
-    <%= render :partial => 'contour/layouts/menu' %>
+    <%= render partial: 'contour/layouts/menu' %>
   </div>
 
   <div id="content" class="container">
     <%= yield %>
   </div>
-  
+
   <div id="popup" style="overflow-y: hidden;">
     <div id="popup_header" style="padding: 12px;">
-      <div style="float:right;margin-right:10px; margin-top:-4px"><%= image_tag(Contour.header_title_image, :alt => '') unless Contour.header_title_image.blank?  %></div>
+      <div style="float:right;margin-right:10px; margin-top:-4px"><%= image_tag(Contour.header_title_image, alt: '') unless Contour.header_title_image.blank?  %></div>
       <a id="popup_close">x</a>
       <h1 id="popup_title"></h1>
     </div>
     <div id="popup_content"></div>
   </div>
-  
+
   <div id="background_popup"></div>
 </body>
 </html>

@@ -7,13 +7,13 @@
   <% Contour.menu_items.each do |menu_item| %>
     <% if display.include?(menu_item[:display]) and (menu_item[:condition].blank? or eval(menu_item[:condition])) %>
       <li class="parent li_<%= menu_item[:position] %>">
-        <%= link_to_if (not menu_item[:path].blank?), (menu_item[:eval] ? eval(menu_item[:name]) : menu_item[:name].html_safe + (menu_item[:image].blank? ? '' : image_tag(menu_item[:image], menu_item[:image_options]))), eval(menu_item[:path].to_s), :class => 'noicon', :target => menu_item[:target] %>
+        <%= link_to_if (not menu_item[:path].blank?), (menu_item[:eval] ? eval(menu_item[:name]) : menu_item[:name].html_safe + (menu_item[:image].blank? ? '' : image_tag(menu_item[:image], menu_item[:image_options]))), eval(menu_item[:path].to_s), class: 'noicon', target: menu_item[:target] %>
         <% if menu_item[:links].size > 0 %>
           <ul>
           <% menu_item[:links].each do |link| %>
             <% if link[:condition].blank? or eval(link[:condition]) %>
               <% if link[:html].blank? %>
-                <li><%= link_to_if (not link[:path].blank?), (link[:eval] ? eval(link[:name]) : link[:name].html_safe + (link[:image].blank? ? '' : image_tag(link[:image], link[:image_options]))), eval(link[:path].to_s), :class => 'noicon', :target => link[:target] %></li>
+                <li><%= link_to_if (not link[:path].blank?), (link[:eval] ? eval(link[:name]) : link[:name].html_safe + (link[:image].blank? ? '' : image_tag(link[:image], link[:image_options]))), eval(link[:path].to_s), class: 'noicon', target: link[:target] %></li>
               <% else %>
                 <li><%= link[:eval] ? eval(link[:html]).html_safe : link[:html].html_safe %></li>
               <% end %>
@@ -24,5 +24,5 @@
       </li>
     <% end %>
   <% end %>
-  <%= render :partial => 'contour/authentications/menu' unless user_signed_in? %>
+  <%= render partial: 'contour/authentications/menu' unless user_signed_in? %>
 </ul>
