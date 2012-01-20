@@ -164,5 +164,5 @@ You can then sign in using your google account (click on the google link), or by
 
 == Copyright
 
-Copyright (c) 2012 Remo Mueller. See {LICENSE}[http:LICENSE] for further details.
+Copyright (c) 2012 Remo Mueller. See {LICENSE}[file:/remomueller/contour/blob/master/LICENSE] for further details.
 
