@@ -98,7 +98,7 @@ Make sure the devise line in config/routes.rb looks as follows
 
   devise_for :users, controllers: { registrations: 'contour/registrations', sessions: 'contour/sessions', passwords: 'contour/passwords' }, path_names: { sign_up: 'register', sign_in: 'login' }
 
-<b>If there is a line that just says 'devise_for :users' or a duplicate, <i>REMOVE it</i></b>
+<b>If there is a line that just says 'devise_for :users' or a duplicate, <i>REMOVE IT!</i></b>
 
 Create a root in your config/routes.rb
 
@@ -164,5 +164,5 @@ You can then sign in using your google account (click on the google link), or by
 
 == Copyright
 
-Copyright (c) 2012 Remo Mueller. See LICENSE for further details.
+Copyright (c) 2012 Remo Mueller. See {LICENSE}[link:/remomueller/contour/blob/master/LICENSE] for further details.
 
