@@ -145,11 +145,11 @@ Edit config/initializers/devise.rb to use :get for devise sign_out_via
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :get
 
-Start your server and navigate to localhost:3000/users/login
+Start your server and navigate to http://localhost:3000/users/login
 
   rails s
 
-You can then sign in using your google account (click on the google link), or by registering for an account at localhost:3000/users/register
+You can then sign in using your {Google Account}[http://localhost:3000/auth/google_apps?domain=gmail.com] or by registering for an account at http://localhost:3000/users/register
 
 
 == Contributing to contour
