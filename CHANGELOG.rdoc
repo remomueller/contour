@@ -2,6 +2,8 @@
 
 * Enhancements
   * Dependency for Rails updated to 3.2.0 and OmniAuth 1.0.2
+  * Updated to use Devise 2.0.0.rc
+    * Important! Update Devise Migrations to new format! {https://github.com/plataformatec/devise/wiki/How-To:-Upgrade-to-Devise-2.0-migration-schema-style}[Devise 2.0.0 Migration Schema]
 
 * Refactoring
   * Removed debug logging information
