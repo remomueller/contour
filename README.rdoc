@@ -36,7 +36,7 @@ In order to get registration working, you can use the modified Contour Authentic
 
 == Setting up a new project with quick authentication
 
-Make sure you have Rails 3.2.0
+Make sure you have Rails 3.2.1
 
   rails -v
 
@@ -162,7 +162,7 @@ You can then sign in using your {Google Account}[http://localhost:3000/auth/goog
 * Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
 
-== Copyright
+== Copyright {<img style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png"/>}[http://creativecommons.org/licenses/by-nc-sa/3.0/]
 
 Copyright (c) 2012 Remo Mueller. See {LICENSE}[https://github.com/remomueller/contour/blob/master/LICENSE] for further details.
 

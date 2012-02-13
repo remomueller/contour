@@ -1,4 +1,4 @@
-source "http://rubygems.org"
+source "https://rubygems.org"
 
 # Declare your gem's dependencies in contour.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
@@ -12,9 +12,9 @@ gem 'sqlite3'
 # Testing
 group :test do
   # Pretty printed test output
-  gem 'win32console',     platforms: [:mswin, :mingw]
-  gem 'turn', '~> 0.8.3', require: false
-  gem 'simplecov',        require: false
+  gem 'win32console',                       :platforms => [ :mswin, :mingw ]
+  gem 'turn',         '~> 0.9.2',           :require => false
+  gem 'simplecov',                          :require => false
 end
 
 # Declare any dependencies that are still in development here instead of in
