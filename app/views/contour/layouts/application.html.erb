@@ -8,14 +8,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%#= javascript_tag "var root_url='#{Contour.application_site_url + '/'}';var auth_token='#{form_authenticity_token}';" %>
   <%= javascript_tag "var root_url='#{request.script_name + '/'}';var auth_token='#{form_authenticity_token}';" %>
   <div id="header" class="container" <%= "style='background-image: url(#{request.script_name}/assets/#{Contour.header_background_image});'" unless Contour.header_background_image.blank? %>>
-    <div id="version" style="position:relative;display:none">
-      <span style="position:absolute;top:-15px;left:82px;font-size:0.5em;font-variant:normal" class="quiet"><%= Contour.application_version %></span>
-    </div>
     <%= image_tag(Contour.header_title_image, alt: '', style: 'vertical-align:middle') unless Contour.header_title_image.blank? %>
-    <%= link_to (Contour.application_name_html.blank? ? Contour.application_name : Contour.application_name_html.html_safe), root_path, style: 'text-decoration:none;color:#404040;', onmouseover: "$('#version').show();", onmouseout: "$('#version').hide();" %>
+    <%= link_to (Contour.application_name_html.blank? ? Contour.application_name : Contour.application_name_html.html_safe), root_path, style: 'text-decoration:none;', onmouseover: "$('#version').show();", onmouseout: "$('#version').hide();" %>
+      <span id="version" style="display:none;font-size:0.5em;font-variant:normal" class="quiet"><%= Contour.application_version %></span>
   </div>
 
   <div class="container" style="position:relative">
@@ -24,8 +21,10 @@
     </div>
   </div>
 
-  <div id="menu" class="container shadow">
-    <%= render partial: 'contour/layouts/menu' %>
+  <div style="height:29px">
+    <div id="menu" class="container shadow">
+      <%= render partial: 'contour/layouts/menu' %>
+    </div>
   </div>
 
   <div id="content" class="container">

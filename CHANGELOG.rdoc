@@ -1,5 +1,8 @@
 == 0.10.0
 
+* Enhancements
+  * Changes made to accomodate contour template gems like contour-minimalist
+
 == 0.9.4
 
 * Enhancements

@@ -6,7 +6,7 @@ module Contour
   # Default Application Name
   mattr_accessor :application_name
   @@application_name = 'Application Name'
-  
+
   mattr_accessor :application_name_html
   @@application_name_html = nil
 
@@ -18,14 +18,14 @@ module Contour
   # mattr_accessor :application_site_url
   # @@application_site_url = 'http://localhost'
 
-  # Default Application Version
+  # Default Header Background Image (Logo)
   mattr_accessor :header_background_image
   @@header_background_image = 'rails.png'
-  
+
   # Default Application Version
   mattr_accessor :header_title_image
   @@header_title_image = nil
-  
+
   # Default Menu Items
   mattr_accessor :menu_items
   @@menu_items = [
@@ -45,15 +45,15 @@ module Contour
       links: []
     }
   ]
-   
+
   # Default news feed
   mattr_accessor :news_feed
   @@news_feed = nil
-  
+
   # Default max number of items displayed in the news feed
   mattr_accessor :news_feed_items
   @@news_feed_items = 5
-  
+
   def self.setup
     yield self
   end
