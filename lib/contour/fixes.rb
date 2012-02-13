@@ -4,6 +4,6 @@ require 'contour/fixes/rack.rb'
 
 module Contour
   module Fixes
-    
+
   end
 end

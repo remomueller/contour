@@ -2,6 +2,11 @@
 
 * Enhancements
   * Dependency for Rails updated to 3.2.1 and Devise 2.0.1
+  * Devise no longer complains about missing Engine Route, set to :main_app
+  * Removed Devise fix that is no longer needed as of Devise 2.0.1
+
+* Testing
+  * Passwords controller test added for "Forget Password"
 
 == 0.9.3
 
