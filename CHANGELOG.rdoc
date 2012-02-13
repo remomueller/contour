@@ -1,7 +1,7 @@
 == 0.9.4
 
 * Enhancements
-  * Dependency for Rails updated to 3.2.0 and Devise 2.0.1
+  * Dependency for Rails updated to 3.2.1 and Devise 2.0.1
 
 == 0.9.3
 
