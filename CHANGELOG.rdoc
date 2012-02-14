@@ -1,5 +1,10 @@
 == 0.10.1
 
+* Enhancements
+  * Added options for setting body_background_{image|color} and link_color
+    * Setting these as arrays will rotate through on a daily basis
+    * Use the month_day configuration to set specific colors/images for select days
+
 == 0.10.0
 
 * Enhancements

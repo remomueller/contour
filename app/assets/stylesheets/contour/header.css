@@ -14,5 +14,10 @@
 	background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: top right;
-  background-color: #FFF;
+  background-color: transparent;
+}
+
+#header a:link, #header a:visited, #header a:active, #header a:focus {
+  color: #404040;
+  text-decoration: none;
 }

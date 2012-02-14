@@ -54,7 +54,53 @@ module Contour
   mattr_accessor :news_feed_items
   @@news_feed_items = 5
 
+  # A string or array of strings that represent a CSS color code for generic link color
+  mattr_accessor :link_color
+  @@link_color = nil
+
+  # A string or array of strings that represent a CSS color code for the body background
+  mattr_accessor :body_background_color
+  @@body_background_color = nil
+
+  # A string or array of strings that represent an image url for the body background image
+  mattr_accessor :body_background_image
+  @@body_background_image = nil
+
+  # A hash where the key is a string in "month-day" format where values are a hash of the link_color, body_background_color and/or body_background_image
+  # An example might be (April 1st), { "4-1" => { body_background_image: 'aprilfools.jpg' } }
+  # Note the lack of leading zeros!
+  # Special days take precendence over the rotating options given above
+  mattr_accessor :month_day
+  @@month_day = {}
+
   def self.setup
     yield self
+  end
+
+  def self.link_color_select
+    retrieve_option(:link_color) || mod_year(link_color)
+  end
+
+  def self.body_background_color_select
+    retrieve_option(:body_background_color) || mod_year(body_background_color)
+  end
+
+  def self.body_background_image_select()
+    retrieve_option(:body_background_image) || mod_year(body_background_image)
+  end
+
+  def self.retrieve_option(option_name)
+    key = Date.today.month.to_s + "-" + Date.today.day.to_s
+    if month_day.kind_of?(Hash) and month_day[key] and not month_day[key][option_name.to_sym].blank?
+      month_day[key][option_name.to_sym]
+    else
+      nil
+    end
+  end
+
+  # Takes a string or array as input and returns element from location (YearDay % ArraySize)
+  def self.mod_year(element)
+    array = [element].flatten
+    array.size > 0 ? array[Date.today.yday % array.size] : nil
   end
 end

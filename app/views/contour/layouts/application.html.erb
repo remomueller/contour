@@ -6,6 +6,16 @@
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <style type="text/css">
+    body {
+      <%= "background-image: url(#{image_path(Contour.body_background_image_select) rescue ''});" unless Contour.body_background_image_select.blank? %>
+      <%= "background-color: #{Contour.body_background_color_select};" unless Contour.body_background_color_select.blank? %>
+    }
+
+    a:link, a:visited, a:hover, a:active, a:focus, #header a:hover, #menu a:hover {
+      <%= "color: #{Contour.link_color_select};" unless Contour.link_color_select.blank? %>
+    }
+  </style>
 </head>
 <body>
   <%= javascript_tag "var root_url='#{request.script_name + '/'}';var auth_token='#{form_authenticity_token}';" %>

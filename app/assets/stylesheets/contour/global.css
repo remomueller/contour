@@ -2,7 +2,13 @@
 /*              GLOBALS               */
 /**************************************/
 
-body{ color: #404040; overflow-y: scroll; }
+body {
+  color: #404040;
+  overflow-y: scroll;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
+}
 
 a:link { color: #057080; }
 a:hover { color: #EB6C20; }
@@ -16,10 +22,18 @@ a:link.positive {
   color: #529214;
 }
 
+a:link, a:visited, #header a:hover, #menu a:hover {
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  text-decoration: underline;
+}
+
 #content {
   margin-top: 10px;
   padding: 0px 4px 4px 4px;
-  background-color: #FFF;
+  background-color: transparent;
 }
 
 pre {
