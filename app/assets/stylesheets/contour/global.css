@@ -14,11 +14,11 @@ a:link { color: #057080; }
 a:hover { color: #EB6C20; }
 hr { margin:0px; }
 
-a:link.negative {
+a:link.negative, a:visited.negative {
   color: #D12F19;
 }
 
-a:link.positive {
+a:link.positive:link, a:visited.positive {
   color: #529214;
 }
 
