@@ -9,12 +9,16 @@ gemspec
 gem 'jquery-rails'
 gem 'sqlite3'
 
+group :assets do
+  gem 'twitter-bootstrap-rails'
+end
+
 # Testing
 group :test do
   # Pretty printed test output
-  gem 'win32console',                       :platforms => [ :mswin, :mingw ]
-  gem 'turn',         '~> 0.9.2',           :require => false
-  gem 'simplecov',                          :require => false
+  gem 'win32console',                             :platforms => [ :mswin, :mingw ]
+  gem 'turn',               '~> 0.9.4'
+  gem 'simplecov',          '~> 0.6.1',           :require => false
 end
 
 # Declare any dependencies that are still in development here instead of in

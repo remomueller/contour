@@ -1,36 +1,17 @@
-<% @title = 'Login' %>
+<h2>Sign in</h2>
 
-<table class="blank padded">
-  <tr>
-    <td style="vertical-align:top">
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <fieldset style="width:235px">
-          <legend><%= @title %></legend>
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <div><%= f.label :email %>
+  <%= f.email_field :email %></div>
 
-          <div class="field">
-            <%= f.label :email %><br />
-            <%= f.text_field :email %>
-          </div>
-          <div class="field">
-            <%= f.label :password %><br />
-            <%= f.password_field :password %>
-          </div>
-        </fieldset>
-        <div class="actions">
-          <% form_name = "new_#{resource.class.name.underscore}" %>
-          <%= link_to_function image_tag('contour/tick.png', alt: '') + "Login", "$('##{form_name}').submit();", class: "button positive" %>
-          <% if devise_mapping.rememberable? -%>
-            <div style="padding-top:5px;padding-bottom:4px;"><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-          <% end -%>
-          <% if devise_mapping.recoverable? && controller_name != 'passwords' %>
-            <div style="clear:both"></div><br />
-            <%= link_to "Forgot your password?", new_password_path(resource_name) %> or <%= link_to "Register here!", new_registration_path(resource_name) %>
-          <% end %>
-        </div>
-      <% end %>
-    </td>
-    <td style="vertical-align:top">
-      <%= render partial: 'contour/layouts/latest_news' %>
-    </td>
-  </tr>
-</table>
+  <div><%= f.label :password %>
+  <%= f.password_field :password %></div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+  <% end -%>
+
+  <div><%= f.submit "Sign in", class: 'btn btn-primary' %></div>
+<% end %>
+
+<%= render "links" %>

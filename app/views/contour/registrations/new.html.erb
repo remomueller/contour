@@ -1,45 +1,18 @@
-<% @title = 'Register' %>
+<h2>Sign up</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
-  <fieldset style="width:235px">
-    <legend><%= @title %></legend>
 
-    <% if resource.methods.include?(:first_name) %>
-      <div class="field">
-        <%= f.label :first_name %><br />
-        <%= f.text_field :first_name  %>
-      </div>
-    <% end %>
+  <div><%= f.label :email %>
+  <%= f.email_field :email %></div>
 
-    <% if resource.methods.include?(:last_name) %>
-      <div class="field">
-        <%= f.label :last_name %><br />
-        <%= f.text_field :last_name  %>
-      </div>
-    <% end %>
+  <div><%= f.label :password %>
+  <%= f.password_field :password %></div>
 
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.text_field :email %>
-    </div>
+  <div><%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %></div>
 
-    <% if resource.password_required? %>
-      <div class="field">
-        <%= f.label :password %><br />
-        <%= f.password_field :password %>
-      </div>
-
-      <div class="field">
-        <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation %>
-      </div>
-    <% end %>
-  </fieldset>
-  <div class="actions">
-    <% form_name = "new_#{resource.class.name.underscore}" %>
-    <%= link_to_function image_tag('contour/tick.png', alt: '') + "Sign up", "$('##{form_name}').submit();", class: "button positive" %>
-    <div style="clear:both"></div><br />
-    <%= link_to "Already signed up? Login here!", new_session_path(resource_name) %>
-  </div>
+  <div><%= f.submit "Sign up", class: 'btn btn-primary' %></div>
 <% end %>
+
+<%= render "links" %>

@@ -3,9 +3,13 @@
 <head>
   <title><%= [Contour.application_name, @title].compact.join(' - ').html_safe %></title>
   <%= favicon_link_tag %>
-  <%= stylesheet_link_tag    "application", media: "all" %>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+  <![endif]-->
+  <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style type="text/css">
     body {
       <%= "background-image: url(#{image_path(Contour.body_background_image_select) rescue ''});" unless Contour.body_background_image_select.blank? %>
@@ -19,6 +23,8 @@
 </head>
 <body>
   <%= javascript_tag "var root_url='#{request.script_name + '/'}';var auth_token='#{form_authenticity_token}';" %>
+
+<% if false %>
   <div id="header" class="container" <%= "style='background-image: url(#{request.script_name}/assets/#{Contour.header_background_image});'" unless Contour.header_background_image.blank? %>>
     <%= image_tag(Contour.header_title_image, alt: '', style: 'vertical-align:middle') unless Contour.header_title_image.blank? %>
     <%= link_to (Contour.application_name_html.blank? ? Contour.application_name : Contour.application_name_html.html_safe), root_path, style: 'text-decoration:none;', onmouseover: "$('#version').show();", onmouseout: "$('#version').hide();" %>
@@ -30,26 +36,14 @@
       <%= render partial: 'contour/layouts/message' %>
     </div>
   </div>
+<% end %>
 
-  <div style="height:29px">
-    <div id="menu" class="container shadow">
-      <%= render partial: 'contour/layouts/menu' %>
-    </div>
+  <div class="navbar navbar-fixed-top">
+    <%= render partial: 'contour/layouts/menu' %>
   </div>
 
-  <div id="content" class="container">
+  <div class="container">
     <%= yield %>
   </div>
-
-  <div id="popup" style="overflow-y: hidden;">
-    <div id="popup_header" style="padding: 12px;">
-      <div style="float:right;margin-right:10px; margin-top:-4px"><%= image_tag(Contour.header_title_image, alt: '') unless Contour.header_title_image.blank?  %></div>
-      <a id="popup_close">x</a>
-      <h1 id="popup_title"></h1>
-    </div>
-    <div id="popup_content"></div>
-  </div>
-
-  <div id="background_popup"></div>
 </body>
 </html>
