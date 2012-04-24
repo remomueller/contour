@@ -2,7 +2,7 @@ class Contour::RegistrationsController < Devise::RegistrationsController
   prepend_before_filter :require_no_authentication, only: [ :new ]
 
   def create
-    if user_signed_in?
+    if signed_in?
       params[:user][:password] = params[:user][:password_confirmation] = Digest::SHA1.hexdigest(Time.now.usec.to_s)[0..19]
       @user = User.new(params[:user])
       if @user.save
