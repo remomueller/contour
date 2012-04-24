@@ -46,7 +46,7 @@ Make sure you have Rails 3.2.1
 
 Modify Gemfile and add
 
-  gem 'contour', '~> 0.10.0'          # Basic Layout and Assets
+  gem 'contour', '~> 1.0.0'          # Basic Layout and Assets
 
 Run Bundle install
 
@@ -60,10 +60,6 @@ Add the authentication model
 
   rails generate model Authentication user_id:integer provider:string uid:string
 
-Add first_name and last_name to user model
-
-  rails generate migration AddFirstNameAndLastNameToUsers first_name:string last_name:string
-
 Migrate your database
 
   bundle exec rake db:create
@@ -72,11 +68,7 @@ Migrate your database
 
 Create a sample controller
 
-  rails generate controller welcome index
-
-Remove any scaffold.css files that may exist in your application
-
-  rm app/assets/stylesheets/scaffold.css*
+  rails generate controller welcome index --skip-stylesheets
 
 Remove the public/index.html
 
@@ -114,10 +106,6 @@ Add the following to your app/models/user.rb
 
   # Model Relationships
   has_many :authentications
-
-  def name
-    "#{first_name} #{last_name}"
-  end
 
   def apply_omniauth(omniauth)
     unless omniauth['info'].blank?

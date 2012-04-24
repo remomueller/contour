@@ -17,8 +17,8 @@ end
 group :test do
   # Pretty printed test output
   gem 'win32console',                             :platforms => [ :mswin, :mingw ]
-  gem 'turn',               '~> 0.9.4'
-  gem 'simplecov',          '~> 0.6.1',           :require => false
+  gem 'turn',               '~> 0.9.5'
+  gem 'simplecov',          '~> 0.6.2',           :require => false
 end
 
 # Declare any dependencies that are still in development here instead of in
