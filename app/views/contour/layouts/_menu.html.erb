@@ -18,19 +18,19 @@
       <ul class="nav <%= 'pull-right' if position == 'right' %>">
         <% items.each_with_index do |menu_item, index| %>
           <% if display.include?(menu_item[:display]) and (menu_item[:condition].blank? or eval(menu_item[:condition])) %>
-            <li class="<%= 'dropdown' if (menu_item[:links] || []).size > 0 %>" id="menu<%= index %>">
+            <li class="<%= 'dropdown' if (menu_item[:links] || []).size > 0 %>" id="menu<%= position %><%= index %>">
               <%= link_to(
                   (menu_item[:eval] ? eval(menu_item[:name]) : menu_item[:name].html_safe + (menu_item[:image].blank? ? '' : image_tag(menu_item[:image], menu_item[:image_options]))),
                   (menu_item[:path].blank? ? '#' : eval(menu_item[:path].to_s)),
-                  target: menu_item[:target], style: "#{ 'display:inline-block;padding-left:0px' if (menu_item[:links] || []).size > 0 }")
+                  target: menu_item[:target], style: "#{ 'display:inline-block;padding-right:0px' if (menu_item[:links] || []).size > 0 }")
                    %>
-              <%= link_to "<b class='caret'></b>".html_safe, '#', 'data-target' => "#menu#{index}", class: 'dropdown-toggle', style: 'display:inline-block;padding-left:0px' if (menu_item[:links] || []).size > 0 %>
+              <%= link_to "<b class='caret'></b>".html_safe, '#', 'data-target' => "#menu#{position}#{index}", class: 'dropdown-toggle', 'data-toggle' => 'dropdown', style: 'display:inline-block;padding-left:0px' if (menu_item[:links] || []).size > 0 %>
               <% if menu_item[:links].size > 0 %>
                 <ul class="dropdown-menu">
                 <% menu_item[:links].each do |link| %>
                   <% if link[:condition].blank? or eval(link[:condition]) %>
                     <% if link[:divider] != true %>
-                      <li><%= link_to (link[:eval] ? eval(link[:html].blank? ? link[:name] : link[:html]) : (link[:html].blank? ? link[:name] : link[:html]).html_safe + (link[:image].blank? ? '' : image_tag(link[:image], link[:image_options]))), link[:path].blank? ? '#' : eval(link[:path].to_s), target: link[:target] %></li>
+                      <li><%= link_to (link[:eval] ? eval(link[:html].blank? ? link[:name] : link[:html].html_safe) : (link[:html].blank? ? link[:name] : link[:html].html_safe) + (link[:image].blank? ? '' : image_tag(link[:image], link[:image_options]))).html_safe, link[:path].blank? ? '#' : eval(link[:path].to_s), target: link[:target] %></li>
                     <% else %>
                       <li class="divider"></li>
                     <% end %>
@@ -105,7 +105,7 @@
               <% if link[:html].blank? %>
                 <li><%= link_to_if (not link[:path].blank?), (link[:eval] ? eval(link[:name]) : link[:name].html_safe + (link[:image].blank? ? '' : image_tag(link[:image], link[:image_options]))), eval(link[:path].to_s), class: 'noicon', target: link[:target] %></li>
               <% else %>
-                <li><%= link[:eval] ? eval(link[:html]).html_safe : link[:html].html_safe %></li>
+                <li><%= (link[:eval] ? eval(link[:html]) : link[:html]).html_safe %></li>
               <% end %>
             <% end %>
           <% end %>
