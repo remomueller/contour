@@ -24,10 +24,12 @@
                   <ul class="dropdown-menu">
                   <% menu_item[:links].each do |link| %>
                     <% if link[:condition].blank? or eval(link[:condition]) %>
-                      <% if link[:divider] != true %>
-                        <li><%= link_to (link[:eval] ? eval(link[:html].blank? ? link[:name] : link[:html].html_safe) : (link[:html].blank? ? link[:name] : link[:html].html_safe) + (link[:image].blank? ? '' : image_tag(link[:image], link[:image_options]))).html_safe, link[:path].blank? ? '#' : eval(link[:path].to_s), target: link[:target] %></li>
-                      <% else %>
+                      <% if link[:divider] == true %>
                         <li class="divider"></li>
+                      <% elsif link[:authentications] == true %>
+                        <%= render partial: 'contour/authentications/menu' %>
+                      <% else %>
+                        <li><%= link_to (link[:eval] ? eval(link[:html].blank? ? link[:name] : link[:html].html_safe) : (link[:html].blank? ? link[:name] : link[:html].html_safe) + (link[:image].blank? ? '' : image_tag(link[:image], link[:image_options]))).html_safe, link[:path].blank? ? '#' : eval(link[:path].to_s), target: link[:target] %></li>
                       <% end %>
                     <% end %>
                   <% end %>
@@ -41,8 +43,3 @@
     </div>
   </div>
 </div>
-
-
-<% if false %>
-  <%= render partial: 'contour/authentications/menu' unless signed_in? %>
-<% end %>
