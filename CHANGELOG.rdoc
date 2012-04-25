@@ -1,11 +1,13 @@
 == 1.0.0 (unreleased)
 
 * Enhancements
+  * Twitter-Bootstrap CSS layout is now default!
   * Authentications can now be placed as a submenu using { authentications: true } anywhere in the contour links configuration
 
 * Breaking Changes
   * All icons other than Gentleface 16x16 have been removed
   * User model no longer requires a name attribute or method
+  * Authentication model is no longer required to be the user model
 
 == 0.10.2
 
