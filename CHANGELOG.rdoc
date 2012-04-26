@@ -3,11 +3,17 @@
 * Enhancements
   * Twitter-Bootstrap CSS layout is now default!
   * Authentications can now be placed as a submenu using { authentications: true } anywhere in the contour links configuration
+  * Rails updated to minimum 3.2.3
 
 * Breaking Changes
+  * CSS updated to use Twitter-Bootstrap
+    * New CSS classes here: http://twitter.github.com/bootstrap/base-css.html
+    * New JS operations here: http://twitter.github.com/bootstrap/javascript.html
+    * New Components here: http://twitter.github.com/bootstrap/components.html
   * All icons other than Gentleface 16x16 have been removed
   * User model no longer requires a name attribute or method
   * Authentication model is no longer required to be the user model
+  * Authentication model creation no longer assigns application specific variables
 
 == 0.10.2
 

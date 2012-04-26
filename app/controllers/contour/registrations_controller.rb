@@ -3,15 +3,19 @@ class Contour::RegistrationsController < Devise::RegistrationsController
 
   def create
     if signed_in?
-      params[:user][:password] = params[:user][:password_confirmation] = Digest::SHA1.hexdigest(Time.now.usec.to_s)[0..19]
+      # TODO: Should use "Resource" and not "User"
+      params[:user][:password] = params[:user][:password_confirmation] = Digest::SHA1.hexdigest(Time.now.usec.to_s)[0..19] if params[:user][:password].blank? and params[:user][:password_confirmation].blank?
       @user = User.new(params[:user])
       if @user.save
-        [:pp_committee, :pp_committee_secretary, :steering_committee, :steering_committee_secretary, :system_admin, :status].each do |attribute|
-          @user.update_attribute attribute, params[:user][attribute]
+        respond_to do |format|
+          format.html { redirect_to @user, notice: 'User was successfully created.' }
+          format.json { render json: @user, only: [:id, :email], status: :created, location: @user }
         end
-        redirect_to @user, notice: 'User was successfully created.'
       else
-        render action: "/users/new"
+        respond_to do |format|
+          format.html { render action: "/users/new" }
+          format.json { render json: @user.errors, status: :unprocessable_entity}
+        end
       end
     else
       super
