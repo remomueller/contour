@@ -11,3 +11,6 @@
     element = $(value)
     element.fadeIn(2000)
   )
+
+jQuery ->
+  $(".collapse").collapse()
