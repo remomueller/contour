@@ -30,12 +30,6 @@
     <%= link_to (Contour.application_name_html.blank? ? Contour.application_name : Contour.application_name_html.html_safe), root_path, style: 'text-decoration:none;', onmouseover: "$('#version').show();", onmouseout: "$('#version').hide();" %>
       <span id="version" style="display:none;font-size:0.5em;font-variant:normal" class="quiet"><%= Contour.application_version %></span>
   </div>
-
-  <div class="container" style="position:relative">
-    <div id="message">
-      <%= render partial: 'contour/layouts/message' %>
-    </div>
-  </div>
 <% end %>
 
   <div class="navbar navbar-fixed-top">

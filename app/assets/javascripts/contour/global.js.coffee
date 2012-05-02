@@ -6,11 +6,5 @@
   else if element
     element.html('<img width=\"13\" height=\"13\" src=\"' + root_url + 'assets/ajax-loader.gif\" align=\"absmiddle\" alt=\"...\" />' + text)
 
-@showMessage = (elements) ->
-  $.each(elements, (index, value) ->
-    element = $(value)
-    element.fadeIn(2000)
-  )
-
 jQuery ->
   $(".collapse").collapse()
