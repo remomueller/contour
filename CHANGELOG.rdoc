@@ -4,6 +4,7 @@
   * Twitter-Bootstrap CSS layout is now default!
   * Authentications can now be placed as a submenu using { authentications: true } anywhere in the contour links configuration
   * Rails updated to minimum 3.2.3
+  * Redirects to the user's alternate login page if a user fails to login on the default devise sign in page
 
 * Breaking Changes
   * CSS updated to use Twitter-Bootstrap
