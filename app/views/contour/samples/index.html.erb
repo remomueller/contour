@@ -1,9 +1,13 @@
-<h1>Contour Details</h1>
+<% @title = 'Contour Details' %>
+<div class="page-header">
+  <h1><%= @title %></h1>
+</div>
 
-<p>
-  <b>Contour Version:</b>
-  <%= Contour::VERSION::STRING %>
-</p>
+<dl class="dl-horizontal">
+  <dt>Contour Version</dt>
+  <dd><%= Contour::VERSION::STRING %></dd>
+</dl>
+
 
 <h2>Application Details</h2>
 
@@ -15,18 +19,18 @@ If the file does not exist run:<br />
 <br />
 <code style="margin-left:10px">rails generate contour:install</code><br />
 <br />
-<% unless request.script_name.blank? %>
-  <p><b>Subdomain:</b>
-    <%= request.script_name %>
-  </p>
-<% end %>
-<% (Contour.class_variables.collect{|v| v.to_s.gsub('@@','')} - ['menu_items']).each do |attribute| %>
-  <p>
-    <b><%= attribute.titleize %>:</b>
+
+<dl class="dl-horizontal">
+  <% unless request.script_name.blank? %>
+    <dt>Subdomain</dt>
+    <dd><%= request.script_name %></dd>
+  <% end %>
+  <% (Contour.class_variables.collect{|v| v.to_s.gsub('@@','')} - ['menu_items']).each do |attribute| %>
+    <dt><%= attribute.titleize %></dt>
     <% if Contour.send(attribute).blank? %>
-      <span class="quiet">NULL</span>
+      <dd class="muted">NULL</dd>
     <% else %>
-      <%= Contour.send(attribute) %>
+      <dd><%= Contour.send(attribute) %></dd>
     <% end %>
-  </p>
-<% end %>
+  <% end %>
+</dl>

@@ -1,12 +1,20 @@
-<h2>Resend unlock instructions</h2>
+<% @title = 'Resend unlock instructions' %>
+<div class="page-header">
+  <h1><%= @title %></h1>
+</div>
 
-<%= form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => { :method => :post }) do |f| %>
+<%= form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => { :method => :post, class: 'form-horizontal' }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+  <div class="control-group">
+    <%= f.label :email, class: 'control-label' %>
+    <div class="controls">
+      <%= f.email_field :email %>
+    </div>
+  </div>
 
-  <div><%= f.submit "Resend unlock instructions" %></div>
+  <div class="form-actions">
+    <%= f.submit "Resend unlock instructions", class: 'btn btn-primary' %>
+    <%= render partial: 'contour/links' %>
+  </div>
 <% end %>
-
-<%= render "links" %>

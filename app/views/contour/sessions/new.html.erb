@@ -1,17 +1,33 @@
-<h2>Sign in</h2>
+<% @title = 'Sign in' %>
+<div class="page-header">
+  <h1><%= @title %></h1>
+</div>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %>
-  <%= f.email_field :email %></div>
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-horizontal' }) do |f| %>
+  <div class="control-group">
+    <%= f.label :email, class: 'control-label' %>
+    <div class="controls">
+      <%= f.email_field :email %>
+    </div>
+  </div>
 
-  <div><%= f.label :password %>
-  <%= f.password_field :password %></div>
+  <div class="control-group">
+    <%= f.label :password, class: 'control-label' %>
+    <div class="controls">
+      <%= f.password_field :password %>
+    </div>
+  </div>
 
   <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+    <div class="control-group">
+      <div class="controls checkbox">
+        <%= f.check_box :remember_me %> <%= f.label :remember_me %>
+      </div>
+    </div>
   <% end -%>
 
-  <div><%= f.submit "Sign in", class: 'btn btn-primary' %></div>
+  <div class="form-actions">
+    <%= f.submit "Sign in", class: 'btn btn-primary' %>
+    <%= render partial: 'contour/links' %>
+  </div>
 <% end %>
-
-<%= render "links" %>
