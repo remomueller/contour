@@ -17,7 +17,7 @@ module Contour
       def copy_omniauth
         template "omniauth.rb", "config/initializers/omniauth.rb"
       end
-      
+
       def install_devise
         generate("devise:install")
         # model_name = ask("What would you like the user model to be called? [user]")
@@ -27,17 +27,17 @@ module Contour
       end
 
       def add_contour_devise_route
-        route "devise_for :users, controllers: { registrations: 'contour/registrations', sessions: 'contour/sessions', passwords: 'contour/passwords' }, path_names: { sign_up: 'register', sign_in: 'login' }"
+        route "devise_for :users, controllers: { registrations: 'contour/registrations', sessions: 'contour/sessions', passwords: 'contour/passwords', confirmations: 'contour/confirmations', unlocks: 'contour/unlocks' }, path_names: { sign_up: 'register', sign_in: 'login' }"
       end
 
       def show_readme
         readme "README" if behavior == :invoke
       end
-      
+
       # def copy_locale
       #   copy_file "../../../config/locales/en.yml", "config/locales/contour.en.yml"
       # end
-      # 
+      #
       # def show_readme
       #   readme "README" if behavior == :invoke
       # end
