@@ -59,4 +59,8 @@ Contour.setup do |config|
   # Note the lack of leading zeros!
   # Special days take precendence over the rotating options given above
   # config.month_day = {}
+
+  # An array of hashes that specify additional fields to add to the sign up form
+  # An example might be [ { attribute: 'first_name', type: 'text_field' }, { attribute: 'last_name', type: 'text_field' } ]
+  # config.sign_up_fields = []
 end

@@ -74,6 +74,11 @@ module Contour
   mattr_accessor :month_day
   @@month_day = {}
 
+  # An array of fields to add to the sign up form
+  # An example might be [ { attribute: 'first_name', type: 'text_field' }, { attribute: 'last_name', type: 'text_field' } ]
+  mattr_accessor :sign_up_fields
+  @@sign_up_fields = []
+
   def self.setup
     yield self
   end
