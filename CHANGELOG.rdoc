@@ -7,7 +7,7 @@
   * Redirects to the user's alternate login page if a user fails to login on the default devise sign in page
   * Registration page can now have fields added by modifying <tt>config.sign_up_fields</tt>
     * Ex: <tt>config.sign_up_fields = [ { attribute: 'first_name', type: 'text_field' }, { attribute: 'last_name', type: 'text_field' } ]</tt>
-  * Links array is no longer required when specifying a menu item without a submenu
+  * An empty <tt>links</tt> array is no longer required when specifying a menu item without a submenu
   * Submenus are properly hidden if none of the submenu link conditions evaluate to true
 
 * Breaking Changes
