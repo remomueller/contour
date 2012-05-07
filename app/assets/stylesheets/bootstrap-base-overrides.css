@@ -1,0 +1,17 @@
+/* bootstrap-base-overrides.css */
+/* These overrides come after bootstrap.css but before bootstrap-responsive.css */
+
+/* Line 1752 */
+[class^="icon-"],
+[class*=" icon-"] {
+  background-image: url(twitter-bootstrap/v2.0.3/glyphicons-halflings.png);
+}
+
+/* Line 1770 */
+.icon-white {
+  background-image: url(twitter-bootstrap/v2.0.3/glyphicons-halflings-white.png);
+}
+
+
+
+body { padding-top: 60px; }
