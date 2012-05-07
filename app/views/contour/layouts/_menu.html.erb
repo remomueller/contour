@@ -11,7 +11,7 @@
       <% Contour.menu_items.group_by{|i| i[:position]}.each do |position, items| %>
         <ul class="nav <%= 'pull-right' if position == 'right' %>">
           <% items.each_with_index do |menu_item, index| %>
-            <% has_submenu = (menu_item[:links] || []).size > 0 %>
+            <% has_submenu = (menu_item[:links] || []).collect{|link| link[:condition].blank? or eval(link[:condition])}.include?(true) %>
             <% if display.include?(menu_item[:display]) and (menu_item[:condition].blank? or eval(menu_item[:condition])) %>
               <li class="<%= 'dropdown' if has_submenu %>" id="menu<%= position %><%= index %>">
                 <%= link_to(
@@ -20,7 +20,7 @@
                     target: menu_item[:target], style: "#{ 'display:inline-block;padding-right:0px' if has_submenu }")
                      %>
                 <%= link_to "<b class='caret'></b>".html_safe, '#', 'data-target' => "#menu#{position}#{index}", class: 'dropdown-toggle', 'data-toggle' => 'dropdown', style: 'display:inline-block;padding-left:0px' if has_submenu %>
-                <% if menu_item[:links].size > 0 %>
+                <% if has_submenu %>
                   <ul class="dropdown-menu">
                   <% menu_item[:links].each do |link| %>
                     <% if link[:condition].blank? or eval(link[:condition]) %>

@@ -9,10 +9,6 @@ gemspec
 gem 'jquery-rails'
 gem 'sqlite3'
 
-group :assets do
-  gem 'twitter-bootstrap-rails'
-end
-
 # Testing
 group :test do
   # Pretty printed test output

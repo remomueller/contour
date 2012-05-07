@@ -24,7 +24,6 @@ Gem::Specification.new do |s|
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency 'rails',                   '~> 3.2.3'
-  s.add_dependency 'twitter-bootstrap-rails', '~> 2.0.6'
   s.add_dependency 'jquery-rails',            '~> 2.0.2'
   s.add_dependency 'devise',                  '~> 2.0.4'
   s.add_dependency 'omniauth',                '~> 1.0.3'
