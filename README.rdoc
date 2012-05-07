@@ -14,29 +14,7 @@ Or update your Gemfile to include:
 
 == Getting started
 
-Contour depends on a config initializer. The config initializer is used to set various default settings in the layout, and also allows the menu to be created using a ruby hash.  To install a template you can run:
-
-  rails generate contour:install
-
-Contour uses a template to generate your application layout. You can add the following in your application_controller.rb:
-
-  layout "contour/layouts/application"
-
-Contour also provides a custom jquery-ui and BlueTrip CSS Framework.  To include these, add the following to your application.css manifest (after "*= require_self" and before "*= require_tree ."):
-
-  *= require contour
-
-Contour provides custom JavaScript.  In order to make the application layout function properly include the following at the beginning of your application.js (before "//= require_tree ." replacing "//= require jquery" and "//= require jquery_ujs"):
-
-  //= require contour
-
-In order to get registration working, you can use the modified Contour Authentications controller which overrides the default devise controller of the same name:
-
-  devise_for :users, controllers: { registrations: 'contour/registrations', sessions: 'contour/sessions', passwords: 'contour/passwords' }, path_names: { sign_up: 'register', sign_in: 'login' }
-
-== Setting up a new project with quick authentication
-
-Make sure you have Rails 3.2.1
+Make sure you have Rails 3.2.3
 
   rails -v
 
@@ -46,7 +24,7 @@ Make sure you have Rails 3.2.1
 
 Modify Gemfile and add
 
-  gem 'contour', '~> 1.0.0'          # Basic Layout and Assets
+  gem 'contour', '~> 1.0.0'
 
 Run Bundle install
 
@@ -88,7 +66,7 @@ Edit your app/assets/stylesheets/application.css manifest to use Contour CSS (af
 
 Make sure the devise line in config/routes.rb looks as follows
 
-  devise_for :users, controllers: { registrations: 'contour/registrations', sessions: 'contour/sessions', passwords: 'contour/passwords' }, path_names: { sign_up: 'register', sign_in: 'login' }
+  devise_for :users, controllers: { registrations: 'contour/registrations', sessions: 'contour/sessions', passwords: 'contour/passwords', confirmations: 'contour/confirmations', unlocks: 'contour/unlocks' }, path_names: { sign_up: 'register', sign_in: 'login' }
 
 <b>If there is a line that just says 'devise_for :users' or a duplicate, <i>REMOVE IT!</i></b>
 
