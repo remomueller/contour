@@ -18,3 +18,8 @@ dt, dd {
     overflow: visible;
   }
 }
+
+/* Fix for IE7 IE8 dropdown menu items */
+.collapse {
+  overflow: visible;
+}
