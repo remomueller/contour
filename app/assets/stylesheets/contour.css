@@ -5,8 +5,8 @@
  *= require_self
  *= require twitter-bootstrap/v2.0.3/bootstrap
  *= require bootstrap-base-overrides
- *= require twitter-bootstrap/v2.0.3/bootstrap-responsive
  *= require twitter-bootstrap/bootstrap-scroll-modal
+ *= require twitter-bootstrap/v2.0.3/bootstrap-responsive
  *= require bootstrap-responsive-overrides
  *= require jquery-ui-1.8.10.custom
  *= require jquery.qtip

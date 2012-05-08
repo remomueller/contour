@@ -6,17 +6,15 @@ dt, dd {
   min-height: 40px;
 }
 
-/*
-dt, dd {
-  display: block;
-  float: left;
-  margin-top: 20px;
+@media (max-width: 480px) {
+  .modal-wrapper {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    width: auto;
+    margin: 0;
+    z-index: 1050;
+    overflow: visible;
+  }
 }
-
-dt { clear: both; }
-dl { overflow: hidden; }
-
-.dl-horizontal dd {
-  margin-left: 30px;
-}
-*/
