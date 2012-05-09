@@ -18,7 +18,7 @@
   * All icons other than Gentleface 16x16 have been removed
   * User model no longer requires a name attribute or method
   * Authentication model is no longer required to be the user model
-  * Authentication model creation no longer assigns application specific variables
+  * Authentication model creation no longer assigns application specific variables, i.e. first_name, last_name
 
 == 0.10.2
 
