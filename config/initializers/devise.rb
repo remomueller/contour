@@ -13,7 +13,10 @@ module Devise
       opts[:format] = request_format unless skip_format?
       # The 2.1.0.rc of Devise has the following line.  I've commented it out since it
       # breaks subdomain redirects when failing to login.
-      # opts[:script_name] = nil
+      # Until 2.1.0.rc2 is out, use the following from:
+      # https://github.com/plataformatec/devise/commit/ad0aed3ba5ab58cbe2f54b1a5bd760642c1c689c
+      # Thanks @josevalim !
+      opts[:script_name] = Rails.application.config.relative_url_root
 
       context = send(Devise.available_router_name)
 
