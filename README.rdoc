@@ -76,20 +76,12 @@ Create a root in your config/routes.rb
 
 Add the following to your app/models/user.rb
 
-  attr_accessible :first_name, :last_name
-
-  # Model Validation
-  validates_presence_of     :first_name
-  validates_presence_of     :last_name
-
   # Model Relationships
   has_many :authentications
 
   def apply_omniauth(omniauth)
     unless omniauth['info'].blank?
       self.email = omniauth['info']['email'] if email.blank?
-      self.first_name = omniauth['info']['first_name'] if first_name.blank?
-      self.last_name = omniauth['info']['last_name'] if last_name.blank?
     end
     authentications.build( provider: omniauth['provider'], uid: omniauth['uid'] )
   end
