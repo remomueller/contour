@@ -12,6 +12,10 @@
   background-image: url(twitter-bootstrap/v2.0.3/glyphicons-halflings-white.png);
 }
 
+/* Line 3604 */
+.navbar .brand {
+  color: #ffffff;
+}
 
 
 body { padding-top: 60px; }
