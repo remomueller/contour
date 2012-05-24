@@ -68,9 +68,9 @@ Make sure the devise line in <tt>config/routes.rb</tt> looks as follows
 
   devise_for :users, controllers: { registrations: 'contour/registrations', sessions: 'contour/sessions', passwords: 'contour/passwords', confirmations: 'contour/confirmations', unlocks: 'contour/unlocks' }, path_names: { sign_up: 'register', sign_in: 'login' }
 
-<b>If there is a line that just says 'devise_for :users' or a duplicate, <i>REMOVE IT!</i></b>
+<b>If there is a line that just says <tt>devise_for :users</tt> or a duplicate, <i>REMOVE IT!</i></b>
 
-Create a root in your config/routes.rb
+Create a root in your <tt>config/routes.rb</tt>
 
   root to: 'welcome#index'
 
@@ -115,7 +115,7 @@ You can then sign in using your {Google Account}[http://localhost:3000/auth/goog
 
 == Overwrite Default Rails Scaffolding (optional)
 
-Add {Kaminari}[https://github.com/amatsuda/kaminari] gem to your <tt>Gemfile</tt>:
+Add {Kaminari}[https://github.com/amatsuda/kaminari] gem to your <tt>Gemfile</tt>
 
   gem 'kaminari', '~> 0.13.0'
 
