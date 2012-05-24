@@ -165,7 +165,7 @@ Go to http://localhost:3000/items to see the changes! Note, that the <tt>user_id
 
 == Inspiration and Attribution
 
-Contour is designed to be a gem to quickly create a Rails application with nice default styling and a solid authentication system. The Contour code base has been influenced by existing Rails Engines architectures that are listed below. Please check them out if you are interested in seeing how Contour is put together!
+Contour is designed to rapidly prototype Rails applications with nice default styling and a solid authentication system. The Contour code base has been influenced by existing Rails Engines architectures that are listed below. Please check them out if you are interested in seeing how Contour is put together!
 
 === Devise
 
