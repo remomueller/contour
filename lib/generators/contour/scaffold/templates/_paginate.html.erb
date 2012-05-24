@@ -1,0 +1,30 @@
+<%%= render partial: 'contour/layouts/per_page', locals: { type: '<%= resource_name_plural %>', per_page: 20 } %>
+
+<table class="table table-striped table-bordered" style="width:100%">
+  <thead>
+    <tr>
+      <%- columns.each do |column| -%>
+      <th style="white-space:nowrap"><%%== sort_field_helper(@order, '<%= resource_name_plural %>.<%= column.name %>', '<%= column.name.titleize %>', '<%= resource_name_plural %>_search') %></th>
+      <%- end -%>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <%% @<%= resource_name_plural %>.each do |<%= resource_name %>| %>
+    <tr>
+      <%- columns.each do |column| -%>
+      <%- if column.name.split('_').last == 'id' -%>
+      <td><%%= link_to <%= resource_name %>.<%= column.name.split('_')[0..-2].join('_') %>.name, <%= resource_name %>.<%= column.name.split('_')[0..-2].join('_') %> if <%= resource_name %>.<%= column.name.split('_')[0..-2].join('_') %> %></td>
+      <%- else -%>
+      <td><%%= <%= resource_name %>.<%= column.name %> %></td>
+      <%- end -%>
+      <%- end -%>
+      <td>
+        <%%= link_to 'Edit', edit_<%= resource_name %>_path(<%= resource_name %>), class: 'btn btn-mini' %>
+        <%%= link_to 'Delete', <%= resource_name %>, confirm: "Are you sure you want to delete <%= resource_title %> #{<%= resource_name %>.name}?", method: :delete, class: 'btn btn-mini btn-danger' %>
+      </td>
+    </tr>
+  <%% end %>
+</table>
+
+<center><%%= paginate @<%= resource_name_plural %> %></center>

@@ -1,0 +1,7 @@
+<div class="pagination pagination-right">
+  <ul>
+    <li class="disabled"><a href="#">Per Page</a></li>
+    <li class="active per_page"><%= link_to (defined?(per_page) and per_page ? per_page : 20), "#" %></li>
+    <% if defined?(object_count) and object_count %><li class="disabled"><a href="#">out of <%= object_count %></a></li><% end %>
+  </ul>
+</div>

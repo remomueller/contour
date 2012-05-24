@@ -1,0 +1,37 @@
+<div class="page-header">
+  <h1><%%= @title %></h1>
+</div>
+
+<%%= form_for @<%= resource_name %>, html: { class: 'form-horizontal' } do |f| %>
+  <%% if @<%= resource_name %>.errors.any? %>
+    <div id="error_explanation">
+      <h2><%%= pluralize(@<%= resource_name %>.errors.count, "error") %> prohibited this <%= resource_name %> from being saved:</h2>
+
+      <ul>
+      <%% @<%= resource_name %>.errors.full_messages.each do |msg| %>
+        <li><%%= msg %></li>
+      <%% end %>
+      </ul>
+    </div>
+  <%% end %>
+
+  <%- columns.each do |column| -%>
+  <div class="control-group">
+    <%%= f.label :<%= column.name %>, nil, class: 'control-label' %>
+    <div class="controls">
+      <%- if column.name.split('_').last == 'id' -%>
+      <%%= f.select :<%= column.name %>, [['---', nil]] + <%= column.name.split('_')[0..-2].join('_').camelize %>.current.collect{|<%= column.name.first %>| [<%= column.name.first %>.name, <%= column.name.first %>.id]} %>
+      <%- elsif column.field_type == :date_select -%>
+      <%%= f.text_field :<%= column.name %>, class: 'datepicker', value: @<%= resource_name %>.<%= column.name %> ? @<%= resource_name %>.<%= column.name %>.strftime('%m/%d/%Y') : '' %>
+      <%- else -%>
+      <%%= f.<%= column.field_type %> :<%= column.name %><%= ", rows: 7, style: 'width:95%'" if column.field_type == :text_area %> %>
+      <%- end -%>
+    </div>
+  </div>
+
+  <%- end -%>
+  <div class="form-actions">
+    <%%= f.submit nil, class: 'btn btn-primary' %>
+    <%%= cancel %>
+  </div>
+<%% end %>

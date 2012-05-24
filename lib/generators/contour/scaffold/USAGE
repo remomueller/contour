@@ -1,0 +1,15 @@
+Description:
+    Installs views and controller based on the model name provided
+
+Example:
+    rails generate contour:bootstrap NAME
+
+    This will create:
+        app/controllers/NAMEs_controller.rb
+        app/views/NAMEs/_form.html.erb
+        app/views/NAMEs/_NAMEs.html.erb
+        app/views/NAMEs/edit.html.erb
+        app/views/NAMEs/index.html.erb
+        app/views/NAMEs/index.js.erb
+        app/views/NAMEs/new.html.erb
+        app/views/NAMEs/show.html.erb

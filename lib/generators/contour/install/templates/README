@@ -4,25 +4,21 @@
 Contour requires some additional setup:
 
   1. Add the following line to your application_controller.rb
-  
+
        layout "contour/layouts/application"
-  
+
   2. Edit your application.js manifest to use Contour JavaScript
-  
+
        //= require contour
-  
+
   3. Edit your application.css manifest to use Contour CSS
-       
+
        *= require contour
-  
+
   4. Remove any scaffold.css files that exist in your application
-  
+
   5. Make a migration for Authentications
-  
+
        rails generate model Authentication user_id:integer provider:string uid:string
-  
-  6. Add first_name and last_name to User model
-  
-       rails generate migration AddFirstNameAndLastNameToUsers first_name:string last_name:string
-       
+
 ===============================================================================

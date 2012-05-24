@@ -9,6 +9,10 @@
     * Ex: <tt>config.sign_up_fields = [ { attribute: 'first_name', type: 'text_field' }, { attribute: 'last_name', type: 'text_field' } ]</tt>
   * An empty <tt>links</tt> array is no longer required when specifying a menu item without a submenu
   * Submenus are properly hidden if none of the submenu link conditions evaluate to true
+  * Added Rails scaffold generator
+    * <tt>rails generate contour:scaffold ModelName</tt>
+    * NOTE: This generator currently assumes you have a scope named current in your model. The conditions can be modified to limit only those records who are not deleted for example.
+      * <tt>scope :current, conditions: { }</tt>
 
 * Breaking Changes
   * CSS updated to use Twitter-Bootstrap
