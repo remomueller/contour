@@ -147,7 +147,7 @@ Add a user resource to your <tt>config/routes.rb</tt> file
 
   resources :users
 
-NOTE: Adding the User controller is not shown, but could be created using <tt>rails g controller Users index show edit update destroy</tt>. Remember that the <tt>new</tt> and <tt>create</tt> actions are already defined and should be left commented out.
+NOTE: Adding the User controller is not shown, but could be created using <tt>rails g controller Users index show edit update destroy --no-stylesheets</tt>. Remember that the <tt>new</tt> and <tt>create</tt> actions are already defined and should be left commented out.
 
 Migrate your database
 

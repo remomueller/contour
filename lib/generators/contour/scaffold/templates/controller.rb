@@ -89,6 +89,10 @@ class <%= resource_class_name_plural %>Controller < ApplicationController
 
   private
 
+  def parse_date(date_string)
+    date_string.to_s.split('/').last.size == 2 ? Date.strptime(date_string, "%m/%d/%y") : Date.strptime(date_string, "%m/%d/%Y") rescue ""
+  end
+
   def post_params
 
     [<%= date_columns.collect{|c| ":#{c.name}"}.join(', ') %>].each do |date|
