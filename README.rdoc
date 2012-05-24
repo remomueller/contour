@@ -179,7 +179,7 @@ While Contour doesn't have an external dependency on the {Twitter Bootstrap Rail
 
 For those interested in having better control on modifying the Twitter Bootstrap Less file and CSS, I highly recommend taking a look at Twitter Bootstrap Rails!
 
-== Contributing to contour
+== Contributing to Contour
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
