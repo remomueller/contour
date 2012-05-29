@@ -26,3 +26,9 @@ jQuery ->
     $.get($("#"+object_class+"_search").attr("action"), $("#"+object_class+"_search").serialize() + "&"+object_class+"_per_page="+ $(this).data('count'), null, "script")
     false
   )
+
+  $(document).on('click', '[data-object~="order"]', () ->
+    $('#order').val($(this).data('order'))
+    $($(this).data('form')).submit()
+    false
+  )
