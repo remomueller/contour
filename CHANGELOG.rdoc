@@ -1,9 +1,9 @@
-== 1.0.0 (unreleased)
+== 1.0.0
 
 * Enhancements
   * Twitter-Bootstrap CSS layout is now default!
   * Authentications can now be placed as a submenu using { authentications: true } anywhere in the contour links configuration
-  * Rails updated to minimum 3.2.3
+  * Rails updated to minimum 3.2.4
   * Redirects to the user's alternate login page if a user fails to login on the default devise sign in page
   * Registration page can now have fields added by modifying <tt>config.sign_up_fields</tt>
     * Ex: <tt>config.sign_up_fields = [ { attribute: 'first_name', type: 'text_field' }, { attribute: 'last_name', type: 'text_field' } ]</tt>

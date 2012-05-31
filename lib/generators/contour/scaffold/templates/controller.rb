@@ -94,12 +94,12 @@ class <%= resource_class_name_plural %>Controller < ApplicationController
   end
 
   def post_params
+    params[:<%= resource_name %>] ||= {}
 
     [<%= date_columns.collect{|c| ":#{c.name}"}.join(', ') %>].each do |date|
       params[:<%= resource_name %>][date] = parse_date(params[:<%= resource_name %>][date])
     end
 
-    params[:<%= resource_name %>] ||= {}
     params[:<%= resource_name %>].slice(
       <%= columns.collect{|c| ":#{c.name}"}.join(', ') %>
     )
