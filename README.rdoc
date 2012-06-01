@@ -14,7 +14,7 @@ Or update your <tt>Gemfile</tt> to include
 
 == Getting started
 
-Make sure you have Rails 3.2.4
+Make sure you have Rails 3.2.5
 
   rails -v
 
@@ -24,7 +24,7 @@ Make sure you have Rails 3.2.4
 
 Modify <tt>Gemfile</tt> and add
 
-  gem 'contour', '~> 1.0.0'
+  gem 'contour', '~> 1.0.1'
 
 Run Bundle install
 
