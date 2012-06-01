@@ -1,6 +1,6 @@
 # Compiling the Gem
 # gem build contour.gemspec
-# gem install ./contour-x.x.x.gem
+# gem install ./contour-x.x.x.gem --no-ri --no-rdoc
 #
 # gem push contour-x.x.x.gem
 # gem list -r contour
