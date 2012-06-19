@@ -6,6 +6,7 @@
   * Devise updated to minimum 2.1.2
   * Twitter Bootstrap updated to 2.0.4
     * Now includes all Bootstrap JavaScript Plugins, http://twitter.github.com/bootstrap/javascript.html
+    * Added styling for .subnav and .subnav-fixed
 
 == 1.0.1
 
