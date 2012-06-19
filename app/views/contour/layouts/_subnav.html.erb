@@ -1,8 +1,9 @@
+<div style="min-height:36px">
 <div class="subnav">
   <ul class="nav nav-pills">
     <% links.each_with_index do |link_hash, index| %>
       <% sublinks = (link_hash[:sublinks] || []) %>
-      <% href = (sublinks.size == 0) ? "##{link_hash[:name].to_s.gsub(/[^\w]/, '_').downcase}_#{index}" : (link_hash[:href] || '#') %>
+      <% href = (sublinks.size == 0 ? (link_hash[:href] || '#') : "##{link_hash[:name].to_s.gsub(/[^\w]/, '_').downcase}_#{index}") %>
       <li class="<%= 'dropdown' if sublinks.size %> <%= 'active' if index == 0 %>">
         <% if sublinks.size == 0 %>
           <%= link_to link_hash[:name].to_s, href %>
@@ -18,4 +19,5 @@
       </li>
     <% end %>
   </ul>
+</div>
 </div>
