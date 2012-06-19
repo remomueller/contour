@@ -1,18 +1,18 @@
 /* bootstrap-base-overrides.css */
 /* These overrides come after bootstrap.css but before bootstrap-responsive.css */
 
-/* Line 1752 */
+/* Line 1773 */
 [class^="icon-"],
 [class*=" icon-"] {
-  background-image: url(twitter-bootstrap/v2.0.3/glyphicons-halflings.png);
+  background-image: url(twitter-bootstrap/v2.0.4/glyphicons-halflings.png);
 }
 
-/* Line 1770 */
+/* Line 1791 */
 .icon-white {
-  background-image: url(twitter-bootstrap/v2.0.3/glyphicons-halflings-white.png);
+  background-image: url(twitter-bootstrap/v2.0.4/glyphicons-halflings-white.png);
 }
 
-/* Line 3604 */
+/* Line 3615 */
 .navbar .brand {
   color: #ffffff;
 }

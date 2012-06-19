@@ -4,6 +4,8 @@
   * Rails updated to minimum 3.2.6
     * :confirm links updated to use data: { :confirm } to account for deprecations in Rails 4.0
   * Devise updated to minimum 2.1.2
+  * Twitter Bootstrap updated to 2.0.4
+    * Now includes all Bootstrap JavaScript Plugins, http://twitter.github.com/bootstrap/javascript.html
 
 == 1.0.1
 
