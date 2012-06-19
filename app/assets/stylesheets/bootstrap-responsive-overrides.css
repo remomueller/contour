@@ -6,6 +6,11 @@ dt, dd {
   min-height: 40px;
 }
 
+.dl-horizontal dt {
+  white-space: normal;
+  overflow: visible;
+}
+
 @media (max-width: 480px) {
   .modal-wrapper {
     position: absolute;
