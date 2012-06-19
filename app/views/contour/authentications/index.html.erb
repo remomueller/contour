@@ -12,7 +12,7 @@
           <%= image_tag "contour/#{authentication.provider}_32.png", height: "32px" %>
           <div class="provider"><%= authentication.provider.titleize %></div>
           <div class="uid"><%= authentication.uid %></div>
-          <%= link_to "X", authentication, confirm: 'Are you sure you want to remove this authentication option?', method: :delete, class: "remove" %>
+          <%= link_to "X", authentication, method: :delete, class: "remove", data: { confirm: 'Are you sure you want to remove this authentication option?' } %>
         </div>
       <% end %>
       <div style="clear:both"></div>

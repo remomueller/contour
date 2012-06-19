@@ -1,5 +1,10 @@
 == 1.0.2
 
+* Enhancements
+  * Rails updated to minimum 3.2.6
+    * :confirm links updated to use data: { :confirm } to account for deprecations in Rails 4.0
+  * Devise updated to minimum 2.1.2
+
 == 1.0.1
 
 * Enhancements
