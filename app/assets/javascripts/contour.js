@@ -4,6 +4,9 @@
 //= require jquery
 //= require jquery_ujs
 //
+//= require external/jquery-ui-1.8.10.custom.min.js
+//= require external/jquery.qtip.min.js
+//
 //= require twitter-bootstrap/v2.0.4/bootstrap
 //= require twitter-bootstrap/v2.0.4/plugins/bootstrap-alert
 //= require twitter-bootstrap/v2.0.4/plugins/bootstrap-button
