@@ -1,24 +1,31 @@
-<% @title = 'Contour Details' %>
-<div class="page-header">
-  <h1><%= @title %></h1>
+<% @title = 'About Contour' %>
+
+<div class="row" style="margin-top:54px">
+  <div class="span12">
+    <h1 class="about-title"><%= @title %></h1>
+  </div>
 </div>
 
-<dl class="dl-horizontal">
-  <dt>Contour Version</dt>
-  <dd><%= Contour::VERSION::STRING %></dd>
-</dl>
+<hr class="soften">
+
+<p class="about-description">Contour is a <%= link_to 'free to use*', 'https://github.com/remomueller/contour/blob/master/LICENSE', rel: 'tooltip', data: { title: 'Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License' } %> and <%= link_to 'open source', 'https://github.com/remomueller/contour', rel: 'tooltip', data: { title: 'Source code freely available on GitHub' } %> Ruby on Rails gem for rapid prototyping of Rails applications with nice default styling and a solid authentication system.</p>
+
+<hr class="soften">
+
+<footer class="footer">
+  <p class="muted about-footer">Contour Version <%= link_to Contour::VERSION::STRING, "https://github.com/remomueller/contour/tree/#{Contour::VERSION::MAJOR}.#{Contour::VERSION::MINOR}.#{Contour::VERSION::TINY}" %></p>
+</footer>
 
 
-<h2>Application Details</h2>
+<h2 class="about-title" style="text-align:left">Application Configuration</h2>
 
-These items can all be specified in:<br />
-<br />
-<code style="margin-left:10px">config/initializers/contour.rb</code><br />
-<br />
-If the file does not exist run:<br />
-<br />
-<code style="margin-left:10px">rails generate contour:install</code><br />
-<br />
+<p>Contour can be configured in:</p>
+
+<p style='margin-left:10px'><tt>config/initializers/contour.rb</tt></p>
+
+<p>If the file does not exist run:</p>
+
+<p style='margin-left:10px'><tt>rails generate contour:install</tt></p>
 
 <dl class="dl-horizontal">
   <% unless request.script_name.blank? %>
