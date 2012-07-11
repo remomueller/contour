@@ -4,6 +4,10 @@
   * JavaScript includes reordered to allow Twitter Bootstrap buttons to be the default $().button() instead of jQuery UI
   * Added styling CSS for an About page
   * All headers (h1, h2, ...) have had their font-weight changed from bold to 300
+  * Flash messages can be added using JavaScript:
+    * flashMessage('My Message', alert_type, overwrite)
+      * alert_type can be 'success' (default), 'error', 'info', or '', which are green, red, blue, and yellow respectively
+      * overwrite can be <tt>true</tt> (default), or <tt>false</tt> in which case it will append to the already existing alerts
 
 == 1.0.2
 
