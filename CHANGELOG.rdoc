@@ -2,6 +2,7 @@
 
 * Enhancements
   * JavaScript includes reordered to allow Twitter Bootstrap buttons to be the default $().button() instead of jQuery UI
+  * Added styling CSS for an About page
 
 == 1.0.2
 
