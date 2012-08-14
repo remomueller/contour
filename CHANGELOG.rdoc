@@ -1,7 +1,7 @@
 == 1.0.4
 
 * Enhancements
-  * Updated to minimum Rails 3.2.8
+  * Rails updated to minimum 3.2.8
     * Removed deprecated use of update_attribute for Rails 4.0 compatibility
 
 * Testing
