@@ -4,6 +4,7 @@
   * Rails updated to minimum 3.2.8
     * Removed deprecated use of update_attribute for Rails 4.0 compatibility
   * Cancel button no longer uses btn-danger class for consistency with Bootstrap cancel button defaults
+  * <tt>devise.failure.unauthenticated</tt> message is no longer displayed when navigating to the root_url
 
 * Testing
   * Use ActionDispatch for Integration tests instead of ActionController

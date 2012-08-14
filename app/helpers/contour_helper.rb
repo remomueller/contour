@@ -17,7 +17,9 @@ module ContourHelper
   def flash_block
     output = ''
     flash.each do |type, message|
-      output += flash_container(type, message) if ['alert', 'notice', 'error', 'warning', 'success', 'info'].include?(type.to_s)
+      unless session["user_return_to"] == root_path and I18n.t("devise.failure.unauthenticated") == message
+        output += flash_container(type, message) if ['alert', 'notice', 'error', 'warning', 'success', 'info'].include?(type.to_s)
+      end
     end
 
     raw(output)
