@@ -6,7 +6,7 @@
         <% provider_name = OmniAuth.config.camelizations[provider.to_s.downcase] || provider.to_s.titleize %>
         <% image_name = provider.to_s.downcase %>
         <a href="<%= request.script_name %><%= "/" + OmniAuth.config.path_prefix.split('/').last.to_s %><%= "/" + provider.to_s.downcase %>" class="btn" style="white-space:nowrap" rel='tooltip' data-title='<%= provider_name %>' data-placement='bottom'>
-          <%= image_tag "contour/#{image_name}_32.png", align: 'absmiddle', height: "28px", title: provider_name %>
+          <%= image_tag "contour/#{image_name}_32.png", align: 'absmiddle', height: "28px" %>
         </a>
       <% end %>
     </div>
