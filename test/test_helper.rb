@@ -1,8 +1,6 @@
 require 'simplecov'
 
-# Configure Rails Environment
 ENV["RAILS_ENV"] = "test"
-
 require File.expand_path("../dummy/config/environment.rb",  __FILE__)
 require "rails/test_help"
 
@@ -23,31 +21,31 @@ end
 
 class ActionController::TestCase
   include Devise::TestHelpers
-  
-  def login(user)
-    @request.env["devise.mapping"] = Devise.mappings[user]
-    sign_in(:user, user)
+
+  def login(resource)
+    @request.env["devise.mapping"] = Devise.mappings[resource]
+    sign_in(resource.class.name.downcase.to_sym, resource)
   end
 end
 
-class ActionController::IntegrationTest
+class ActionDispatch::IntegrationTest
   def sign_in_as(user_template, password, email)
     user = User.create( password: password, password_confirmation: password, email: email,
                         first_name: user_template.first_name, last_name: user_template.last_name )
     user.save!
-    user.update_attribute :status, user_template.status
-    user.update_attribute :deleted, user_template.deleted?
+    user.update_column :status, user_template.status
+    user.update_column :deleted, user_template.deleted?
     post_via_redirect 'users/login', user: { email: email, password: password }
     user
   end
 end
 
-# module Rack
-#   module Test
-#     class UploadedFile
-#       def tempfile
-#         @tempfile
-#       end
-#     end
-#   end
-# _end_
+module Rack
+  module Test
+    class UploadedFile
+      def tempfile
+        @tempfile
+      end
+    end
+  end
+end

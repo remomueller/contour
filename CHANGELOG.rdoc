@@ -1,5 +1,12 @@
 == 1.0.4
 
+* Enhancements
+  * Updated to minimum Rails 3.2.8
+    * Removed deprecated use of update_attribute for Rails 4.0 compatibility
+
+* Testing
+  * Use ActionDispatch for Integration tests instead of ActionController
+
 == 1.0.3
 
 * Enhancements
