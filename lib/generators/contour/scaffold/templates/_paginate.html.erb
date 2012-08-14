@@ -1,4 +1,4 @@
-<%%= render partial: 'contour/layouts/per_page', locals: { type: '<%= resource_name_plural %>', per_page: 20 } %>
+<%%= render partial: 'contour/layouts/per_page', locals: { type: '<%= resource_name_plural %>', per_page: 20, object_count: @<%= resource_name %>_count } %>
 
 <table class="table table-striped table-bordered" style="width:100%">
   <thead>
