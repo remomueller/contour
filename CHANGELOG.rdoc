@@ -6,6 +6,7 @@
   * Cancel button no longer uses btn-danger class for consistency with Bootstrap cancel button defaults
   * <tt>devise.failure.unauthenticated</tt> message is no longer displayed when navigating to the root_url
   * <tt>rails g contour:scaffold</tt> updated to include better ordering and object counts on index pages
+  * Sign in with PROVIDER buttons added to sign in page
 
 * Testing
   * Use ActionDispatch for Integration tests instead of ActionController

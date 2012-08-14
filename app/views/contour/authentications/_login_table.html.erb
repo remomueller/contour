@@ -1,0 +1,14 @@
+<% if PROVIDERS.size > 0 %>
+  <div class="control-group">
+    <label class="control-label">Sign in with</label>
+    <div class="controls">
+      <% PROVIDERS.each do |provider| %>
+        <% provider_name = OmniAuth.config.camelizations[provider.to_s.downcase] || provider.to_s.titleize %>
+        <% image_name = provider.to_s.downcase %>
+        <a href="<%= request.script_name %><%= "/" + OmniAuth.config.path_prefix.split('/').last.to_s %><%= "/" + provider.to_s.downcase %>" class="btn" style="white-space:nowrap" rel='tooltip' data-title='<%= provider_name %>' data-placement='bottom'>
+          <%= image_tag "contour/#{image_name}_32.png", align: 'absmiddle', height: "28px", title: provider_name %>
+        </a>
+      <% end %>
+    </div>
+  </div>
+<% end %>
