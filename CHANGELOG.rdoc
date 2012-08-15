@@ -1,5 +1,12 @@
 == 1.1.0
 
+* Enhancements
+  * Updated jQuery UI to 1.8.22, the following modules are included:
+    * UI Core: Core, Widget, Mouse
+    * Interactions: Draggable, Droppable, Resizable, Selectable, Sortable
+    * Widgets: Datepicker
+    * Effects: Effects Core, Blind, Bounce, Clip, Drop, Explode, Fade, Fold, Highlight, Pulsate, Scale, Shake, Slide, Transfer
+
 == 1.0.4
 
 * Enhancements
