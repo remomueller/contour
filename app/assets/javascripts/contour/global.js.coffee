@@ -40,3 +40,6 @@ jQuery ->
     $($(this).data('form')).submit()
     false
   )
+
+  # Load forms on page load
+  $('[data-object~="form-load"]').submit()

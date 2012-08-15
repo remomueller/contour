@@ -7,6 +7,9 @@
     * Widgets: Datepicker
     * Effects: Effects Core, Blind, Bounce, Clip, Drop, Explode, Fade, Fold, Highlight, Pulsate, Scale, Shake, Slide, Transfer
 
+* Breaking Changes
+  * Unobtrusive JS now required, JavaScript is now included at bottom of HTML to improve perceived page load
+
 == 1.0.4
 
 * Enhancements

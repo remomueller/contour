@@ -1,47 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= [Contour.application_name, @title].compact.join(' - ').html_safe %></title>
-  <%= favicon_link_tag %>
-  <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-  <![endif]-->
-  <%= stylesheet_link_tag    "application", media: "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style type="text/css">
-    body {
-      <%= "background-image: url(#{image_path(Contour.body_background_image_select) rescue ''});" unless Contour.body_background_image_select.blank? %>
-      <%= "background-color: #{Contour.body_background_color_select};" unless Contour.body_background_color_select.blank? %>
-    }
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= [Contour.application_name, @title].compact.join(' - ').html_safe %></title>
+    <%= favicon_link_tag %>
+    <%= csrf_meta_tags %>
 
-    a:link, a:visited, a:hover, a:active, a:focus, #header a:hover, #menu a:hover {
-      <%= "color: #{Contour.link_color_select};" unless Contour.link_color_select.blank? %>
-    }
-  </style>
-</head>
-<body data-spy="scroll" data-target=".subnav" data-offset="0">
-  <%= javascript_tag "var root_url='#{request.script_name + '/'}';var auth_token='#{form_authenticity_token}';" %>
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
 
-<% if false %>
-  <div id="header" class="container" <%= "style='background-image: url(#{request.script_name}/assets/#{Contour.header_background_image});'" unless Contour.header_background_image.blank? %>>
-    <%= image_tag(Contour.header_title_image, alt: '', style: 'vertical-align:middle') unless Contour.header_title_image.blank? %>
-    <%= link_to (Contour.application_name_html.blank? ? Contour.application_name : Contour.application_name_html.html_safe), root_path, style: 'text-decoration:none;', onmouseover: "$('#version').show();", onmouseout: "$('#version').hide();" %>
-      <span id="version" style="display:none;font-size:0.5em;font-variant:normal" class="quiet"><%= Contour.application_version %></span>
-  </div>
-<% end %>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+  </head>
+  <body data-spy="scroll" data-target=".subnav" data-offset="0">
+    <div class="navbar navbar-fixed-top">
+      <%= render partial: 'contour/layouts/menu' %>
+    </div>
 
-  <div class="navbar navbar-fixed-top">
-    <%= render partial: 'contour/layouts/menu' %>
-  </div>
+    <div class="container" data-object="flash-container">
+      <%= flash_block %>
+    </div>
 
-  <div class="container" data-object="flash-container">
-    <%= flash_block %>
-  </div>
+    <div class="container">
+      <%= yield %>
+    </div>
 
-  <div class="container">
-    <%= yield %>
-  </div>
-</body>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_tag "var root_url='#{request.script_name + '/'}';var auth_token='#{form_authenticity_token}';" %>
+  </body>
 </html>
