@@ -7,18 +7,20 @@
 //= require external/jquery-ui-1.8.22.custom.min.js
 //= require external/jquery.qtip.min.js
 //
-//= require twitter-bootstrap/v2.0.4/bootstrap
-//= require twitter-bootstrap/v2.0.4/plugins/bootstrap-alert
-//= require twitter-bootstrap/v2.0.4/plugins/bootstrap-button
-//= require twitter-bootstrap/v2.0.4/plugins/bootstrap-carousel
-//= require twitter-bootstrap/v2.0.4/plugins/bootstrap-collapse
-//= require twitter-bootstrap/v2.0.4/plugins/bootstrap-dropdown
-//= require twitter-bootstrap/v2.0.4/plugins/bootstrap-modal
-//= require twitter-bootstrap/v2.0.4/plugins/bootstrap-popover
-//= require twitter-bootstrap/v2.0.4/plugins/bootstrap-scrollspy
-//= require twitter-bootstrap/v2.0.4/plugins/bootstrap-tab
-//= require twitter-bootstrap/v2.0.4/plugins/bootstrap-tooltip
-//= require twitter-bootstrap/v2.0.4/plugins/bootstrap-typeahead
+//= require twitter-bootstrap/v2.1.0-wip/bootstrap
+//= require twitter-bootstrap/v2.1.0-wip/plugins/bootstrap-affix
+//= require twitter-bootstrap/v2.1.0-wip/plugins/bootstrap-alert
+//= require twitter-bootstrap/v2.1.0-wip/plugins/bootstrap-button
+//= require twitter-bootstrap/v2.1.0-wip/plugins/bootstrap-carousel
+//= require twitter-bootstrap/v2.1.0-wip/plugins/bootstrap-collapse
+//= require twitter-bootstrap/v2.1.0-wip/plugins/bootstrap-dropdown
+//= require twitter-bootstrap/v2.1.0-wip/plugins/bootstrap-modal
+//= require twitter-bootstrap/v2.1.0-wip/plugins/bootstrap-popover
+//= require twitter-bootstrap/v2.1.0-wip/plugins/bootstrap-scrollspy
+//= require twitter-bootstrap/v2.1.0-wip/plugins/bootstrap-tab
+//= require twitter-bootstrap/v2.1.0-wip/plugins/bootstrap-tooltip
+//= require twitter-bootstrap/v2.1.0-wip/plugins/bootstrap-transition
+//= require twitter-bootstrap/v2.1.0-wip/plugins/bootstrap-typeahead
 //
 //= require twitter-bootstrap/bootstrap-scroll-modal
 //= require twitter-bootstrap/bootstrap
