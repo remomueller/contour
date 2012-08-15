@@ -17,6 +17,27 @@
   color: #ffffff;
 }
 
+/*.navbar-inverse .navbar-inner {
+  background-color: #006dcc;
+  *background-color: #0044cc;
+
+  background-image: -moz-linear-gradient(top, #0088CC, #0044CC);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088CC), to(#0044CC));
+  background-image: -webkit-linear-gradient(top, #0088CC, #0044CC);
+  background-image: -o-linear-gradient(top, #0088CC, #0044CC);
+  background-image: linear-gradient(to bottom, #0088CC, #0044CC);
+  background-repeat: repeat-x;
+
+  border-color: #0044cc #0044cc #002a80;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
+}*/
+
+/* Line 4433 */
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle, .navbar-inverse .nav li.dropdown.active > .dropdown-toggle, .navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {
+  background-color: transparent;
+}
 
 body { padding-top: 60px; }
 
