@@ -83,7 +83,7 @@ class <%= resource_class_name_plural %>Controller < ApplicationController
     @<%= resource_name %>.destroy
 
     respond_to do |format|
-      format.html { redirect_to <%= resource_name_plural %>_url }
+      format.html { redirect_to <%= resource_name_plural %>_path }
       format.json { head :no_content }
     end
   end
