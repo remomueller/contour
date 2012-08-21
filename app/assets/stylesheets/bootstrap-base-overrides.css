@@ -1,40 +1,23 @@
 /* bootstrap-base-overrides.css */
 /* These overrides come after bootstrap.css but before bootstrap-responsive.css */
 
-/* Line 1773 */
+/* Line 2041 */
 [class^="icon-"],
 [class*=" icon-"] {
-  background-image: url(twitter-bootstrap/v2.1.0-wip/glyphicons-halflings.png);
+  background-image: url(twitter-bootstrap/v2.1.0/glyphicons-halflings.png);
 }
 
-/* Line 1791 */
+/* Line 2055 */
 .icon-white {
-  background-image: url(twitter-bootstrap/v2.1.0-wip/glyphicons-halflings-white.png);
+  background-image: url(twitter-bootstrap/v2.1.0/glyphicons-halflings-white.png);
 }
 
-/* Line 3615 */
+/* Line 4060 */
 .navbar .brand {
   color: #ffffff;
 }
 
-/*.navbar-inverse .navbar-inner {
-  background-color: #006dcc;
-  *background-color: #0044cc;
-
-  background-image: -moz-linear-gradient(top, #0088CC, #0044CC);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088CC), to(#0044CC));
-  background-image: -webkit-linear-gradient(top, #0088CC, #0044CC);
-  background-image: -o-linear-gradient(top, #0088CC, #0044CC);
-  background-image: linear-gradient(to bottom, #0088CC, #0044CC);
-  background-repeat: repeat-x;
-
-  border-color: #0044cc #0044cc #002a80;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-
-  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
-}*/
-
-/* Line 4433 */
+/* Line 4472 */
 .navbar-inverse .nav li.dropdown.open > .dropdown-toggle, .navbar-inverse .nav li.dropdown.active > .dropdown-toggle, .navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {
   background-color: transparent;
 }

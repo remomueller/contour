@@ -6,7 +6,7 @@
     * Interactions: Draggable, Droppable, Resizable, Selectable, Sortable
     * Widgets: Datepicker
     * Effects: Effects Core, Blind, Bounce, Clip, Drop, Explode, Fade, Fold, Highlight, Pulsate, Scale, Shake, Slide, Transfer
-  * Updated Twitter Bootstrap from 2.0.4 to 2.1.0-wip
+  * Updated Twitter Bootstrap from 2.0.4 to 2.1.0
 
 * Breaking Changes
   * Unobtrusive JS now required, JavaScript is now included at bottom of HTML to improve perceived page load
