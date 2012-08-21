@@ -24,7 +24,7 @@ Make sure you have Rails 3.2.8
 
 Modify <tt>Gemfile</tt> and add
 
-  gem 'contour', '~> 1.0.4'
+  gem 'contour', '~> 1.0.5'
 
 Run Bundle install
 
