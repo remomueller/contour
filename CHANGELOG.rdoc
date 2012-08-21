@@ -1,5 +1,8 @@
 == 1.0.5
 
+* Bug Fix
+  * IE8 no longer shows security warning due to http reference to shim.js when using https by default
+
 == 1.0.4
 
 * Enhancements
