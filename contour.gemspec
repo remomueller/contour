@@ -26,13 +26,13 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails',                   '~> 3.2.8'
   s.add_dependency 'jquery-rails',            '~> 2.1.1'
   s.add_dependency 'devise',                  '~> 2.1.2'
-  s.add_dependency 'omniauth',                '~> 1.1.0'
+  s.add_dependency 'omniauth',                '~> 1.1.1'
   s.add_dependency 'omniauth-cas',            '~> 0.0.7'
   s.add_dependency 'omniauth-facebook',       '~> 1.4.1'
   s.add_dependency 'omniauth-ldap',           '~> 1.0.2'
   s.add_dependency 'omniauth-linkedin',       '~> 0.0.8'
   s.add_dependency 'omniauth-openid',         '~> 1.0.1'
-  s.add_dependency 'omniauth-twitter',        '~> 0.0.12'
+  s.add_dependency 'omniauth-twitter',        '~> 0.0.13'
 
   s.add_development_dependency "sqlite3"
 end
