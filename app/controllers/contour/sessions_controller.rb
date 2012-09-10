@@ -28,7 +28,11 @@ class Contour::SessionsController < Devise::SessionsController
     if resource
       set_flash_message(:notice, :signed_in) if is_navigational_format?
       sign_in(resource_name, resource)
-      respond_with resource, location: after_sign_in_path_for(resource)
+
+      respond_to do |format|
+        format.html { respond_with resource, location: after_sign_in_path_for(resource) }
+        format.json { render json: { success: true, user: resource.as_json( only: [:id, :email, :first_name, :last_name, :authentication_token ] ) } }
+      end
     else
       resource = resource_name.to_s.titleize.constantize.find_by_email(params[resource_name][:email])
       if resource and resource.respond_to?('authentications') and providers = resource.authentications.pluck(:provider).uniq and providers.size > 0

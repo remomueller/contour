@@ -11,6 +11,11 @@
 * Breaking Changes
   * Unobtrusive JS now required, JavaScript is now included at bottom of HTML to improve perceived page load
 
+== 1.0.6
+
+* Enhancements
+  * Login and Registration API now return authentication token, first_name, last_name, id, and email for JSON requests on successful login
+
 == 1.0.5
 
 * Bug Fix

@@ -9,7 +9,7 @@ class Contour::RegistrationsController < Devise::RegistrationsController
       if @user.save
         respond_to do |format|
           format.html { redirect_to @user, notice: 'User was successfully created.' }
-          format.json { render json: @user, only: [:id, :email], status: :created, location: @user }
+          format.json { render json: @user.as_json( only: [:id, :email, :first_name, :last_name, :authentication_token ] ), status: :created, location: @user }
         end
       else
         respond_to do |format|
