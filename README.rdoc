@@ -1,4 +1,4 @@
-= Contour {<img src="https://secure.travis-ci.org/remomueller/contour.png"/>}[http://travis-ci.org/remomueller/contour] {<img src="https://gemnasium.com/remomueller/contour.png" alt="Dependency Status" />}[https://gemnasium.com/remomueller/contour]
+= Contour {<img src="https://secure.travis-ci.org/remomueller/contour.png"/>}[http://travis-ci.org/remomueller/contour] {<img src="https://gemnasium.com/remomueller/contour.png" alt="Dependency Status" />}[https://gemnasium.com/remomueller/contour] {<img src="https://codeclimate.com/badge.png" />}[https://codeclimate.com/github/remomueller/contour]
 
 Basic Rails framework files and assets for layout and authentication
 
