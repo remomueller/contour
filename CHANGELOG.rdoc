@@ -1,5 +1,8 @@
 == 1.1.1
 
+* Bug Fix
+  * Renamed LICENSE to LICENSE.txt to keep assets from failing to compile in Rails 3.2.9.rc1
+
 == 1.1.0
 
 * Enhancements
