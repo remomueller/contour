@@ -1,4 +1,4 @@
-<div class="pagination pagination-right">
+<div class="pagination pagination-right <%= "pagination-#{pagination_size}" if defined?(pagination_size) and ['large', 'small', 'mini'].include?(pagination_size) %>">
   <ul>
     <li class="disabled"><a href="#">Per Page</a></li>
     <li class="active per_page"><%= link_to (defined?(per_page) and per_page ? per_page : 20), "#" %></li>

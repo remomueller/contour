@@ -7,12 +7,12 @@
 //= require external/jquery-ui-1.8.22.custom.min.js
 //= require external/jquery.qtip.min.js
 //
-//= require twitter-bootstrap/v2.1.1/bootstrap
+//= require twitter-bootstrap/v2.2.1/bootstrap
 //
 //= require twitter-bootstrap/bootstrap-scroll-modal
 //= require twitter-bootstrap/bootstrap
 //
-//= require external/highcharts-2.1.9.src.js
-//= require external/exporting-2.1.9.src.js
+//= require external/highcharts-2.3.3.src.js
+//= require external/exporting-2.3.3.src.js
 //
 //= require_tree .
