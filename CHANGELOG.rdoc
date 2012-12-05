@@ -1,5 +1,8 @@
 == 1.1.2
 
+* Enhancements
+  * Recommended Ruby bumped to 1.9.3-p327
+
 == 1.1.1
 
 * Bug Fix
