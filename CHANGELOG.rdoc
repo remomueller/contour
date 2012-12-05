@@ -4,6 +4,8 @@
   * Recommended Ruby bumped to 1.9.3-p327
   * Updated Twitter Bootstrap to 2.2.1
   * Updated HighCharts to 2.3.3
+  * Kaminari Pagination styling now provided, available themes:
+    * <%= paginate @items, theme: "contour[-large|-small|-mini]" %>
 
 == 1.1.1
 
