@@ -11,7 +11,8 @@ dt, dd {
   overflow: visible;
 }
 
-@media (max-width: 480px) {
+/* TODO REMOVE */
+/*@media (max-width: 480px) {
   .modal-wrapper {
     position: absolute;
     top: 10px;
@@ -22,7 +23,7 @@ dt, dd {
     z-index: 1050;
     overflow: visible;
   }
-}
+}*/
 
 /* Fix for IE7 IE8 dropdown menu items */
 .collapse {

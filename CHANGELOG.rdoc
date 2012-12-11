@@ -8,6 +8,7 @@
     * <%= paginate @items, theme: "contour[-large|-small|-mini]" %>
   * Update Gem Dependencies
     * rails 3.2.9, jquery-rails 2.1.4, omniauth-cas 1.0.0, omniauth-twitter 0.0.14
+  * Updated Bootstrap-Scroll-Modal to version 1.2
 
 == 1.1.1
 
