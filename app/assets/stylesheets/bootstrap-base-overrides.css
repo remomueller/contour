@@ -1,16 +1,14 @@
 /* bootstrap-base-overrides.css */
 /* These overrides come after bootstrap.css but before bootstrap-responsive.css */
 
-/* Line 2154 */
+/* Line 2255 */
 [class^="icon-"],
 [class*=" icon-"] {
-  background-image: url(twitter-bootstrap/v2.2.1/glyphicons-halflings.png);
+  background-image: url(twitter-bootstrap/v2.2.2/glyphicons-halflings.png);
 }
 
-/* Line 2174 */
+/* Line 2275 */
 .icon-white,
-.nav-tabs > .active > a > [class^="icon-"],
-.nav-tabs > .active > a > [class*=" icon-"],
 .nav-pills > .active > a > [class^="icon-"],
 .nav-pills > .active > a > [class*=" icon-"],
 .nav-list > .active > a > [class^="icon-"],
@@ -20,16 +18,18 @@
 .dropdown-menu > li > a:hover > [class^="icon-"],
 .dropdown-menu > li > a:hover > [class*=" icon-"],
 .dropdown-menu > .active > a > [class^="icon-"],
-.dropdown-menu > .active > a > [class*=" icon-"] {
-  background-image: url(twitter-bootstrap/v2.2.1/glyphicons-halflings-white.png);
+.dropdown-menu > .active > a > [class*=" icon-"],
+.dropdown-submenu:hover > a > [class^="icon-"],
+.dropdown-submenu:hover > a > [class*=" icon-"] {
+  background-image: url(twitter-bootstrap/v2.2.2/glyphicons-halflings-white.png);
 }
 
-/* Line 4225 */
+/* Line 4346 */
 .navbar .brand {
   color: #ffffff;
 }
 
-/* Line 4642 */
+/* Line 4773 */
 .navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
 .navbar-inverse .nav li.dropdown.active > .dropdown-toggle,
 .navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {

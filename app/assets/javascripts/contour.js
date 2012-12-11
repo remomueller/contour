@@ -7,7 +7,7 @@
 //= require external/jquery-ui-1.8.22.custom.min.js
 //= require external/jquery.qtip.min.js
 //
-//= require twitter-bootstrap/v2.2.1/bootstrap
+//= require twitter-bootstrap/v2.2.2/bootstrap
 //
 //= require twitter-bootstrap/bootstrap-scroll-modal
 //= require twitter-bootstrap/bootstrap
