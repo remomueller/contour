@@ -14,7 +14,7 @@ Or update your <tt>Gemfile</tt> to include
 
 == Getting started
 
-Make sure you have Rails 3.2.8
+Make sure you have Rails 3.2.10
 
   rails -v
 
@@ -24,7 +24,7 @@ Make sure you have Rails 3.2.8
 
 Modify <tt>Gemfile</tt> and add
 
-  gem 'contour', '~> 1.1.0'
+  gem 'contour', '~> 1.1.2'
 
 Run Bundle install
 
@@ -191,5 +191,5 @@ For those interested in having better control on modifying the Twitter Bootstrap
 
 == Copyright {<img style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png"/>}[http://creativecommons.org/licenses/by-nc-sa/3.0/]
 
-Copyright (c) 2012 Remo Mueller. See {LICENSE}[https://github.com/remomueller/contour/blob/master/LICENSE] for further details.
+Copyright (c) 2013 Remo Mueller. See {LICENSE}[https://github.com/remomueller/contour/blob/master/LICENSE] for further details.
 
