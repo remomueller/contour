@@ -11,12 +11,12 @@
   * Updated Bootstrap-Scroll-Modal to version 1.2
   * nonStandardClick(event) helper JavaScript added to capture clicks
 
-== 1.1.1
+== 1.1.1 (October 30, 2012)
 
 * Bug Fix
   * Renamed LICENSE to LICENSE.txt to keep assets from failing to compile in Rails 3.2.9.rc1
 
-== 1.1.0
+== 1.1.0 (September 18, 2012)
 
 * Enhancements
   * Updated jQuery UI to 1.8.22, the following modules are included:
@@ -29,17 +29,17 @@
 * Breaking Changes
   * Unobtrusive JS now required, JavaScript is now included at bottom of HTML to improve perceived page load
 
-== 1.0.6
+== 1.0.6 (September 10, 2012)
 
 * Enhancements
   * Login and Registration API now return authentication token, first_name, last_name, id, and email for JSON requests on successful login
 
-== 1.0.5
+== 1.0.5 (August 21, 2012)
 
 * Bug Fix
   * IE8 no longer shows security warning due to http reference to shim.js when using https by default
 
-== 1.0.4
+== 1.0.4 (August 14, 2012)
 
 * Enhancements
   * Rails updated to minimum 3.2.8
@@ -52,7 +52,7 @@
 * Testing
   * Use ActionDispatch for Integration tests instead of ActionController
 
-== 1.0.3
+== 1.0.3 (July 11, 2012)
 
 * Enhancements
   * JavaScript includes reordered to allow Twitter Bootstrap buttons to be the default $().button() instead of jQuery UI
@@ -63,7 +63,7 @@
       * alert_type can be 'success' (default), 'error', 'info', or '', which are green, red, blue, and yellow respectively
       * overwrite can be <tt>true</tt> (default), or <tt>false</tt> in which case it will append to the already existing alerts
 
-== 1.0.2
+== 1.0.2 (June 19, 2012)
 
 * Enhancements
   * Rails updated to minimum 3.2.6
@@ -75,13 +75,13 @@
   * Subnav Partial added, can be called as follows:
     * <tt>render partial: 'contour/layouts/subnav', locals: { links: [{name: 'Link A', sublinks: [{name: 'Sublink 1'}, {name: 'Sublink 2'}]}, {name: 'Link B'}]}</tt>
 
-== 1.0.1
+== 1.0.1 (June 1, 2012)
 
 * Enhancements
   * Rails updated to minimum 3.2.5
   * Recommended use of Ruby 1.9.3-p194
 
-== 1.0.0
+== 1.0.0 (May 31, 2012)
 
 * Enhancements
   * Twitter-Bootstrap CSS layout is now default!
@@ -107,24 +107,24 @@
   * Authentication model is no longer required to be the user model
   * Authentication model creation no longer assigns application specific variables, i.e. first_name, last_name
 
-== 0.10.2
+== 0.10.2 (March 2, 2012)
 
 * Bug Fix
   * CSS fixed for positive and negative classes for buttons
 
-== 0.10.1
+== 0.10.1 (February 14, 2012)
 
 * Enhancements
   * Added options for setting body_background_{image|color} and link_color
     * Setting these as arrays will rotate through on a daily basis
     * Use the month_day configuration to set specific colors/images for select days
 
-== 0.10.0
+== 0.10.0 (February 13, 2012)
 
 * Enhancements
   * Changes made to accomodate contour template gems like contour-minimalist
 
-== 0.9.4
+== 0.9.4 (February 13, 2012)
 
 * Enhancements
   * Dependency for Rails updated to 3.2.1 and Devise 2.0.1
@@ -134,7 +134,7 @@
 * Testing
   * Passwords controller test added for "Forget Password"
 
-== 0.9.3
+== 0.9.3 (January 20, 2012)
 
 * Enhancements
   * Dependency for Rails updated to 3.2.0 and OmniAuth 1.0.2
@@ -144,17 +144,17 @@
 * Refactoring
   * Removed debug logging information
 
-== 0.9.2
+== 0.9.2 (January 18, 2012)
 
 * Bug Fix
   * HTTP Basic Auth failure fix for Devise added, (Do not use ActiveSupport::Base64, https://github.com/plataformatec/devise/commit/9549a32500301c0a60a41bc31311b6198a8f0670)
 
-== 0.9.1
+== 0.9.1 (January 16, 2012)
 
 * Bug Fix
   * rails generate contour:install now installs the correct omniauth.rb configuration file
 
-== 0.9.0
+== 0.9.0 (January 13, 2012)
 
 * Enhancements
   * Updated Contour to work with OmniAuth 1.0
@@ -170,7 +170,7 @@
 * Testing
   * SimpleCov testing updated to show gem test coverage
 
-== 0.8.4
+== 0.8.4 (January 12, 2012)
 
 * Bug Fix
   * OmniAuth Builder updated to work with Rack 1.4.0
@@ -186,7 +186,7 @@
     * Unit Tests for User Model
   * Continuous Integration using TravisCI (travis-ci.org)
 
-== 0.8.3
+== 0.8.3 (January 9, 2012)
 
 * Enhancements
   * Added icons from gentleface.com (see LICENSE in /app/assets/images/gentleface/LICENSE)
@@ -194,17 +194,17 @@
       <%= image_tag('gentleface/[16|32|48]/checkmark.png') %>
     * Note: in 1.0.0+ the images/contour/gentleface icons will be removed and be moved to images/gentleface
 
-== 0.8.2
+== 0.8.2 (January 9, 2012)
 
 * Bug Fix
   * Submit buttons on new registration, new session, and new password have been fixed
 
-== 0.8.1
+== 0.8.1 (January 6, 2012)
 
 * Bug Fix
   * rake assets:precompile now works due to Sprockets 2.1.2 incorrectly assuming that .src was a x-wais-source file instead of a javascript file
 
-== 0.8.0
+== 0.8.0 (January 3, 2012)
 
 * Enhancements
   * Updated to require Rails 3.2.x for ~> 0.8.0
@@ -219,12 +219,12 @@
 * Bug Fix
   * Fixed Rails 3.2.x deprecation warning due to passing the format in the template name for render :template
 
-== 0.7.2
+== 0.7.2 (January 3, 2012)
 
 * Bug Fix
   * Print layouts can now be specified using @media print{} block in CSS
 
-== 0.7.1
+== 0.7.1 (December 14, 2011)
 
 * Bug Fix
   * Settings default menu item removed
@@ -233,7 +233,7 @@
   * Contour Menu Items no longer require a unique id
   * README updated to reflects that Contour requires Rails 3.1.3 for ~> 0.7.0
 
-== 0.7.0
+== 0.7.0 (December 13, 2011)
 
 * Enhancements
   * Restructuring gem to be more in line with a gem created by 'rails plugin new'
@@ -246,12 +246,12 @@
 * Bug Fix
   * New Menu system is now IE7+ compatible
 
-== 0.6.1
+== 0.6.1 (November 14, 2011)
 
 * Bug Fix
   * Samples Index page now correctly displays the Contour version number
 
-== 0.6.0
+== 0.6.0 (November 14, 2011)
 
 * Enhancements
   * Underlying HighCharts Library updated to 2.1.9 to work with jQuery 1.7.0
@@ -260,7 +260,7 @@
 * Bug Fix
   * CSS classes negative and positive now properly apply color to their corresponding links
 
-== 0.5.7
+== 0.5.7 (November 14, 2011)
 
 * Enhancements
   * Authentications link is now hidden by default if no additional providers have been specified for Omniauth
@@ -268,17 +268,17 @@
 * Bug Fix
   * Dependency added for jquery-rails 1.0.0 to 1.0.16 since jquery-rails 1.0.17 switches to jQuery 1.7.0 which is incompatible with HighCharts 2.1.4 which requires jQuery 1.6.4
 
-== 0.5.6
+== 0.5.6 (October 11, 2011)
 
 * Bug Fix
   * SSL Verify Mode set to VERIFY_NONE so that RSS feeds using https can be read and parsed
 
-== 0.5.5
+== 0.5.5 (October 10, 2011)
 
 * Bug Fix
   * after_inactive_sign_up_path_for is now set to redirect to new_session_path(resource) to properly show message and to avoid redirect when the root_path is not publicly available
 
-== 0.5.4
+== 0.5.4 (October 10, 2011)
 
 * Enhancements
   * Added arrow.png image asset
@@ -288,17 +288,17 @@
 * Refactoring
   * Code cleanup and additional logger information for Devise Registrations (Omniauth) controller
 
-== 0.5.3
+== 0.5.3 (September 30, 2011)
 
 * Enhancements
   * Added warning.png image asset
 
-== 0.5.2
+== 0.5.2 (September 19, 2011)
 
 * Bug Fix
   * Password reset functionality fixed
 
-== 0.5.1
+== 0.5.1 (September 12, 2011)
 
 * Refactoring
   * Removed debug output
@@ -306,7 +306,7 @@
 * Documentation
   * Contour Walkthrough from an empty Rails 3.1 application now works correctly (# Devise.config.sign_out_via = :delete)
 
-== 0.5.0
+== 0.5.0 (September 8, 2011)
 
 * Enhancements
   * rails generate contour:install now appends routes
@@ -319,7 +319,7 @@
   * Removed registration page requirement for first_name and last_name
   * Incorrect redirect on LDAP authentication failure for Rails apps on subdomains fixed
 
-== 0.4.0
+== 0.4.0 (September 7, 2011)
 
 * Enhancements
   * Added new image assets
@@ -327,17 +327,17 @@
   * Added application_name_html configuration so that users can specify the html for the application name
   * :image and :image_options can now be passed to links to specify an image that appears to the right of the link
 
-== 0.3.2
+== 0.3.2 (September 6, 2011)
 
 * Bug Fix
   * Fixing asset paths in production and development by restructuring asset (image and stylesheet) relative placement
 
-== 0.3.1
+== 0.3.1 (September 5, 2011)
 
 * Bug Fix
   * Fixed assets location for images specified in the stylesheets
 
-== 0.3.0
+== 0.3.0 (September 5, 2011)
 
 * Enhancements
   * Update dependencies to Devise 1.4.4, (needed for Rails 3.1.0)
@@ -348,23 +348,23 @@
 * Testing
   * Created limited tests for authentications controller and registrations
 
-== 0.2.1
+== 0.2.1 (September 1, 2011)
 
 * Bug Fix
   * Apparently add_dependency doesn't work with (= ) signs either
 
-== 0.2.0
+== 0.2.0 (September 1, 2011)
 
 * Enhancements
   * Stock assets added
   * Sign in, password reset, and registration pages redesigned
 
-== 0.1.1
+== 0.1.1 (September 1, 2011)
 
 * Bug Fix
   * Apparently add_dependency doesn't currently work without ~> Set Omniauth dependency to increment on bug fix revision
 
-== 0.1.0
+== 0.1.0 (September 1, 2011)
 
 * Enhancements
   * Contour can now be used as a default template for the application layout
@@ -372,6 +372,6 @@
   * Contour provides CSS based on Bluetrip to provide cross-browser compatiblity
   * Contour rails generator provides fixes to Rack and Omniauth to allow correct reverse proxy (chaining) authentication to machines behind firewalls
 
-== 0.0.0
+== 0.0.0 (August 29, 2011)
 
 * Skeleton files to compile gem and make it available on rubygems.org
