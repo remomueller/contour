@@ -30,6 +30,7 @@ class Contour::AuthenticationsController < ApplicationController
         logger.info "Creating new user with new authentication."
         user = User.new(params[:user])
         user.apply_omniauth(omniauth)
+        user.password = Devise.friendly_token[0,20] if user.password.blank?
         if user.save
           session["user_return_to"] = request.env["action_dispatch.request.unsigned_session_cookie"]["user_return_to"] if request.env and request.env["action_dispatch.request.unsigned_session_cookie"] and request.env["action_dispatch.request.unsigned_session_cookie"]["user_return_to"] and session["user_return_to"].blank?
           flash[:notice] = "Signed in successfully." if user.active_for_authentication?
