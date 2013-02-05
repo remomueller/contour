@@ -45,3 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 .tooltip {
   line-height: 20px;
 }
+
+.center {
+  text-align: center;
+}
