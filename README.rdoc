@@ -14,7 +14,7 @@ Or update your <tt>Gemfile</tt> to include
 
 == Getting started
 
-Make sure you have Rails 3.2.10
+Make sure you have Rails 3.2.11
 
   rails -v
 
