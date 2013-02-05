@@ -3,7 +3,7 @@
 * Enhancements
   * Tooltip base line-height is now fixed at 20px
   * Update Gem Dependencies
-    * rails 3.2.11, omniauth-ldap 1.0.3
+    * rails 3.2.11
   * Removed tooltips from alternate login providers to save iPhones and iPads from clicking the authentication button twice
   * Added a <tt>.center</tt> CSS class to use instead of the deprecated <tt>&lt;center&gt;</tt> tag
 
