@@ -87,6 +87,7 @@ Add the following to your <tt>app/models/user.rb</tt>
     unless omniauth['info'].blank?
       self.email = omniauth['info']['email'] if email.blank?
     end
+    self.password = Devise.friendly_token[0,20] if self.password.blank?
     authentications.build( provider: omniauth['provider'], uid: omniauth['uid'] )
   end
 
