@@ -8,6 +8,7 @@
     * UI Core: Core, Widget, Mouse
     * Interactions: Draggable, Droppable, Sortable
     * Effects: Effects Core, Fade, Highlight
+  * Added bootstrap-datepicker and bootstrap-timepicker
 
 == 1.1.2 (January 3, 2013)
 

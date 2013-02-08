@@ -18,13 +18,19 @@
   event.which > 1 or event.metaKey or event.ctrlKey or event.shiftKey or event.altKey
 
 jQuery ->
-  # $(".datepicker").datepicker
-  #   showOtherMonths: true
-  #   selectOtherMonths: true
-  #   changeMonth: true
-  #   changeYear: true
+  $(".timepicker").timepicker
+    showMeridian: false
+    showSeconds: true
+    defaultTime: false
+  $(".datepicker").datepicker('remove')
+  $(".datepicker").datepicker( autoclose: true )
 
-  # $("#ui-datepicker-div").hide()
+  $(document).on('change', '.datepicker', () ->
+    try
+      $(this).val($.datepicker.formatDate('mm/dd/yy', $.datepicker.parseDate('mm/dd/yy', $(this).val())))
+    catch error
+      # Nothing
+  )
 
   $(document).on('click', ".pagination a, .page a, .next a, .prev a", () ->
     return false if $(this).parent().is('.active, .disabled, .per_page')
