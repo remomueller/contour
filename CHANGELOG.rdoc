@@ -3,7 +3,7 @@
 * Enhancements
   * Updated Twitter Bootstrap to 2.3.0
   * Updated Gem Dependencies
-    * devise 2.2.3
+    * devise 2.2.3, jquery-rails 2.2.1
 
 == 1.1.2 (January 3, 2013)
 
