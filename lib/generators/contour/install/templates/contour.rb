@@ -37,6 +37,15 @@ Contour.setup do |config|
   #   }
   # ]
 
+  # Enter search bar information if you would like one [default none]:
+  # config.search_bar = {
+  #   display: 'always',
+  #   id: 'global-search',
+  #   path: 'search_path',
+  #   placeholder: 'Search',
+  #   position: 'left'
+  # }
+
   # Enter an address of a valid RSS Feed if you would like to see news on the sign in page.
   # config.news_feed = ''
 

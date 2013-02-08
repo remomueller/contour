@@ -41,6 +41,11 @@
           <% end %>
         </ul>
       <% end %>
+      <% if Contour.search_bar and display.include?(Contour.search_bar[:display]) %>
+        <form id="<%= Contour.search_bar[:id] || 'global-search' %>-form" class="navbar-search pull-<%= Contour.search_bar[:position] || 'left' %>" action="<%= Contour.search_bar[:path].blank? ? '#' : eval(Contour.search_bar[:path].to_s) %>">
+          <input id="<%= Contour.search_bar[:id] || 'global-search' %>" name="q" type="text" autocomplete="off" class="search-query" value="<%= params[:q] %>" placeholder="<%= Contour.search_bar[:placeholder] || 'Search' %>">
+        </form>
+      <% end %>
     </div>
   </div>
 </div>

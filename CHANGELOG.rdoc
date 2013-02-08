@@ -9,6 +9,15 @@
     * Interactions: Draggable, Droppable, Sortable
     * Effects: Effects Core, Fade, Highlight
   * Added bootstrap-datepicker and bootstrap-timepicker
+  * Contour can now be configured to have a search bar in the navigation menu
+    * For example:
+      config.search_bar = {
+        display: 'always',
+        id: 'global-search',
+        path: 'search_path',
+        placeholder: 'Search',
+        position: 'left'
+      }
 
 == 1.1.2 (January 3, 2013)
 

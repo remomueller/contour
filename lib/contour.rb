@@ -47,6 +47,16 @@ module Contour
     }
   ]
 
+  # Default search bar (none)
+  # Options
+  # display: always|not_signed_in|signed_in
+  # id: input field id, the form around the search box is 'id'-form
+  # position: left|right
+  # path: the path for the form to submit to
+  # placeholder: defaults to 'Search'
+  mattr_accessor :search_bar
+  @@search_bar = {}
+
   # Default news feed
   mattr_accessor :news_feed
   @@news_feed = nil
