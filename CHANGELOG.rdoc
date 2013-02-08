@@ -1,5 +1,8 @@
 == 1.2.0
 
+* Enhancements
+  * Updated Twitter Bootstrap to 2.3.0
+
 == 1.1.2 (January 3, 2013)
 
 * Enhancements
