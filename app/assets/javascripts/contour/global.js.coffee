@@ -18,13 +18,13 @@
   event.which > 1 or event.metaKey or event.ctrlKey or event.shiftKey or event.altKey
 
 jQuery ->
-  $(".datepicker").datepicker
-    showOtherMonths: true
-    selectOtherMonths: true
-    changeMonth: true
-    changeYear: true
+  # $(".datepicker").datepicker
+  #   showOtherMonths: true
+  #   selectOtherMonths: true
+  #   changeMonth: true
+  #   changeYear: true
 
-  $("#ui-datepicker-div").hide()
+  # $("#ui-datepicker-div").hide()
 
   $(document).on('click', ".pagination a, .page a, .next a, .prev a", () ->
     return false if $(this).parent().is('.active, .disabled, .per_page')

@@ -9,7 +9,7 @@
  *= require twitter-bootstrap/v2.3.0/bootstrap-responsive
  *= require twitter-bootstrap/bootstrap-subnav
  *= require bootstrap-responsive-overrides
- *= require jquery-ui-1.8.22.custom
+ *= require jquery-ui-1.10.0.custom
  *= require jquery.qtip
  *= require contour/about
  *= require contour/authentication
