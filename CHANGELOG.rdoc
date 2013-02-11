@@ -8,6 +8,7 @@
     * UI Core: Core, Widget, Mouse
     * Interactions: Draggable, Droppable, Sortable
     * Effects: Effects Core, Fade, Highlight
+  * Updated qTip2 to account for deprecations in jQuery 1.9.1
   * Added bootstrap-datepicker and bootstrap-timepicker
   * Contour can now be configured to have a search bar in the navigation menu
     * For example:
