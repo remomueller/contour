@@ -19,6 +19,18 @@
         position: 'left'
       }
 
+== 1.1.3 (February 11, 2013)
+
+* Enhancements
+  * Tooltip base line-height is now fixed at 20px
+  * Update Gem Dependencies
+    * rails 3.2.11
+  * Removed tooltips from alternate login providers to save iPhones and iPads from clicking the authentication button twice
+  * Added a <tt>.center</tt> CSS class to use instead of the deprecated <tt>&lt;center&gt;</tt> tag
+
+* Bug Fix
+  * apply_omniauth(omniauth) updated to account for PostgreSQL error, see {README}[https://github.com/remomueller/contour/blob/master/README]
+
 == 1.1.2 (January 3, 2013)
 
 * Enhancements

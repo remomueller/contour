@@ -1,4 +1,4 @@
-= Contour {<img src="https://secure.travis-ci.org/remomueller/contour.png"/>}[http://travis-ci.org/remomueller/contour] {<img src="https://gemnasium.com/remomueller/contour.png" alt="Dependency Status" />}[https://gemnasium.com/remomueller/contour] {<img src="https://codeclimate.com/badge.png" />}[https://codeclimate.com/github/remomueller/contour]
+= Contour {<img src="https://secure.travis-ci.org/remomueller/contour.png"/>}[http://travis-ci.org/remomueller/contour] {<img src="https://gemnasium.com/remomueller/contour.png" alt="Dependency Status" />}[https://gemnasium.com/remomueller/contour] {<img src="https://codeclimate.com/github/remomueller/contour.png" />}[https://codeclimate.com/github/remomueller/contour]
 
 Basic Rails framework files and assets for layout and authentication
 
@@ -14,7 +14,7 @@ Or update your <tt>Gemfile</tt> to include
 
 == Getting started
 
-Make sure you have Rails 3.2.10
+Make sure you have Rails 3.2.11
 
   rails -v
 
@@ -87,6 +87,7 @@ Add the following to your <tt>app/models/user.rb</tt>
     unless omniauth['info'].blank?
       self.email = omniauth['info']['email'] if email.blank?
     end
+    self.password = Devise.friendly_token[0,20] if self.password.blank?
     authentications.build( provider: omniauth['provider'], uid: omniauth['uid'] )
   end
 
@@ -192,4 +193,3 @@ For those interested in having better control on modifying the Twitter Bootstrap
 == Copyright {<img style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png"/>}[http://creativecommons.org/licenses/by-nc-sa/3.0/]
 
 Copyright (c) 2013 Remo Mueller. See {LICENSE}[https://github.com/remomueller/contour/blob/master/LICENSE] for further details.
-
