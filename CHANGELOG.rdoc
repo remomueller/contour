@@ -3,7 +3,7 @@
 * Enhancements
   * Updated Twitter Bootstrap to 2.3.0
   * Updated Gem Dependencies
-    * devise 2.2.3, jquery-rails 2.2.1
+    * devise 2.2.3, jquery-rails 2.2.1, rails 3.2.12
   * Updated jQuery UI to 1.10.0, the following modules are included:
     * UI Core: Core, Widget, Mouse
     * Interactions: Draggable, Droppable, Sortable
