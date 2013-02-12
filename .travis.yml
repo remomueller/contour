@@ -4,6 +4,3 @@ rvm:
   - 2.0.0
 before_script:
   - "bundle exec rake db:migrate RAILS_ENV=test"
-matrix:
-  allow_failures:
-    - rvm: 2.0.0
