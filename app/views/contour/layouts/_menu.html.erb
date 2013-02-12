@@ -46,6 +46,9 @@
           <input id="<%= Contour.search_bar[:id] || 'global-search' %>" name="q" type="text" autocomplete="off" class="search-query" value="<%= params[:q] %>" placeholder="<%= Contour.search_bar[:placeholder] || 'Search' %>">
         </form>
       <% end %>
+      <div class="navbar-search pull-right" data-object="flash-container">
+        <%= flash_block %>
+      </div>
     </div>
   </div>
 </div>
