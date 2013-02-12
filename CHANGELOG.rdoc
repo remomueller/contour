@@ -1,5 +1,8 @@
 == 1.2.0
 
+* Breaking Changes
+  * Removed support for the subnav partial
+
 * Enhancements
   * Updated Twitter Bootstrap to 2.3.0
   * Updated Gem Dependencies
@@ -106,7 +109,7 @@
   * Twitter Bootstrap updated to 2.0.4
     * Now includes all Bootstrap JavaScript Plugins, http://twitter.github.com/bootstrap/javascript.html
     * Added styling for .subnav and .subnav-fixed
-  * Subnav Partial added, can be called as follows:
+  * Subnav Partial added, can be called as follows: **Subnav was REMOVED in 1.2.0**
     * <tt>render partial: 'contour/layouts/subnav', locals: { links: [{name: 'Link A', sublinks: [{name: 'Sublink 1'}, {name: 'Sublink 2'}]}, {name: 'Link B'}]}</tt>
 
 == 1.0.1 (June 1, 2012)
