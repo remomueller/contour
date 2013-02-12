@@ -7,7 +7,7 @@
     element.html('<img width=\"13\" height=\"13\" src=\"' + root_url + 'assets/contour/ajax-loader.gif\" align=\"absmiddle\" alt=\"...\" />' + text)
 
 @flashMessage = (message, alert_type = 'success', overwrite = true) ->
-  div_block = "<div class='alert alert-#{alert_type}'><button type='button' class='close' data-dismiss='alert'>×</button>#{message}</div>"
+  div_block = "<div class='navbar-alert alert alert-#{alert_type}'><button type='button' class='close' data-dismiss='alert'>×</button>#{message}</div>"
   flash_container = $('[data-object~="flash-container"]')
   if overwrite
     flash_container.html(div_block)
