@@ -1125,6 +1125,14 @@
     }
 
   , enter: function (e) {
+      // Added by Contour
+      // https://github.com/twitter/bootstrap/issues/6232#issuecomment-13458685
+      if (this.options.trigger == 'hover' && 'ontouchstart' in document.documentElement) {
+        // Block tooltip event on touch devices since it swallows click events
+        return;
+      }
+      // End of Added by Contour
+
       var self = $(e.currentTarget)[this.type](this._options).data(this.type)
 
       if (!self.options.delay || !self.options.delay.show) return self.show()
