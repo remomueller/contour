@@ -33,7 +33,7 @@
 - Update Gem Dependencies
   - rails 3.2.11
 - Removed tooltips from alternate login providers to save iPhones and iPads from clicking the authentication button twice
-- Added a `.center` CSS class to use instead of the deprecated `&lt;center&gt;` tag
+- Added a `.center` CSS class to use instead of the deprecated `<center>` tag
 
 ### Bug Fix
 - apply_omniauth(omniauth) updated to account for PostgreSQL error, see [README](https://github.com/remomueller/contour/blob/master/README.md)
