@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
 
   s.platform = Gem::Platform::RUBY
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["CHANGELOG.rdoc", "contour.gemspec", "LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["CHANGELOG.md", "contour.gemspec", "LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency 'rails',                   '~> 3.2.12'
