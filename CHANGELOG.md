@@ -36,7 +36,7 @@
 - Added a `.center` CSS class to use instead of the deprecated `&lt;center&gt;` tag
 
 ### Bug Fix
-- apply_omniauth(omniauth) updated to account for PostgreSQL error, see {README}[https://github.com/remomueller/contour/blob/master/README]
+- apply_omniauth(omniauth) updated to account for PostgreSQL error, see [README](https://github.com/remomueller/contour/blob/master/README.md)
 
 ## 1.1.2 (January 3, 2013)
 
