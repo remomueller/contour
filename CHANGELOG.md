@@ -1,4 +1,4 @@
-## 1.2.0
+## 1.2.0 (February 15, 2013)
 
 ### Breaking Changes
 - Removed support for the subnav partial
