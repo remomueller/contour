@@ -1,5 +1,9 @@
 ## 1.2.1
 
+### Enhancements
+- Flash notices are now displayed underneath the menu bar as a float
+  - Flash notices can be customized by overwriting the CSS for `.flash-block` and `.navbar-alert`
+
 ## 1.2.0 (February 15, 2013)
 
 ### Breaking Changes

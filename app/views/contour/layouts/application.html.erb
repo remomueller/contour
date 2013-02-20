@@ -19,6 +19,12 @@
       <%= render partial: 'contour/layouts/menu' %>
     </div>
 
+    <div class="container" style="position:relative">
+      <div class="flash-block" data-object="flash-container">
+        <%= flash_block %>
+      </div>
+    </div>
+
     <div class="container">
       <%= yield %>
     </div>

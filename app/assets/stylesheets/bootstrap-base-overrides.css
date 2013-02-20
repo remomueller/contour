@@ -47,13 +47,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-alert {
-  padding: 5px;
-  line-height: 20px;
-  margin: 0px 0px 3px 0px;
+  margin: 0px 0px 5px 0px;
+  border: 1px solid #515151;
+  -moz-box-shadow: 3px 3px 4px #515151;
+  -webkit-box-shadow: 3px 3px 4px #515151;
+  box-shadow: 3px 3px 4px #515151;
 }
 
-.navbar-alert .close {
-  position: inherit;
-  line-height: 16px;
-  padding-left: 5px;
+.flash-block {
+  position: absolute;
+  right: 0px;
+  top: -16px;
+  z-index: 1000;
 }
