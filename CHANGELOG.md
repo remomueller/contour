@@ -1,4 +1,4 @@
-## 1.2.1
+## 1.2.1 (February 20, 2013)
 
 ### Enhancements
 - Flash notices are now displayed underneath the menu bar as a float
