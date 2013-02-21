@@ -8,8 +8,8 @@
  *= require twitter-bootstrap/bootstrap-scroll-modal
  *= require twitter-bootstrap/v2.3.0/bootstrap-responsive
  *= require bootstrap-responsive-overrides
+ *= require typeahead
  *= require jquery-ui-1.10.0.custom
- *= require jquery.qtip
  *= require datepicker
  *= require timepicker
  *= require contour/about

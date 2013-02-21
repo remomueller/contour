@@ -5,12 +5,13 @@
 //= require jquery_ujs
 //
 //= require external/jquery-ui-1.10.0.custom.min.js
-//= require external/jquery.qtip.js
 //
 //= require twitter-bootstrap/v2.3.0/bootstrap
 //
 //= require twitter-bootstrap/bootstrap-scroll-modal
 //= require twitter-bootstrap/bootstrap
+//
+//= require typeahead.js
 //
 //= require external/highcharts-2.3.3.src.js
 //= require external/exporting-2.3.3.src.js

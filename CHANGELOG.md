@@ -4,6 +4,7 @@
 - Removed qTip^2 JavaScript to reduce overall JavaScript footprint
 
 ### Enhancements
+- Added twitter/typeahead.js for more flexible typeahead
 - **Gem Changes**
   - Updated to omniauth 1.1.3
   - Updated to omniauth-ldap 1.0.3
