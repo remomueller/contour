@@ -6,8 +6,8 @@
 ### Enhancements
 - **Gem Changes**
   - Updated to omniauth 1.1.3
-  - Updated to omniauth-linkedin 0.1.0
   - Updated to omniauth-ldap 1.0.3
+  - Updated to omniauth-linkedin 0.1.0
 
 ## 1.2.1 (February 20, 2013)
 
