@@ -1,5 +1,8 @@
 ## 1.3.0
 
+### Breaking Changes
+- Removed qTip^2 JavaScript to reduce overall JavaScript footprint
+
 ## 1.2.1 (February 20, 2013)
 
 ### Enhancements
