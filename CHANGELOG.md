@@ -3,6 +3,10 @@
 ### Breaking Changes
 - Removed qTip^2 JavaScript to reduce overall JavaScript footprint
 
+### Enhancements
+- Updated **Gem Dependencies**
+  - omniauth-linkedin 0.1.0
+
 ## 1.2.1 (February 20, 2013)
 
 ### Enhancements
