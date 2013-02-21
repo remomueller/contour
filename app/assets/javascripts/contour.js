@@ -11,7 +11,7 @@
 //= require twitter-bootstrap/bootstrap-scroll-modal
 //= require twitter-bootstrap/bootstrap
 //
-//= require typeahead.js
+//= require external/typeahead.js
 //
 //= require external/highcharts-2.3.3.src.js
 //= require external/exporting-2.3.3.src.js
