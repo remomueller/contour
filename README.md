@@ -118,11 +118,8 @@ include Contourable
 Add the following to your `app/models/authentication.rb`
 
 ```ruby
-belongs_to :user
-
-def provider_name
-  OmniAuth.config.camelizations[provider.to_s.downcase] || provider.to_s.titleize
-end
+# Concerns
+include ContourAuthenticatable
 ```
 
 Edit `config/initializers/devise.rb` to use `:get` for devise `sign_out_via`
