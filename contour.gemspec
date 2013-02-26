@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/remomueller'
   s.summary     = 'Basic Rails framework files and assets for layout and authentication'
   s.description = 'Basic Rails Framework files and assets for layout and authentication'
+  s.license     = 'CC BY-NC-SA 3.0'
 
   s.platform = Gem::Platform::RUBY
 
