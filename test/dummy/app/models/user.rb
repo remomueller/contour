@@ -7,14 +7,14 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :timeoutable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  # Concerns
+  include Contourable
+
   # # Setup accessible (or protected) attributes for your model
   # attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name
 
   # Named Scopes
-  scope :current, conditions: { deleted: false }
-
-  # Model Relationships
-  has_many :authentications
+  scope :current, -> { where(deleted: false) }
 
   def name
     "#{first_name} #{last_name}"
@@ -27,20 +27,6 @@ class User < ActiveRecord::Base
   # Overriding Devise built-in active? method
   def active_for_authentication?
     super and self.status == 'active' and not self.deleted?
-  end
-
-  def apply_omniauth(omniauth)
-    unless omniauth['info'].blank?
-      self.email = omniauth['info']['email'] if email.blank?
-      self.first_name = omniauth['info']['first_name'] if first_name.blank?
-      self.last_name = omniauth['info']['last_name'] if last_name.blank?
-    end
-    self.password = Devise.friendly_token[0,20] if self.password.blank?
-    authentications.build( provider: omniauth['provider'], uid: omniauth['uid'] )
-  end
-
-  def password_required?
-    (authentications.empty? || !password.blank?) && super
   end
 
 end

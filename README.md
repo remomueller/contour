@@ -70,12 +70,6 @@ Create a sample controller
 rails generate controller welcome index --skip-stylesheets
 ```
 
-Remove the `public/index.html`
-
-```console
-rm public/index.html
-```
-
 Add the following line to your `app/controllers/application_controller.rb`
 
 ```ruby
@@ -111,26 +105,14 @@ root to: 'welcome#index'
 Add the following to the top of your `app/controllers/welcome_controller.rb`
 
 ```ruby
-before_filter :authenticate_user!
+before_action :authenticate_user!
 ```
 
 Add the following to your `app/models/user.rb`
 
 ```ruby
-# Model Relationships
-has_many :authentications
-
-def apply_omniauth(omniauth)
-  unless omniauth['info'].blank?
-    self.email = omniauth['info']['email'] if email.blank?
-  end
-  self.password = Devise.friendly_token[0,20] if self.password.blank?
-  authentications.build( provider: omniauth['provider'], uid: omniauth['uid'] )
-end
-
-def password_required?
-  (authentications.empty? || !password.blank?) && super
-end
+# Concerns
+include Contourable
 ```
 
 Add the following to your `app/models/authentication.rb`
