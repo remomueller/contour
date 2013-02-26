@@ -1,5 +1,9 @@
 ## 2.0.0
 
+### Enhancements
+- **Gem Changes**
+  - Updated to Rails 4.0.0.beta1
+
 ## 1.3.0 (February 26, 2013)
 
 ### Breaking Changes
