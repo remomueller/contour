@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   get '/auth/failure' => 'contour/authentications#failure'
-  get '/auth/:provider/callback' => 'contour/authentications#create'
+  post '/auth/:provider/callback' => 'contour/authentications#create'
   get '/auth/:provider' => 'contour/authentications#passthru'
   get '/contour' => 'contour/samples#index'
 
