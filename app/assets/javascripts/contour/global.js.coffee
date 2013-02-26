@@ -17,7 +17,30 @@
 @nonStandardClick = (event) ->
   event.which > 1 or event.metaKey or event.ctrlKey or event.shiftKey or event.altKey
 
-jQuery ->
+$(document)
+  .on('change', '.datepicker', () ->
+    try
+      $(this).val($.datepicker.formatDate('mm/dd/yy', $.datepicker.parseDate('mm/dd/yy', $(this).val())))
+    catch error
+      # Nothing
+  )
+  .on('click', ".pagination a, .page a, .next a, .prev a", () ->
+    return false if $(this).parent().is('.active, .disabled, .per_page')
+    $.get(this.href, null, null, "script")
+    false
+  )
+  .on("click", ".per_page a", () ->
+    object_class = $(this).data('object')
+    $.get($("#"+object_class+"_search").attr("action"), $("#"+object_class+"_search").serialize() + "&"+object_class+"_per_page="+ $(this).data('count'), null, "script")
+    false
+  )
+  .on('click', '[data-object~="order"]', () ->
+    $('#order').val($(this).data('order'))
+    $($(this).data('form')).submit()
+    false
+  )
+
+@ready = () ->
   $(".timepicker").timepicker
     showMeridian: false
     showSeconds: true
@@ -25,30 +48,8 @@ jQuery ->
   $(".datepicker").datepicker('remove')
   $(".datepicker").datepicker( autoclose: true )
 
-  $(document).on('change', '.datepicker', () ->
-    try
-      $(this).val($.datepicker.formatDate('mm/dd/yy', $.datepicker.parseDate('mm/dd/yy', $(this).val())))
-    catch error
-      # Nothing
-  )
-
-  $(document).on('click', ".pagination a, .page a, .next a, .prev a", () ->
-    return false if $(this).parent().is('.active, .disabled, .per_page')
-    $.get(this.href, null, null, "script")
-    false
-  )
-
-  $(document).on("click", ".per_page a", () ->
-    object_class = $(this).data('object')
-    $.get($("#"+object_class+"_search").attr("action"), $("#"+object_class+"_search").serialize() + "&"+object_class+"_per_page="+ $(this).data('count'), null, "script")
-    false
-  )
-
-  $(document).on('click', '[data-object~="order"]', () ->
-    $('#order').val($(this).data('order'))
-    $($(this).data('form')).submit()
-    false
-  )
-
   # Load forms on page load
   $('[data-object~="form-load"]').submit()
+
+$(document).ready(ready)
+# $(document).on('page:load', ready)
