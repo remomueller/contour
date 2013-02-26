@@ -1,3 +1,5 @@
+## 2.0.0
+
 ## 1.3.0 (February 26, 2013)
 
 ### Breaking Changes
