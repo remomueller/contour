@@ -7,8 +7,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :timeoutable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name
+  # # Setup accessible (or protected) attributes for your model
+  # attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name
 
   # Named Scopes
   scope :current, conditions: { deleted: false }

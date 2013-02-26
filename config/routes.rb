@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  match '/auth/failure' => 'contour/authentications#failure'
-  match '/auth/:provider/callback' => 'contour/authentications#create'
-  match '/auth/:provider' => 'contour/authentications#passthru'
-  match '/contour' => 'contour/samples#index'
+  get '/auth/failure' => 'contour/authentications#failure'
+  get '/auth/:provider/callback' => 'contour/authentications#create'
+  get '/auth/:provider' => 'contour/authentications#passthru'
+  get '/contour' => 'contour/samples#index'
 
   resources :authentications, controller: 'contour/authentications'
 
