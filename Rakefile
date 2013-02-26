@@ -1,8 +1,11 @@
 #!/usr/bin/env rake
 
-require 'rake'
+require 'bundler/gem_tasks'
 require 'rake/testtask'
-require 'bundler'
+require 'rdoc/task'
+
+desc 'Default: run contour tests'
+task default: :test
 
 APP_RAKEFILE = File.expand_path("../test/dummy/Rakefile", __FILE__)
 load 'rails/tasks/engine.rake'
@@ -16,4 +19,12 @@ Rake::TestTask.new(:test) do |t|
   t.verbose = false
 end
 
-task default: :test
+desc 'Generate documentation for Contour'
+Rake::RDocTask.new(:rdoc) do |rdoc|
+  rdoc.rdoc_dir = 'rdoc'
+  rdoc.title    = 'Contour'
+  rdoc.options << '--line-numbers' << '--inline-source'
+  rdoc.rdoc_files.include('README.md')
+  rdoc.rdoc_files.include('lib/**/*.rb')
+end
+
