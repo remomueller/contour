@@ -160,7 +160,7 @@ rails g scaffold Item name:string description:text user_id:integer bought_date:d
 Add a current `scope` and `belongs_to` relationship to `app/models/item.rb`
 
 ```ruby
-scope :current, conditions: { }
+scope :current, -> { all }
 
 belongs_to :user
 ```
@@ -168,7 +168,7 @@ belongs_to :user
 Add a current `scope` and `has_many` relationship to `app/models/user.rb` along with name placeholder
 
 ```ruby
-scope :current, conditions: { }
+scope :current, -> { all }
 
 has_many :items
 
