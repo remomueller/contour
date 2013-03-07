@@ -31,7 +31,7 @@ class Contour::SessionsController < Devise::SessionsController
 
       respond_to do |format|
         format.html { respond_with resource, location: after_sign_in_path_for(resource) }
-        format.json { render json: { success: true, user: resource.as_json( only: [:id, :email, :first_name, :last_name, :authentication_token ] ) } }
+        format.json { render json: { success: true, resource_name => { id: resource.id, email: resource.email, first_name: resource.first_name, last_name: resource.last_name, authentication_token: (resource.respond_to?(:authentication_token) ? resource.authentication_token : nil) } } }
       end
     else
       resource = resource_name.to_s.titleize.constantize.find_by_email(params[resource_name][:email])
