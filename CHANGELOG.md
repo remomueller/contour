@@ -4,6 +4,9 @@
 - **Gem Changes**
   - Updated to Rails 4.0.0.beta1
 
+### Refactoring
+- Removed an temporary fix that allowed OmniAuth to interact properly with Rack
+
 ## 1.3.0 (February 26, 2013)
 
 ### Breaking Changes

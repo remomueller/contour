@@ -1,45 +1,45 @@
 require 'omniauth'
 require 'omniauth-ldap'
 
-# Overwriting methods from Rack
-# While OmniAuth 1.0.2 fixes the Builder setup, Rack 1.4.0 still responds incorrectly to it's release version.
-# Wait for Rack 1.4.1 or updated version before removing the Builder fixes
-module OmniAuth
+# # Overwriting methods from Rack
+# # While OmniAuth 1.0.2 fixes the Builder setup, Rack 1.4.0 still responds incorrectly to it's release version.
+# # Wait for Rack 1.4.1 or updated version before removing the Builder fixes
+# module OmniAuth
 
-  # class Builder updates for Rack 1.4.0
-  class Builder
-    def initialize(app = nil,&block)
-      @use, @map, @run = [], nil, app
-      instance_eval(&block) if block_given?
-    end
+#   # class Builder updates for Rack 1.4.0
+#   class Builder
+#     def initialize(app = nil,&block)
+#       @use, @map, @run = [], nil, app
+#       instance_eval(&block) if block_given?
+#     end
 
-    def on_failure(&block)
-      OmniAuth.config.on_failure = block
-    end
+#     def on_failure(&block)
+#       OmniAuth.config.on_failure = block
+#     end
 
-    def configure(&block)
-      OmniAuth.configure(&block)
-    end
+#     def configure(&block)
+#       OmniAuth.configure(&block)
+#     end
 
-    def provider(klass, *args, &block)
-      if klass.is_a?(Class)
-        middleware = klass
-      else
-        begin
-          middleware = OmniAuth::Strategies.const_get("#{OmniAuth::Utils.camelize(klass.to_s)}")
-        rescue NameError
-          raise LoadError, "Could not find matching strategy for #{klass.inspect}. You may need to install an additional gem (such as omniauth-#{klass})."
-        end
-      end
+#     def provider(klass, *args, &block)
+#       if klass.is_a?(Class)
+#         middleware = klass
+#       else
+#         begin
+#           middleware = OmniAuth::Strategies.const_get("#{OmniAuth::Utils.camelize(klass.to_s)}")
+#         rescue NameError
+#           raise LoadError, "Could not find matching strategy for #{klass.inspect}. You may need to install an additional gem (such as omniauth-#{klass})."
+#         end
+#       end
 
-      use middleware, *args, &block
-    end
+#       use middleware, *args, &block
+#     end
 
-    def call(env)
-      to_app.call(env)
-    end
-  end
-end
+#     def call(env)
+#       to_app.call(env)
+#     end
+#   end
+# end
 
 # Fix for LDAP Authentication with Domains
 module OmniAuth
