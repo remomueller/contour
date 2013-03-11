@@ -5,6 +5,8 @@
   - Updated to Rails 4.0.0.beta1
 
 ### Refactoring
+- Added a fix for Rack that respecifies the Content-Type as "text/html"
+  - This fixes the OmniAuth-LDAP form from returning as "text/plain"
 - Removed an temporary fix that allowed OmniAuth to interact properly with Rack
 
 ## 1.3.0 (February 26, 2013)
