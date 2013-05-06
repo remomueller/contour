@@ -21,12 +21,12 @@ Gem::Specification.new do |s|
 
   s.platform = Gem::Platform::RUBY
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["CHANGELOG.md", "contour.gemspec", "LICENSE", "Rakefile", "README.md"]
-  s.test_files = Dir["test/**/*"]
+  s.files = Dir['{app,config,db,lib}/**/*'] + ['CHANGELOG.md', 'contour.gemspec', 'LICENSE', 'Rakefile', 'README.md']
+  s.test_files = Dir['test/**/*']
 
-  s.add_dependency 'rails',                   '~> 4.0.0.beta1'
+  s.add_dependency 'rails',                   '~> 4.0.0.rc1'
   s.add_dependency 'jquery-rails',            '~> 2.2.1'
-  s.add_dependency 'coffee-rails',            '~> 4.0.0.beta1'
+  s.add_dependency 'coffee-rails',            '~> 4.0.0'
   # s.add_dependency 'devise',                  '~> 2.2.3' # Currently in Gemfile
   s.add_dependency 'omniauth',                '~> 1.1.3'
   s.add_dependency 'omniauth-cas',            '~> 1.0.1'
@@ -36,5 +36,5 @@ Gem::Specification.new do |s|
   s.add_dependency 'omniauth-openid',         '~> 1.0.1'
   s.add_dependency 'omniauth-twitter',        '~> 0.0.14'
 
-  s.add_development_dependency "sqlite3"
+  s.add_development_dependency 'sqlite3'
 end

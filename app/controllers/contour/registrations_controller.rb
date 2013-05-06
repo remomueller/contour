@@ -5,7 +5,10 @@ class Contour::RegistrationsController < Devise::RegistrationsController
     if signed_in?
       # TODO: Should use "Resource" and not "User"
       params[:user][:password] = params[:user][:password_confirmation] = Digest::SHA1.hexdigest(Time.now.usec.to_s)[0..19] if params[:user][:password].blank? and params[:user][:password_confirmation].blank?
-      @user = User.new(user_params)
+
+      # self.resource = build_resource(sign_up_params)
+      @user = build_resource(sign_up_params)
+
       if @user.save
         respond_to do |format|
           format.html { redirect_to @user, notice: 'User was successfully created.' }
@@ -19,30 +22,29 @@ class Contour::RegistrationsController < Devise::RegistrationsController
       end
     else
       super
-      session[:omniauth] = nil unless @user.new_record?
+      session[:omniauth] = nil if @user and not @user.new_record?
     end
   end
 
-  private
+  protected
 
-    def build_resource(*args)
-      hash ||= user_params
-      self.resource = resource_class.new_with_session(hash, session)
+    def sign_up_params
+      permitted_fields = Contour::sign_up_fields.collect{|a| a[:attribute].to_sym}  | [ :email, :password, :password_confirmation ]
+      devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(*permitted_fields) }
+      devise_parameter_sanitizer.for(:sign_up)
+    end
 
+    def build_resource(hash=nil)
+      object = super(hash)
       if session[:omniauth]
         @user.apply_omniauth(session[:omniauth])
         @user.valid?
       end
+      object
     end
 
     def after_inactive_sign_up_path_for(resource)
       new_session_path(resource) # root_path
-    end
-
-    def user_params
-      params[:user] ||= { blank: '1' }
-      permitted_fields = Contour::sign_up_fields.collect{|a| a[:attribute].to_sym} | [ :email, :password, :password_confirmation ]
-      params.require(:user).permit( *permitted_fields )
     end
 
 end

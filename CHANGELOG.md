@@ -3,7 +3,7 @@
 ### Enhancements
 - Use of Ruby 2.0.0-p0 is now recommended
 - **Gem Changes**
-  - Updated to Rails 4.0.0.beta1
+  - Updated to Rails 4.0.0.rc1
 
 ### Refactoring
 - Added a fix for Rack that respecifies the Content-Type as "text/html"
