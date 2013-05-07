@@ -13,4 +13,5 @@
  *= require timepicker
  *= require contour/about
  *= require contour/authentication
+ *= require contour/errors
 */

@@ -10,6 +10,9 @@
   - This fixes the OmniAuth-LDAP form from returning as "text/plain"
 - Removed an temporary fix that allowed OmniAuth to interact properly with Rack
 
+### Bug Fixes
+- Better styling for errors, fixes error fields appearing lower than they should be on the page
+
 ## 1.3.0 (February 26, 2013)
 
 ### Breaking Changes
