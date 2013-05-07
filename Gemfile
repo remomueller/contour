@@ -5,8 +5,6 @@ source "https://rubygems.org"
 # development dependencies will be added by default to the :development group.
 gemspec
 
-gem 'devise', '~> 2.2.3', github: 'plataformatec/devise', branch: 'rails4'
-
 # jquery-rails is used by the dummy application
 gem 'jquery-rails'
 gem 'sqlite3'
