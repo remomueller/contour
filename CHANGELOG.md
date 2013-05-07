@@ -8,6 +8,9 @@
   - Configuring the invisible `spam_fields` may reduce the number of fake registrations without being a burden to the existing registration process
   - Ex: `config.spam_fields = [ :address ]`
 
+### Breaking Changes
+- The remaining *Gentleface* icons have been removed
+
 ### Refactoring
 - Added a fix for Rack that respecifies the Content-Type as "text/html"
   - This fixes the OmniAuth-LDAP form from returning as "text/plain"
