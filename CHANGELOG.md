@@ -4,6 +4,9 @@
 - Use of Ruby 2.0.0-p0 is now recommended
 - **Gem Changes**
   - Updated to Rails 4.0.0.rc1
+- Added `config.spam_fields` to the configuration allowing application registration pages to be configured with honeypot traps for submitter spam bots
+  - Configuring the invisible `spam_fields` may reduce the number of fake registrations without being a burden to the existing registration process
+  - Ex: `config.spam_fields = [ :address ]`
 
 ### Refactoring
 - Added a fix for Rack that respecifies the Content-Type as "text/html"

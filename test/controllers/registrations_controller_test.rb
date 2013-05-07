@@ -7,7 +7,7 @@ class Contour::RegistrationsControllerTest < ActionController::TestCase
 
   test "a new user should be able to sign up" do
     assert_difference('User.count') do
-      post :create, user: { first_name: 'First Name', last_name: 'Last Name', email: 'new_user@example.com', password: 'password', password_confirmation: 'password' }
+      post :create, user: { first_name: 'First Name', last_name: 'Last Name', email: 'new_user@example.com', password: 'password', password_confirmation: 'password', spam: '' }
     end
 
     assert_not_nil assigns(:user)
@@ -29,6 +29,16 @@ class Contour::RegistrationsControllerTest < ActionController::TestCase
     assert_equal 'Last Name', assigns(:user).last_name
     assert_equal 'pending', assigns(:user).status
     assert_equal 'new_registration@example.com', assigns(:user).email
+
+    assert_redirected_to new_user_session_path
+  end
+
+  test "a submitter spam bot should not be able to sign up" do
+    assert_difference('User.count', 0) do
+      post :create, user: { first_name: 'First Name', last_name: 'Last Name', email: 'new_user@example.com', password: 'password', password_confirmation: 'password', spam: 'http://buystuffhere.com' }
+    end
+
+    assert_equal 'Thank you for your interest! Due to limited capacity you have been put on a waiting list. We will email you when we open up additional space.', flash[:notice]
 
     assert_redirected_to new_user_session_path
   end

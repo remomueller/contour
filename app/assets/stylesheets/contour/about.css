@@ -52,3 +52,8 @@ p.about-footer {
   text-align:center;
   font-weight:300;
 }
+
+.control-special {
+  background-color: black;
+  display: none;
+}

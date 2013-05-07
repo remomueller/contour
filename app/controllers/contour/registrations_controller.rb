@@ -20,6 +20,10 @@ class Contour::RegistrationsController < Devise::RegistrationsController
           format.json { render json: @user.errors, status: :unprocessable_entity}
         end
       end
+    elsif spam_field_used?
+      Rails.logger.info "SPAM BOT SIGNUP: #{params.inspect}"
+      self.resource = build_resource(sign_up_params)
+      redirect_to new_session_path(resource), notice: 'Thank you for your interest! Due to limited capacity you have been put on a waiting list. We will email you when we open up additional space.'
     else
       super
       session[:omniauth] = nil if @user and not @user.new_record?
@@ -45,6 +49,10 @@ class Contour::RegistrationsController < Devise::RegistrationsController
 
     def after_inactive_sign_up_path_for(resource)
       new_session_path(resource) # root_path
+    end
+
+    def spam_field_used?
+      Contour::spam_fields.select{|spam_field| (params[:user] and not params[:user][spam_field].blank?) }.size > 0
     end
 
 end

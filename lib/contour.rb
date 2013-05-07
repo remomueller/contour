@@ -89,6 +89,11 @@ module Contour
   mattr_accessor :sign_up_fields
   @@sign_up_fields = []
 
+  # An array of text fields used to trick spam bots using the honeypot approach. These text fields will not be displayed to the user.
+  # An example might be [ :url, :address, :contact, :comment ]
+  mattr_accessor :spam_fields
+  @@spam_fields = []
+
   def self.setup
     yield self
   end
