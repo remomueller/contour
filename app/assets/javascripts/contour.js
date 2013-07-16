@@ -11,7 +11,6 @@
 //= require twitter-bootstrap/bootstrap-scroll-modal
 //= require twitter-bootstrap/bootstrap
 //
-//= require external/highcharts-2.3.3.src.js
-//= require external/exporting-2.3.3.src.js
+//= require external/highcharts-3.0.2.src.js
 //
 //= require_tree .
