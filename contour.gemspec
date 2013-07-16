@@ -24,8 +24,8 @@ Gem::Specification.new do |s|
   s.files = Dir['{app,config,db,lib}/**/*'] + ['CHANGELOG.md', 'contour.gemspec', 'LICENSE', 'Rakefile', 'README.md']
   s.test_files = Dir['test/**/*']
 
-  s.add_dependency 'rails',                   '~> 4.0.0.rc1'
-  s.add_dependency 'jquery-rails',            '~> 2.2.1'
+  s.add_dependency 'rails',                   '~> 4.0.0'
+  s.add_dependency 'jquery-rails',            '>= 2.2.2'
   s.add_dependency 'coffee-rails',            '~> 4.0.0'
   s.add_dependency 'devise',                  '~> 3.0.0.rc'
   s.add_dependency 'omniauth',                '~> 1.1.3'
