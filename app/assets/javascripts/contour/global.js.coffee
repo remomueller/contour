@@ -2,7 +2,7 @@
 @showWaiting = (element_id, text, centered) ->
   element = $(element_id)
   if element && centered
-    element.html("<br /><div class="center"><div class='spinner'>#{text}</div></div><br />")
+    element.html("<br /><div class='center'><div class='spinner'>#{text}</div></div><br />")
   else if element
     element.html("<div class='spinner'>#{text}</div>")
 
