@@ -2,9 +2,9 @@
 @showWaiting = (element_id, text, centered) ->
   element = $(element_id)
   if element && centered
-    element.html('<br /><div class=\"center\"><img width=\"13\" height=\"13\" src=\"' + root_url + 'assets/contour/ajax-loader.gif\" align=\"absmiddle\" alt=\"...\" />' + text + '</div><br />')
+    element.html("<br /><div class="center"><div class='spinner'>#{text}</div></div><br />")
   else if element
-    element.html('<img width=\"13\" height=\"13\" src=\"' + root_url + 'assets/contour/ajax-loader.gif\" align=\"absmiddle\" alt=\"...\" />' + text)
+    element.html("<div class='spinner'>#{text}</div>")
 
 @flashMessage = (message, alert_type = 'success', overwrite = true) ->
   div_block = "<div class='navbar-alert alert alert-#{alert_type}'><button type='button' class='close' data-dismiss='alert'>×</button>#{message}</div>"
