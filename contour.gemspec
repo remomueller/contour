@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
   s.test_files = Dir['test/**/*']
 
   s.add_dependency 'rails',                   '~> 4.0.0'
-  s.add_dependency 'jquery-rails',            '>= 2.2.2'
+  s.add_dependency 'jquery-rails',            '>= 3.0.4'
   s.add_dependency 'coffee-rails',            '~> 4.0.0'
   s.add_dependency 'devise',                  '~> 3.0.0'
   s.add_dependency 'omniauth',                '~> 1.1.4'

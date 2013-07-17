@@ -5,6 +5,7 @@
 - **Gem Changes**
   - Updated to Rails 4.0.0
   - Updated to Devise 3.0.0
+- Updated jquery-rails to 3.0.4
 - Updated Twitter Bootstrap to 2.3.2
 - Updated HighCharts to 3.0.2
 - Updated omniauth to 1.1.4
