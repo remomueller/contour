@@ -6,7 +6,7 @@
 //
 //= require external/jquery-ui-1.10.0.custom.min.js
 //
-//= require twitter-bootstrap/v2.3.0/bootstrap
+//= require twitter-bootstrap/v2.3.2/bootstrap
 //
 //= require twitter-bootstrap/bootstrap-scroll-modal
 //= require twitter-bootstrap/bootstrap

@@ -4,7 +4,7 @@
 /* Line 2276 */
 [class^="icon-"],
 [class*=" icon-"] {
-  background-image: url(twitter-bootstrap/v2.3.0/glyphicons-halflings.png);
+  background-image: url(twitter-bootstrap/v2.3.2/glyphicons-halflings.png);
 }
 
 /* Line 2292 */
@@ -21,15 +21,15 @@
 .dropdown-menu > .active > a > [class*=" icon-"],
 .dropdown-submenu:hover > a > [class^="icon-"],
 .dropdown-submenu:hover > a > [class*=" icon-"] {
-  background-image: url(twitter-bootstrap/v2.3.0/glyphicons-halflings-white.png);
+  background-image: url(twitter-bootstrap/v2.3.2/glyphicons-halflings-white.png);
 }
 
-/* Line 4412 */
+/* Line 4414 */
 .navbar .brand {
   color: #ffffff;
 }
 
-/* Line 4848 */
+/* Line 4853 */
 .navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
 .navbar-inverse .nav li.dropdown.active > .dropdown-toggle,
 .navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {

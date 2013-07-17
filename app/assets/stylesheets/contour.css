@@ -3,10 +3,10 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
- *= require twitter-bootstrap/v2.3.0/bootstrap
+ *= require twitter-bootstrap/v2.3.2/bootstrap
  *= require bootstrap-base-overrides
  *= require twitter-bootstrap/bootstrap-scroll-modal
- *= require twitter-bootstrap/v2.3.0/bootstrap-responsive
+ *= require twitter-bootstrap/v2.3.2/bootstrap-responsive
  *= require bootstrap-responsive-overrides
  *= require jquery-ui-1.10.0.custom
  *= require datepicker
