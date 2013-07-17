@@ -7,6 +7,7 @@
   - Updated to Devise 3.0.0
 - Updated Twitter Bootstrap to 2.3.2
 - Updated HighCharts to 3.0.2
+- Updated omniauth to 1.1.4
 - Updated omniauth-twitter to 1.0.0
 - Updated omniauth-cas to 1.0.4
 - Added `config.spam_fields` to the configuration allowing application registration pages to be configured with honeypot traps for submitter spam bots
