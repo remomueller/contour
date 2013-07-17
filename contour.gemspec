@@ -34,7 +34,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'omniauth-ldap',           '~> 1.0.3'
   s.add_dependency 'omniauth-linkedin',       '~> 0.1.0'
   s.add_dependency 'omniauth-openid',         '~> 1.0.1'
-  s.add_dependency 'omniauth-twitter',        '~> 0.0.14'
+  s.add_dependency 'omniauth-twitter',        '~> 1.0.0'
 
   s.add_development_dependency 'sqlite3'
 end
