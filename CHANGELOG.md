@@ -4,7 +4,7 @@
 - Use of Ruby 2.0.0-p247 is now recommended
 - **Gem Changes**
   - Updated to Rails 4.0.0
-  - Updated to Devise 3.0.0.rc
+  - Updated to Devise 3.0.0
 - Updated HighCharts to 3.0.2
 - Added `config.spam_fields` to the configuration allowing application registration pages to be configured with honeypot traps for submitter spam bots
   - Configuring the invisible `spam_fields` may reduce the number of fake registrations without being a burden to the existing registration process
