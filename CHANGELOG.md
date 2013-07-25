@@ -1,4 +1,4 @@
-## 2.0.0
+## 2.0.0 (July 25, 2013)
 
 ### Enhancements
 - Added `config.spam_fields` to the configuration allowing application registration pages to be configured with honeypot traps for submitter spam bots
