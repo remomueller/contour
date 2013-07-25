@@ -10,7 +10,7 @@ Basic Rails framework files and assets for layout and authentication
 
 Contour can be installed from rubygems.org using
 
-```console
+```
 gem install contour
 ```
 
@@ -24,7 +24,7 @@ gem 'contour'
 
 Make sure you have Rails 4.0.0
 
-```console
+```
 rails -v
 
 rails new blank_rails_project
@@ -40,25 +40,25 @@ gem 'contour', '~> 2.0.0'
 
 Run Bundle install
 
-```console
+```
 bundle install
 ```
 
 Install contour files
 
-```console
+```
 rails generate contour:install
 ```
 
 Add the authentication model
 
-```console
+```
 rails generate model Authentication user_id:integer provider:string uid:string
 ```
 
 Migrate your database
 
-```console
+```
 bundle exec rake db:create
 
 bundle exec rake db:migrate
@@ -66,7 +66,7 @@ bundle exec rake db:migrate
 
 Create a sample controller
 
-```console
+```
 rails generate controller welcome index --skip-stylesheets
 ```
 
@@ -131,7 +131,7 @@ config.sign_out_via = :get
 
 Start your server and navigate to [http://localhost:3000/users/login](http://localhost:3000/users/login)
 
-```console
+```
 rails s
 ```
 
@@ -147,13 +147,13 @@ gem 'kaminari', '~> 0.14.1'
 
 Update your gems
 
-```console
+```
 bundle update
 ```
 
 Create a new model using the Rails scaffold
 
-```console
+```
 rails g scaffold Item name:string description:text user_id:integer bought_date:date --no-stylesheets
 ```
 
@@ -187,13 +187,13 @@ NOTE: Adding the User controller is not shown, but could be created using `rails
 
 Migrate your database
 
-```console
+```
 bundle exec rake db:migrate
 ```
 
 Update with the Contour scaffold
 
-```console
+```
 rails g contour:scaffold Item
 ```
 
