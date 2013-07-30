@@ -1,5 +1,7 @@
 ## 2.1.0
 
+- Updated Bootstrap to 3.0.0-rc1
+
 ## 2.0.0 (July 25, 2013)
 
 ### Enhancements

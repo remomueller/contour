@@ -1,51 +1,51 @@
-<div class="navbar-inner">
-  <div class="container">
-    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </a>
-    <%= link_to Contour.application_name.html_safe, root_path, class: 'brand' %>
-    <div class="nav-collapse collapse">
-      <% display = signed_in? ? ['signed_in', 'always'] : ['not_signed_in', 'always'] %>
-      <% Contour.menu_items.group_by{|i| i[:position]}.each do |position, items| %>
-        <ul class="nav <%= 'pull-right' if position == 'right' %>">
-          <% items.each_with_index do |menu_item, index| %>
-            <% if display.include?(menu_item[:display]) and (menu_item[:condition].blank? or eval(menu_item[:condition])) %>
-              <% has_submenu = (menu_item[:links] || []).collect{|link| link[:condition].blank? or eval(link[:condition])}.include?(true) %>
-              <li class="<%= 'dropdown' if has_submenu %>" id="menu<%= position %><%= index %>">
-                <%= link_to(
-                    (menu_item[:eval] ? eval(menu_item[:name]) : menu_item[:name].html_safe + (menu_item[:image].blank? ? '' : image_tag(menu_item[:image], menu_item[:image_options]))),
-                    (menu_item[:path].blank? ? '#' : eval(menu_item[:path].to_s)),
-                    target: menu_item[:target], style: "#{ 'display:inline-block;padding-right:0px' if has_submenu }")
-                     %>
-                <%= link_to "<b class='caret'></b>".html_safe, '#', class: 'dropdown-toggle', 'data-toggle' => 'dropdown', style: 'display:inline-block;padding-left:0px' if has_submenu %>
-                <%# , 'data-target' => "#menu#{position}#{index}" %>
-                <% if has_submenu %>
-                  <ul class="dropdown-menu">
-                  <% menu_item[:links].each do |link| %>
-                    <% if link[:condition].blank? or eval(link[:condition]) %>
-                      <% if link[:divider] == true %>
-                        <li class="divider"></li>
-                      <% elsif link[:authentications] == true %>
-                        <%= render partial: 'contour/authentications/menu' %>
-                      <% else %>
-                        <li><%= link_to (link[:eval] ? eval(link[:html].blank? ? link[:name] : link[:html].html_safe) : (link[:html].blank? ? link[:name] : link[:html].html_safe) + (link[:image].blank? ? '' : image_tag(link[:image], link[:image_options]))).html_safe, link[:path].blank? ? '#' : eval(link[:path].to_s), target: link[:target] %></li>
-                      <% end %>
+<div class="container">
+  <%= link_to Contour.application_name.html_safe, root_path, class: 'navbar-brand' %>
+
+  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+
+  <div class="nav-collapse collapse navbar-responsive-collapse">
+    <% display = signed_in? ? ['signed_in', 'always'] : ['not_signed_in', 'always'] %>
+    <% Contour.menu_items.group_by{|i| i[:position]}.each do |position, items| %>
+      <ul class="nav navbar-nav <%= 'pull-right' if position == 'right' %>">
+        <% items.each_with_index do |menu_item, index| %>
+          <% if display.include?(menu_item[:display]) and (menu_item[:condition].blank? or eval(menu_item[:condition])) %>
+            <% has_submenu = (menu_item[:links] || []).collect{|link| link[:condition].blank? or eval(link[:condition])}.include?(true) %>
+            <li class="<%= 'dropdown' if has_submenu %>" id="menu<%= position %><%= index %>">
+              <%= link_to(
+                  (menu_item[:eval] ? eval(menu_item[:name]) : menu_item[:name].html_safe + (menu_item[:image].blank? ? '' : image_tag(menu_item[:image], menu_item[:image_options]))),
+                  (menu_item[:path].blank? ? '#' : eval(menu_item[:path].to_s)),
+                  target: menu_item[:target], style: "#{ 'display:inline-block;padding-right:0px' if has_submenu }")
+                   %>
+              <%= link_to "<b class='caret'></b>".html_safe, '#', class: 'dropdown-toggle', 'data-toggle' => 'dropdown', style: 'display:inline-block;padding-left:0px' if has_submenu %>
+              <%# , 'data-target' => "#menu#{position}#{index}" %>
+              <% if has_submenu %>
+                <ul class="dropdown-menu">
+                <% menu_item[:links].each do |link| %>
+                  <% if link[:condition].blank? or eval(link[:condition]) %>
+                    <% if link[:divider] == true %>
+                      <li class="divider"></li>
+                    <% elsif link[:authentications] == true %>
+                      <%= render partial: 'contour/authentications/menu' %>
+                    <% else %>
+                      <li><%= link_to (link[:eval] ? eval(link[:html].blank? ? link[:name] : link[:html].html_safe) : (link[:html].blank? ? link[:name] : link[:html].html_safe) + (link[:image].blank? ? '' : image_tag(link[:image], link[:image_options]))).html_safe, link[:path].blank? ? '#' : eval(link[:path].to_s), target: link[:target] %></li>
                     <% end %>
                   <% end %>
-                  </ul>
                 <% end %>
-              </li>
-            <% end %>
+                </ul>
+              <% end %>
+            </li>
           <% end %>
-        </ul>
-      <% end %>
-      <% if Contour.search_bar and display.include?(Contour.search_bar[:display]) %>
-        <form id="<%= Contour.search_bar[:id] || 'global-search' %>-form" class="navbar-search pull-<%= Contour.search_bar[:position] || 'left' %>" action="<%= Contour.search_bar[:path].blank? ? '#' : eval(Contour.search_bar[:path].to_s) %>">
-          <input id="<%= Contour.search_bar[:id] || 'global-search' %>" name="q" type="text" autocomplete="off" class="search-query" value="<%= params[:q] %>" placeholder="<%= Contour.search_bar[:placeholder] || 'Search' %>">
-        </form>
-      <% end %>
-    </div>
+        <% end %>
+      </ul>
+    <% end %>
+    <% if Contour.search_bar and display.include?(Contour.search_bar[:display]) %>
+      <form id="<%= Contour.search_bar[:id] || 'global-search' %>-form" class="navbar-form pull-<%= Contour.search_bar[:position] || 'left' %>" action="<%= Contour.search_bar[:path].blank? ? '#' : eval(Contour.search_bar[:path].to_s) %>">
+        <input id="<%= Contour.search_bar[:id] || 'global-search' %>" name="q" type="text" autocomplete="off" class="form-control" value="<%= params[:q] %>" placeholder="<%= Contour.search_bar[:placeholder] || 'Search' %>">
+      </form>
+    <% end %>
   </div>
 </div>

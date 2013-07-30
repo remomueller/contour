@@ -1,0 +1,73 @@
+/* bootstrap-base-overrides.css */
+/* These overrides come after bootstrap.css */
+
+.navbar-brand {
+  color: #ffffff;
+}
+
+/* Line 4853 */
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
+.navbar-inverse .nav li.dropdown.active > .dropdown-toggle,
+.navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {
+  /*background-color: transparent;*/
+}
+
+body { padding-top: 70px; padding-bottom: 70px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+dt, dd {
+/*  line-height: 18px;
+  min-height: 40px;*/
+}
+
+.dl-horizontal dt {
+  white-space: normal;
+  overflow: visible;
+}
+
+
+.center {
+  text-align: center;
+}
+
+.navbar-alert {
+  margin: 0px 0px 5px 0px;
+  border: 1px solid #515151;
+  -moz-box-shadow: 3px 3px 4px #515151;
+  -webkit-box-shadow: 3px 3px 4px #515151;
+  box-shadow: 3px 3px 4px #515151;
+}
+
+.flash-block {
+  position: absolute;
+  right: 0px;
+  top: -16px;
+  z-index: 1000;
+}
+
+.btn-danger-inverse.active {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.btn-danger-inverse {
+  color:  #bd362f;
+}
+
+.btn-danger-inverse:hover,
+.btn-danger-inverse:focus,
+.btn-danger-inverse:active,
+.btn-danger-inverse.active,
+.btn-danger-inverse.disabled,
+.btn-danger-inverse[disabled] {
+  color: #fff;
+  text-shadow: 0px -1px 0 rgba(0,0,0,0.3);
+  background-color: #bd362f;
+  background-image: -moz-linear-gradient(#ee5f5b, #bd362f);
+  background-image: -webkit-linear-gradient(#ee5f5b, #bd362f);
+  background-image: linear-gradient(#ee5f5b, #bd362f);
+  background-repeat: repeat-x;
+  border-color: #cd504a;
+}
