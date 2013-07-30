@@ -35,7 +35,7 @@ cd blank_rails_project
 Modify `Gemfile` and add
 
 ```ruby
-gem 'contour', '~> 2.0.0'
+gem 'contour', '~> 2.1.0'
 ```
 
 Run Bundle install
