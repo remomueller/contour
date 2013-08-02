@@ -2,6 +2,7 @@
 
 - Updated Bootstrap to 3.0.0-rc1
 - Added Twitter-Typeahead to replace BS Typeahead functionality
+- Removed contour-mini pagination theme as the only options in BS3 are pagination-large, pagination, and pagination-small
 
 ## 2.0.0 (July 25, 2013)
 
