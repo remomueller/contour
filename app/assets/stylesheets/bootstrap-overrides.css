@@ -19,8 +19,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 dt, dd {
-/*  line-height: 18px;
-  min-height: 40px;*/
+  line-height: 18px;
+  min-height: 40px;
 }
 
 .dl-horizontal dt {
