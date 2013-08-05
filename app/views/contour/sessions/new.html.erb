@@ -7,31 +7,33 @@
     </div>
 
     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { class: 'form-horizontal' }) do |f| %>
-      <div class="control-group">
-        <%= f.label :email, class: 'control-label' %>
-        <div class="controls">
-          <%= f.email_field :email %>
+      <div class="form-group">
+        <%= f.label :email, class: 'col-lg-2 control-label' %>
+        <div class="col-lg-10">
+          <%= f.email_field :email, class: 'form-control' %>
         </div>
       </div>
 
-      <div class="control-group">
-        <%= f.label :password, class: 'control-label' %>
-        <div class="controls">
-          <%= f.password_field :password %>
+      <div class="form-group">
+        <%= f.label :password, class: 'col-lg-2 control-label' %>
+        <div class="col-lg-10">
+          <%= f.password_field :password, class: 'form-control' %>
         </div>
       </div>
 
       <% if devise_mapping.rememberable? -%>
-        <div class="control-group">
-          <div class="controls checkbox">
+        <div class="form-group">
+          <div class="col-lg-10 checkbox">
             <%= f.check_box :remember_me %> <%= f.label :remember_me %>
           </div>
         </div>
       <% end -%>
 
-      <div class="form-actions">
-        <%= f.submit "Sign in", class: 'btn btn-primary' %>
-        <%= render partial: 'contour/links' %>
+      <div class="form-group">
+        <div class="col-lg-10 col-offset-2">
+          <%= f.submit "Sign in", class: 'btn btn-primary' %>
+          <%= render partial: 'contour/links' %>
+        </div>
       </div>
 
       <%= render partial: 'contour/authentications/login_table' %>

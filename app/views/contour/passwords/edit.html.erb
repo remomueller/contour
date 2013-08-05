@@ -7,22 +7,24 @@
   <%= devise_error_messages! %>
   <%= f.hidden_field :reset_password_token %>
 
-  <div class="control-group">
-    <%= f.label :password, "New password", class: 'control-label' %>
-    <div class="controls">
-      <%= f.password_field :password %>
+  <div class="form-group">
+    <%= f.label :password, "New password", class: 'col-lg-2 control-label' %>
+    <div class="col-lg-10">
+      <%= f.password_field :password, class: 'form-control' %>
     </div>
   </div>
 
-  <div class="control-group">
-    <%= f.label :password_confirmation, "Confirm new password", class: 'control-label' %>
-    <div class="controls">
-      <%= f.password_field :password_confirmation %>
+  <div class="form-group">
+    <%= f.label :password_confirmation, "Confirm new password", class: 'col-lg-2 control-label' %>
+    <div class="col-lg-10">
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
     </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.submit "Change my password", class: 'btn btn-primary' %>
-    <%= render partial: 'contour/links' %>
+  <div class="form-group">
+    <div class="col-lg-10 col-offset-2">
+      <%= f.submit "Change my password", class: 'btn btn-primary' %>
+      <%= render partial: 'contour/links' %>
+    </div>
   </div>
 <% end %>
