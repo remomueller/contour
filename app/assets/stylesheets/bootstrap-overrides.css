@@ -94,3 +94,7 @@ dt, dd {
 .form-inline input[type="password"] {
   width: 180px;
 }
+
+.radio, .checkbox {
+  min-height: 35px;
+}

@@ -4,8 +4,8 @@
 
 <%%= form_for @<%= resource_name %>, html: { class: 'form-horizontal' } do |f| %>
   <%% if @<%= resource_name %>.errors.any? %>
-    <div id="error_explanation">
-      <h2><%%= pluralize(@<%= resource_name %>.errors.count, "error") %> prohibited this <%= resource_name %> from being saved:</h2>
+    <div id="error_explanation" class="bs-callout bs-callout-danger">
+      <h4><%%= pluralize(@<%= resource_name %>.errors.count, "error") %> prohibited this <%= resource_name %> from being saved</h4>
 
       <ul>
       <%% @<%= resource_name %>.errors.full_messages.each do |msg| %>
@@ -16,22 +16,25 @@
   <%% end %>
 
   <%- columns.each do |column| -%>
-  <div class="control-group">
-    <%%= f.label :<%= column.name %>, nil, class: 'control-label' %>
-    <div class="controls">
+  <div class="form-group">
+    <%%= f.label :<%= column.name %>, nil, class: 'col-lg-2 control-label' %>
+    <div class="col-lg-10">
       <%- if column.name.split('_').last == 'id' -%>
-      <%%= f.select :<%= column.name %>, [['---', nil]] + <%= column.name.split('_')[0..-2].join('_').camelize %>.current.collect{|<%= column.name.first %>| [<%= column.name.first %>.name, <%= column.name.first %>.id]} %>
+      <%%= f.select :<%= column.name %>, [['---', nil]] + <%= column.name.split('_')[0..-2].join('_').camelize %>.current.collect{|<%= column.name.first %>| [<%= column.name.first %>.name, <%= column.name.first %>.id]}, {}, class: 'form-control' %>
       <%- elsif column.field_type == :date_select -%>
-      <%%= f.text_field :<%= column.name %>, class: 'datepicker', value: @<%= resource_name %>.<%= column.name %> ? @<%= resource_name %>.<%= column.name %>.strftime('%m/%d/%Y') : '' %>
+      <%%= f.text_field :<%= column.name %>, class: 'datepicker form-control', value: @<%= resource_name %>.<%= column.name %> ? @<%= resource_name %>.<%= column.name %>.strftime('%m/%d/%Y') : '' %>
       <%- else -%>
-      <%%= f.<%= column.field_type %> :<%= column.name %><%= ", rows: 7, style: 'width:95%'" if column.field_type == :text_area %> %>
+      <%%= f.<%= column.field_type %> :<%= column.name %><%= ", rows: 7, style: 'width:95%'" if column.field_type == :text_area %>, class: 'form-control' %>
       <%- end -%>
     </div>
   </div>
 
   <%- end -%>
-  <div class="form-actions">
-    <%%= f.submit nil, class: 'btn btn-primary' %>
-    <%%= cancel %>
+
+  <div class="form-group">
+    <div class="col-lg-10 col-offset-2">
+      <%%= f.submit nil, class: 'btn btn-primary' %>
+      <%%= cancel %>
+    </div>
   </div>
 <%% end %>
