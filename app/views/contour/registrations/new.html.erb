@@ -10,7 +10,7 @@
     <div class="form-group">
       <%= f.label field_hash[:attribute], class: 'col-lg-2 control-label' %>
       <div class="col-lg-10">
-        <%= f.send(field_hash[:type], field_hash[:attribute]), class: 'form-control' %>
+        <%= f.send(field_hash[:type], field_hash[:attribute], class: 'form-control') %>
       </div>
     </div>
   <% end %>
