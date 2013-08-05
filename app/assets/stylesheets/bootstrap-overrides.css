@@ -33,18 +33,10 @@ dt, dd {
   text-align: center;
 }
 
-.navbar-alert {
-  margin: 0px 0px 5px 0px;
-  border: 1px solid #515151;
-  -moz-box-shadow: 3px 3px 4px #515151;
-  -webkit-box-shadow: 3px 3px 4px #515151;
-  box-shadow: 3px 3px 4px #515151;
-}
-
 .flash-block {
   position: absolute;
   right: 0px;
-  top: -16px;
+  top: -20px;
   z-index: 1000;
 }
 
