@@ -6,6 +6,7 @@
 - Added `btn-cancel` and `btn-cancel-inverse` to complement other BS3 button styles
 - Menu dropdowns can now have headers
   - `links: [ ..., { header: 'Dropdown header' }, ... ]`
+- Removed bootstrap-scroll-modal since it collided with BS3's implementation
 
 ## 2.0.0 (July 25, 2013)
 

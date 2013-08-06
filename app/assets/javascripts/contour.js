@@ -8,7 +8,6 @@
 //
 //= require bootstrap/v3.0.0-rc1/bootstrap
 //
-//= require twitter-bootstrap/bootstrap-scroll-modal
 //= require twitter-bootstrap/bootstrap
 //
 //= require external/highcharts-3.0.2.src.js
