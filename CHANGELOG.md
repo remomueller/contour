@@ -4,6 +4,8 @@
 - Added Twitter-Typeahead to replace BS Typeahead functionality
 - Removed contour-mini pagination theme as the only options in BS3 are pagination-large, pagination, and pagination-small
 - Added `btn-cancel` and `btn-cancel-inverse` to complement other BS3 button styles
+- Menu dropdowns can now have headers
+  - `links: [ ..., { header: 'Dropdown header' }, ... ]`
 
 ## 2.0.0 (July 25, 2013)
 
