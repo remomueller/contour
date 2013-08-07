@@ -29,7 +29,7 @@
                     <% if link[:divider] == true %>
                       <li class="divider"></li>
                     <% elsif not link[:header].blank? %>
-                      <li class="dropdown-header"><%= link[:header] %></li>
+                      <li class="dropdown-header"><%= link[:eval] ? eval(link[:header]) : link[:header] %></li>
                     <% elsif link[:authentications] == true %>
                       <%= render partial: 'contour/authentications/menu' %>
                     <% else %>
