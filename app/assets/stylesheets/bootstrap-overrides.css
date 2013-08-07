@@ -100,3 +100,21 @@ dt, dd {
 .radio, .checkbox {
   min-height: 35px;
 }
+
+.page-header {
+  text-align: center;
+}
+
+.page-header h1, .page-header .h1 {
+  font-size: 30px
+}
+
+@media screen and (min-width: 768px) {
+  .page-header {
+    text-align: left;
+  }
+
+  .page-header h1, .page-header .h1 {
+    font-size: 38px
+  }
+}
