@@ -1,22 +1,25 @@
 /* bootstrap-base-overrides.css */
 /* These overrides come after bootstrap.css */
 
-.navbar-inverse .navbar-brand {
-  color: #ffffff;
-}
-
-/* Line 4853 */
-.navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
-.navbar-inverse .nav li.dropdown.active > .dropdown-toggle,
-.navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {
-  /*background-color: transparent;*/
-}
-
 body { padding-top: 50px; padding-bottom: 70px; }
+
+/* Skinnier titles */
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
 }
+
+/* Make sure navbar brand does not wrap onto two lines */
+
+.navbar-brand {
+  white-space: nowrap;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #ffffff;
+}
+
+/* Add spacing for definition lists */
 
 dt, dd {
   line-height: 18px;
@@ -28,6 +31,44 @@ dt, dd {
   overflow: visible;
 }
 
+/* Modify the page-header class to look differently on mobile and larger screen */
+.page-header {
+  text-align: center;
+}
+
+.page-header h1, .page-header .h1 {
+  font-size: 30px
+}
+
+@media screen and (min-width: 768px) {
+  .page-header {
+    text-align: left;
+  }
+
+  .page-header h1, .page-header .h1 {
+    font-size: 38px
+  }
+}
+
+/* Make sure datepicker shows up ontop of bootstrap modals */
+.datepicker {
+  z-index: 10000 !important;;
+}
+
+/* Make sure some text is always veiwable in the form control */
+.form-control {
+  min-width: 100px;
+}
+
+/* Custom Classes */
+
+
+/* Allows modals to be wider on larger screens */
+@media screen and (min-width: 900px) {
+  .modal-dialog.modal-wide-width {
+    width: 900px;
+  }
+}
 
 .center {
   text-align: center;
@@ -99,22 +140,4 @@ dt, dd {
 
 .radio, .checkbox {
   min-height: 35px;
-}
-
-.page-header {
-  text-align: center;
-}
-
-.page-header h1, .page-header .h1 {
-  font-size: 30px
-}
-
-@media screen and (min-width: 768px) {
-  .page-header {
-    text-align: left;
-  }
-
-  .page-header h1, .page-header .h1 {
-    font-size: 38px
-  }
 }
