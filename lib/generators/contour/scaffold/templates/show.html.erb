@@ -2,8 +2,8 @@
 <div class="page-header">
   <h1>
     <%%= link_to "<%= resource_title_plural %>", <%= resource_name_plural %>_path %> &middot; <%%= @title %>
-    <%%= link_to "Edit <%= resource_title %>", edit_<%= resource_name %>_path(@<%= resource_name %>), class: 'btn btn-mini' %>
-    <%%= link_to "Delete <%= resource_title %>", @<%= resource_name %>, method: :delete, class: 'btn btn-mini btn-danger-inverse', data: { confirm: "Are you sure you want to delete <%= resource_title %> #{@<%= resource_name %>.name}?" } %>
+    <%%= link_to "Edit <%= resource_title %>", edit_<%= resource_name %>_path(@<%= resource_name %>), class: 'btn btn-xs' %>
+    <%%= link_to "Delete <%= resource_title %>", @<%= resource_name %>, method: :delete, class: 'btn btn-xs btn-danger-inverse', data: { confirm: "Are you sure you want to delete <%= resource_title %> #{@<%= resource_name %>.name}?" } %>
   </h1>
 </div>
 
