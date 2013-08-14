@@ -52,7 +52,11 @@ dt, dd {
 
 /* Make sure datepicker shows up ontop of bootstrap modals */
 .datepicker {
-  z-index: 10000 !important;;
+  z-index: 10000 !important;
+}
+
+.datepicker-dropdown {
+  padding: 4px;
 }
 
 /* Make sure some text is always veiwable in the form control */
