@@ -7,10 +7,10 @@
     <span class="icon-bar"></span>
   </button>
 
-  <div class="nav-collapse collapse navbar-responsive-collapse">
+  <div class="navbar-collapse collapse navbar-responsive-collapse">
     <% display = signed_in? ? ['signed_in', 'always'] : ['not_signed_in', 'always'] %>
     <% Contour.menu_items.group_by{|i| i[:position]}.each do |position, items| %>
-      <ul class="nav navbar-nav <%= 'pull-right' if position == 'right' %>">
+      <ul class="nav navbar-nav <%= 'navbar-right' if position == 'right' %>">
         <% items.each_with_index do |menu_item, index| %>
           <% if display.include?(menu_item[:display]) and (menu_item[:condition].blank? or eval(menu_item[:condition])) %>
             <% has_submenu = (menu_item[:links] || []).collect{|link| link[:condition].blank? or eval(link[:condition])}.include?(true) %>
@@ -45,7 +45,7 @@
       </ul>
     <% end %>
     <% if Contour.search_bar and display.include?(Contour.search_bar[:display]) %>
-      <form id="<%= Contour.search_bar[:id] || 'global-search' %>-form" class="navbar-form pull-<%= Contour.search_bar[:position] || 'left' %>" action="<%= Contour.search_bar[:path].blank? ? '#' : eval(Contour.search_bar[:path].to_s) %>">
+      <form id="<%= Contour.search_bar[:id] || 'global-search' %>-form" class="navbar-form navbar-<%= Contour.search_bar[:position] || 'left' %>" action="<%= Contour.search_bar[:path].blank? ? '#' : eval(Contour.search_bar[:path].to_s) %>">
         <input id="<%= Contour.search_bar[:id] || 'global-search' %>" name="q" type="text" autocomplete="off" class="form-control" value="<%= params[:q] %>" placeholder="<%= Contour.search_bar[:placeholder] || 'Search' %>">
       </form>
     <% end %>
