@@ -21,6 +21,11 @@
   margin-bottom: 0;
 }
 
+.twitter-typeahead .tt-query {
+  border-top-left-radius: 4px !important;
+  border-bottom-left-radius: 4px !important;
+}
+
 .tt-dropdown-menu {
   min-width: 160px;
   margin-top: 2px;
