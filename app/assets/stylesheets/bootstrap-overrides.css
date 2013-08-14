@@ -146,9 +146,3 @@ dt, dd {
 .radio, .checkbox {
   min-height: 35px;
 }
-
-/* Make default active gray instead of black next to black to give more contrast between selected options */
-.btn.btn-default:active, .btn.active.btn-default {
-  background-color: #ededed;
-  color: #333333;
-}
