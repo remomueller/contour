@@ -1,13 +1,16 @@
 <div class="container">
-  <%= link_to Contour.application_name.html_safe, root_path, class: 'navbar-brand' %>
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
 
-  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-  </button>
+    <%= link_to Contour.application_name.html_safe, root_path, class: 'navbar-brand' %>
+  </div>
 
-  <div class="navbar-collapse collapse navbar-responsive-collapse">
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
     <% display = signed_in? ? ['signed_in', 'always'] : ['not_signed_in', 'always'] %>
     <% Contour.menu_items.group_by{|i| i[:position]}.each do |position, items| %>
       <ul class="nav navbar-nav <%= 'navbar-right' if position == 'right' %>">
@@ -21,7 +24,6 @@
                   target: menu_item[:target], style: "#{ 'display:inline-block;padding-right:0px' if has_submenu }")
                    %>
               <%= link_to "<b class='caret'></b>".html_safe, '#', class: 'dropdown-toggle', 'data-toggle' => 'dropdown', style: 'display:inline-block;padding-left:4px;margin-left:-4px;' if has_submenu %>
-              <%# , 'data-target' => "#menu#{position}#{index}" %>
               <% if has_submenu %>
                 <ul class="dropdown-menu">
                 <% menu_item[:links].each do |link| %>

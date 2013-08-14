@@ -15,9 +15,9 @@
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   </head>
   <body data-spy="scroll" data-target=".bs-sidebar">
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <%= render partial: 'contour/layouts/menu' %>
-    </div>
+    </nav>
 
     <div class="container" style="position:relative">
       <div class="flash-block" data-object="flash-container">
