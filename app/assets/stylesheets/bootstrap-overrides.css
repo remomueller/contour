@@ -103,40 +103,6 @@ dt, dd {
   border-color: #c9302c;
 }
 
-.btn-cancel {
-  color:  #777;
-  background-color: #ededed;;
-}
-
-.btn-cancel:hover,
-.btn-cancel:focus,
-.btn-cancel:active,
-.btn-cancel.active,
-.btn-cancel.disabled,
-.btn-cancel[disabled] {
-  color: #fff;
-  background-color: #777;
-  border-color: #777;
-}
-
-
-.btn-cancel-inverse {
-  border: 1px solid #ededed;
-  color:  #777;
-  background-color: white;
-}
-
-.btn-cancel-inverse:hover,
-.btn-cancel-inverse:focus,
-.btn-cancel-inverse:active,
-.btn-cancel-inverse.active,
-.btn-cancel-inverse.disabled,
-.btn-cancel-inverse[disabled] {
-  color: #fff;
-  background-color: #777;
-  border-color: #777;
-}
-
 .form-inline select,
 .form-inline input[type="text"],
 .form-inline input[type="password"] {

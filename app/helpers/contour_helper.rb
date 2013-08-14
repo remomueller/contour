@@ -1,7 +1,7 @@
 module ContourHelper
 
   def cancel
-    link_to 'Cancel', URI.parse(request.referer.to_s).path.blank? ? root_path : (URI.parse(request.referer.to_s).path), class: 'btn btn-cancel-inverse'
+    link_to 'Cancel', URI.parse(request.referer.to_s).path.blank? ? root_path : (URI.parse(request.referer.to_s).path), class: 'btn btn-default'
   end
 
   def sort_field_helper(order, sort_field, display_name, search_form_id  = 'search_form')

@@ -3,7 +3,6 @@
 - Updated Bootstrap to 3.0.0-rc2
 - Added Twitter-Typeahead to replace BS Typeahead functionality
 - Removed contour-mini pagination theme as the only options in BS3 are pagination-large, pagination, and pagination-small
-- Added `btn-cancel` and `btn-cancel-inverse` to complement other BS3 button styles
 - Menu dropdowns can now have headers
   - `links: [ ..., { header: 'Dropdown header' }, ... ]`
 - Removed bootstrap-scroll-modal since it collided with BS3's implementation
