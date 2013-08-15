@@ -929,7 +929,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     this.$element
       .removeClass('in')
       .attr('aria-hidden', true)
-      .off('click.dismiss.modal')
+      // .off('click.dismiss.modal')
 
     $.support.transition && this.$element.hasClass('fade') ?
       this.$element
