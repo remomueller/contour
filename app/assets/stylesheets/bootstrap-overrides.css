@@ -81,7 +81,7 @@ dt, dd {
 .flash-block {
   position: absolute;
   right: 0px;
-  top: 0px;
+  top: -20px;
   z-index: 1000;
   white-space: nowrap;
 }
