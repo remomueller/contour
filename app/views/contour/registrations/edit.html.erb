@@ -7,37 +7,37 @@
   <%= devise_error_messages! %>
 
   <div class="form-group">
-    <%= f.label :email, class: 'col-lg-2 control-label' %>
-    <div class="col-lg-10">
+    <%= f.label :email, class: 'col-md-2 control-label' %>
+    <div class="col-md-10">
       <%= f.email_field :email, class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= f.label :password, class: 'col-lg-2 control-label' %>
-    <div class="col-lg-10">
+    <%= f.label :password, class: 'col-md-2 control-label' %>
+    <div class="col-md-10">
       <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
       <i class="help-block">(leave blank if you don't want to change it)</i>
     </div>
   </div>
 
   <div class="form-group">
-    <%= f.label :password_confirmation, class: 'col-lg-2 control-label' %>
-    <div class="col-lg-10">
+    <%= f.label :password_confirmation, class: 'col-md-2 control-label' %>
+    <div class="col-md-10">
       <%= f.password_field :password_confirmation, class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= f.label :current_password, class: 'col-lg-2 control-label' %>
-    <div class="col-lg-10">
+    <%= f.label :current_password, class: 'col-md-2 control-label' %>
+    <div class="col-md-10">
       <%= f.password_field :current_password, class: 'form-control' %>
       <i class="help-block">(we need your current password to confirm your changes)</i>
     </div>
   </div>
 
   <div class="form-group">
-    <div class="col-lg-10 col-lg-offset-2">
+    <div class="col-md-10 col-md-offset-2">
       <%= f.submit "Update", class: 'btn btn-primary' %>
     </div>
   </div>

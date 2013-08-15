@@ -7,14 +7,14 @@
   <%= devise_error_messages! %>
 
   <div class="form-group">
-    <%= f.label :email, class: 'col-lg-2 control-label' %>
-    <div class="col-lg-10">
+    <%= f.label :email, class: 'col-md-2 control-label' %>
+    <div class="col-md-10">
       <%= f.email_field :email, class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
-    <div class="col-lg-10 col-lg-offset-2">
+    <div class="col-md-10 col-md-offset-2">
       <%= f.submit "Resend unlock instructions", class: 'btn btn-primary' %>
       <%= render partial: 'contour/links' %>
     </div>

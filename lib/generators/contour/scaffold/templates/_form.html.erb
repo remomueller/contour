@@ -17,8 +17,8 @@
 
   <%- columns.each do |column| -%>
   <div class="form-group">
-    <%%= f.label :<%= column.name %>, nil, class: 'col-lg-2 control-label' %>
-    <div class="col-lg-10">
+    <%%= f.label :<%= column.name %>, nil, class: 'col-md-2 control-label' %>
+    <div class="col-md-10">
       <%- if column.name.split('_').last == 'id' -%>
       <%%= f.select :<%= column.name %>, [['---', nil]] + <%= column.name.split('_')[0..-2].join('_').camelize %>.current.collect{|<%= column.name.first %>| [<%= column.name.first %>.name, <%= column.name.first %>.id]}, {}, class: 'form-control' %>
       <%- elsif column.field_type == :date_select -%>
@@ -32,7 +32,7 @@
   <%- end -%>
 
   <div class="form-group">
-    <div class="col-lg-10 col-lg-offset-2">
+    <div class="col-md-10 col-md-offset-2">
       <%%= f.submit nil, class: 'btn btn-primary' %>
       <%%= cancel %>
     </div>

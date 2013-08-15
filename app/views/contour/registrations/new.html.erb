@@ -8,45 +8,45 @@
 
   <% Contour.sign_up_fields.each do |field_hash| %>
     <div class="form-group">
-      <%= f.label field_hash[:attribute], class: 'col-lg-2 control-label' %>
-      <div class="col-lg-10">
+      <%= f.label field_hash[:attribute], class: 'col-md-2 control-label' %>
+      <div class="col-md-10">
         <%= f.send(field_hash[:type], field_hash[:attribute], class: 'form-control') %>
       </div>
     </div>
   <% end %>
 
   <div class="form-group">
-    <%= f.label :email, class: 'col-lg-2 control-label' %>
-    <div class="col-lg-10">
+    <%= f.label :email, class: 'col-md-2 control-label' %>
+    <div class="col-md-10">
       <%= f.email_field :email, class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= f.label :password, class: 'col-lg-2 control-label' %>
-    <div class="col-lg-10">
+    <%= f.label :password, class: 'col-md-2 control-label' %>
+    <div class="col-md-10">
       <%= f.password_field :password, class: 'form-control' %>
     </div>
   </div>
 
   <div class="form-group">
-    <%= f.label :password_confirmation, class: 'col-lg-2 control-label' %>
-    <div class="col-lg-10">
+    <%= f.label :password_confirmation, class: 'col-md-2 control-label' %>
+    <div class="col-md-10">
       <%= f.password_field :password_confirmation, class: 'form-control' %>
     </div>
   </div>
 
   <% Contour.spam_fields.each do |name| %>
     <div class="form-group control-special">
-      <%= label_tag "#{resource_name}[#{name}]", name, class: 'col-lg-2 control-label' %>
-      <div class="col-lg-10">
+      <%= label_tag "#{resource_name}[#{name}]", name, class: 'col-md-2 control-label' %>
+      <div class="col-md-10">
         <%= text_field_tag "#{resource_name}[#{name}]", '', class: 'form-control' %>
       </div>
     </div>
   <% end %>
 
   <div class="form-group">
-    <div class="col-lg-10 col-lg-offset-2">
+    <div class="col-md-10 col-md-offset-2">
       <%= f.submit "Sign up", class: 'btn btn-primary' %>
       <%= render partial: 'contour/links' %>
     </div>

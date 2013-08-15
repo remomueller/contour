@@ -1,7 +1,7 @@
 <% if PROVIDERS.size > 0 %>
   <div class="form-group">
     <label class="control-label">Sign in with</label>
-    <div class="col-lg-10">
+    <div class="col-md-10">
       <% PROVIDERS.each do |provider| %>
         <% provider_name = OmniAuth.config.camelizations[provider.to_s.downcase] || provider.to_s.titleize %>
         <% image_name = provider.to_s.downcase %>
