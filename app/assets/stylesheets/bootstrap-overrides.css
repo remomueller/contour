@@ -91,6 +91,12 @@ dt, dd {
   white-space: nowrap;
 }
 
+.flash-block .alert .close {
+  right: -5px;
+  top: -2px;
+  position: relative;
+}
+
 .btn-danger-inverse {
   color:  #d43f3a;
   border-color: #ffe3e3;
