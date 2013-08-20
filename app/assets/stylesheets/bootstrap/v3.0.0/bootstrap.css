@@ -5593,11 +5593,12 @@ button.close {
   overflow: hidden;
 }
 
-body.modal-open,
+/* This causes very strange bumping behavior */
+/*body.modal-open,
 .modal-open .navbar-fixed-top,
 .modal-open .navbar-fixed-bottom {
   margin-right: 15px;
-}
+}*/
 
 .modal {
   position: fixed;
