@@ -1,6 +1,6 @@
 class <%= resource_class_name_plural %>Controller < ApplicationController
   before_action :authenticate_user!
-  before_action :set_<%= resource_name %>, only: [:show, :edit, :update, :destroy]
+  before_action :set_<%= resource_name %>, only: [ :show, :edit, :update, :destroy ]
 
   # GET /<%= resource_name_plural %>
   # GET /<%= resource_name_plural %>.json
