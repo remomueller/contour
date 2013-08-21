@@ -28,8 +28,8 @@ module ContourHelper
   # From Twitter-Bootstrap-Rails
   def flash_container(type, message)
     type = 'success' if type.to_s == 'notice'
-    type = 'warning' if type.to_s == 'alert'
-    type = 'danger' if type.to_s == 'error'
+    type = 'danger' if ['alert', 'error'].include?(type.to_s)
+
     content_tag(:div, class: "navbar-alert alert alert-#{type}") do
       content_tag(:a, raw("&times;"), href: '#', class: 'close', data: { dismiss: 'alert' }) + message
     end.html_safe
