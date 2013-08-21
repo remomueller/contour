@@ -20,7 +20,7 @@
       <%- end -%>
       <%- end -%>
       <td>
-        <%%= link_to 'Edit', edit_<%= resource_name %>_path(<%= resource_name %>), class: 'btn btn-xs' %>
+        <%%= link_to 'Edit', edit_<%= resource_name %>_path(<%= resource_name %>), class: 'btn btn-xs btn-default' %>
         <%%= link_to 'Delete', <%= resource_name %>, method: :delete, class: 'btn btn-xs btn-danger-inverse', data: { confirm: "Are you sure you want to delete <%= resource_title %> #{<%= resource_name %>.name}?" } %>
       </td>
     </tr>

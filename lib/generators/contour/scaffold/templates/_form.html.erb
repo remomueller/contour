@@ -17,22 +17,27 @@
 
   <%- columns.each do |column| -%>
   <div class="form-group">
-    <%%= f.label :<%= column.name %>, nil, class: 'col-md-2 control-label' %>
-    <div class="col-md-10">
+    <% unless column.field_type == :check_box %><%%= f.label :<%= column.name %>, nil, class: 'col-md-2 control-label' %><% end %>
+    <div class="<%- if column.field_type == :check_box %>col-md-offset-2 <%- end -%>col-md-10">
       <%- if column.name.split('_').last == 'id' -%>
       <%%= f.select :<%= column.name %>, [['---', nil]] + <%= column.name.split('_')[0..-2].join('_').camelize %>.current.collect{|<%= column.name.first %>| [<%= column.name.first %>.name, <%= column.name.first %>.id]}, {}, class: 'form-control' %>
       <%- elsif column.field_type == :date_select -%>
       <%%= f.text_field :<%= column.name %>, class: 'datepicker form-control', value: @<%= resource_name %>.<%= column.name %> ? @<%= resource_name %>.<%= column.name %>.strftime('%m/%d/%Y') : '' %>
+      <%- elsif column.field_type == :check_box -%>
+      <div class="checkbox">
+        <label>
+          <%%= f.check_box :<%= column.name %> %> <%= column.name.humanize %>
+        </label>
+      </div>
       <%- else -%>
-      <%%= f.<%= column.field_type %> :<%= column.name %><%= ", rows: 7, style: 'width:95%'" if column.field_type == :text_area %>, class: 'form-control' %>
+      <%%= f.<%= column.field_type %> :<%= column.name %><%= ", rows: 7" if column.field_type == :text_area %>, class: 'form-control' %>
       <%- end -%>
     </div>
   </div>
 
   <%- end -%>
-
   <div class="form-group">
-    <div class="col-md-10 col-md-offset-2">
+    <div class="col-md-offset-2 col-md-10">
       <%%= f.submit nil, class: 'btn btn-primary' %>
       <%%= cancel %>
     </div>

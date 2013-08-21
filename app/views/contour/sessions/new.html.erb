@@ -1,7 +1,7 @@
 <% @title = 'Sign in' %>
 
 <div class="row">
-  <div class="span8">
+  <div class="col-md-8">
     <div class="page-header">
       <h1><%= @title %></h1>
     </div>
@@ -23,24 +23,33 @@
 
       <% if devise_mapping.rememberable? -%>
         <div class="form-group">
-          <div class="col-md-10 checkbox">
-            <%= f.check_box :remember_me %> <%= f.label :remember_me %>
+          <div class="col-md-offset-2 col-md-10">
+            <div class="checkbox">
+              <label>
+                <%= f.check_box :remember_me %>
+                Remember me
+              </label>
+            </div>
           </div>
         </div>
       <% end -%>
 
       <div class="form-group">
-        <div class="col-md-10 col-md-offset-2">
+        <div class="col-md-offset-2 col-md-10">
           <%= f.submit "Sign in", class: 'btn btn-primary' %>
           <%= render partial: 'contour/links' %>
+          <% PROVIDERS.each do |provider| %>
+            <a href="<%= request.script_name + "/" + OmniAuth.config.path_prefix.split('/').last.to_s + "/" + provider.to_s.downcase %>" class="btn btn-large btn-default" style="white-space:nowrap">
+              <%= image_tag "contour/#{provider.to_s.downcase}_32.png", align: 'absmiddle' %>
+            </a>
+          <% end %>
         </div>
       </div>
-
-      <%= render partial: 'contour/authentications/login_table' %>
     <% end %>
+
   </div>
 
-  <div class="span4">
+  <div class="col-md-4">
     <%= render partial: 'contour/layouts/latest_news' %>
   </div>
 </div>
