@@ -1,6 +1,6 @@
 <%%= render partial: 'contour/layouts/per_page', locals: { type: '<%= resource_name_plural %>', per_page: 20, object_count: @<%= resource_name_plural %>.total_count } %>
 
-<table class="table table-striped" style="width:100%">
+<table class="table table-striped">
   <thead>
     <tr>
       <%- columns.each do |column| -%>
