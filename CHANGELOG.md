@@ -7,7 +7,7 @@
   - `links: [ ..., { header: 'Dropdown header' }, ... ]`
 - Removed bootstrap-scroll-modal since it collided with BS3's implementation
 - **Gem Changes**
-  - Updated to Devise 3.0.2
+  - Updated to Devise 3.0.3
 
 ## 2.0.0 (July 25, 2013)
 
