@@ -6,6 +6,7 @@
 - Menu dropdowns can now have headers
   - `links: [ ..., { header: 'Dropdown header' }, ... ]`
 - Removed bootstrap-scroll-modal since it collided with BS3's implementation
+- Updated HighCharts to 3.0.5
 - **Gem Changes**
   - Updated to Devise 3.0.3
 
