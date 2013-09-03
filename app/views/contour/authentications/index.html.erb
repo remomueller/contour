@@ -3,25 +3,4 @@
   <h1><%= @title %></h1>
 </div>
 
-<% if @authentications %>
-  <% unless @authentications.empty? %>
-    <p><strong>You can sign in to this account using:</strong></p>
-    <div class="authentications">
-      <% for authentication in @authentications %>
-        <div class="authentication">
-          <%= image_tag "contour/#{authentication.provider}_32.png", height: "32px" %>
-          <div class="provider"><%= authentication.provider.titleize %></div>
-          <div class="uid"><%= authentication.uid %></div>
-          <%= link_to "X", authentication, method: :delete, class: "remove", data: { confirm: 'Are you sure you want to remove this authentication option?' } %>
-        </div>
-      <% end %>
-      <div style="clear:both"></div>
-    </div>
-  <% end %>
-  <p><strong>Add another service to sign in with:</strong></p>
-<% else %>
-  <p><strong>Sign in through one of these services:</strong></p>
-<% end %>
-
-
-<%= render partial: 'contour/authentications/index' %>
+<%= render partial: 'contour/authentications/authentications' %>

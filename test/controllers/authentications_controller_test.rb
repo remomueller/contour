@@ -12,7 +12,6 @@ class Contour::AuthenticationsControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:authentications)
   end
 
   # TODO: Remove
@@ -50,9 +49,9 @@ class Contour::AuthenticationsControllerTest < ActionController::TestCase
 
   test "should destroy authentication" do
     assert_difference('Authentication.count', -1) do
-      delete :destroy, id: @authentication.to_param
+      delete :destroy, id: @authentication, format: 'js'
     end
 
-    assert_redirected_to authentications_path
+    assert_template 'destroy'
   end
 end

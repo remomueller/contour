@@ -2,7 +2,6 @@ class Contour::AuthenticationsController < ApplicationController
   skip_before_action :verify_authenticity_token, only: :create
 
   def index
-    @authentications = current_user.authentications if current_user
   end
 
   def passthru
@@ -43,14 +42,16 @@ class Contour::AuthenticationsController < ApplicationController
         end
       end
     else
-      redirect_to authentications_path, alert: "Authentication not successful."
+      redirect_to authentications_path, alert: 'Authentication not successful.'
     end
   end
 
   def destroy
     @authentication = current_user.authentications.find(params[:id])
     @authentication.destroy
-    flash[:notice] = "Successfully destroyed authentication."
-    redirect_to authentications_path
+    respond_to do |format|
+      format.html { redirect_to authentications_path, notice: 'Successfully removed authentication.' }
+      format.js
+    end
   end
 end

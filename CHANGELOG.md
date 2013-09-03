@@ -7,6 +7,10 @@
   - `links: [ ..., { header: 'Dropdown header' }, ... ]`
 - Removed bootstrap-scroll-modal since it collided with BS3's implementation
 - Updated HighCharts to 3.0.5
+- Available authentications table can be included via the following partial:
+  - `render partial: 'contour/authentications/authentications'`
+  - Authentications can be added and removed through this view
+  - Authentications can now be integrated on existing settings pages instead of being a separate page
 - **Gem Changes**
   - Updated to Devise 3.0.3
 
