@@ -1,4 +1,4 @@
-## 2.1.0
+## 2.1.0 (September 9, 2013)
 
 - Updated Bootstrap to 3.0.0
 - Added Twitter-Typeahead to replace BS Typeahead functionality
