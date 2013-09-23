@@ -1,7 +1,11 @@
 ## 2.2.0
 
+### Breaking Changes
+- Removed HighCharts JavaScript to reduce the overall JavaScript footprint
+
 ## 2.1.0 (September 9, 2013)
 
+### Enhancements
 - Updated Bootstrap to 3.0.0
 - Added Twitter-Typeahead to replace BS Typeahead functionality
 - Removed contour-mini pagination theme as the only options in BS3 are pagination-large, pagination, and pagination-small

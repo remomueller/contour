@@ -10,6 +10,4 @@
 //
 //= require twitter-bootstrap/bootstrap
 //
-//= require external/highcharts-3.0.5.src.js
-//
 //= require_tree .
