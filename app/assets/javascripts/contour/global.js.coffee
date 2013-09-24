@@ -41,10 +41,6 @@ $(document)
   )
 
 @ready = () ->
-  $(".timepicker").timepicker
-    showMeridian: false
-    showSeconds: true
-    defaultTime: false
   $(".datepicker").datepicker('remove')
   $(".datepicker").datepicker( autoclose: true )
 
