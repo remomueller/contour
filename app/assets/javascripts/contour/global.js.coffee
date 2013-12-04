@@ -17,6 +17,12 @@
 @nonStandardClick = (event) ->
   event.which > 1 or event.metaKey or event.ctrlKey or event.shiftKey or event.altKey
 
+@contourReady = () ->
+  $(".datepicker").datepicker('remove')
+  $(".datepicker").datepicker( autoclose: true )
+  # Load forms on page load
+  $('[data-object~="form-load"]').submit()
+
 $(document)
   .on('change', '.datepicker', () ->
     try
@@ -39,13 +45,3 @@ $(document)
     $($(this).data('form')).submit()
     false
   )
-
-@ready = () ->
-  $(".datepicker").datepicker('remove')
-  $(".datepicker").datepicker( autoclose: true )
-
-  # Load forms on page load
-  $('[data-object~="form-load"]').submit()
-
-$(document).ready(ready)
-# $(document).on('page:load', ready)

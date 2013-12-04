@@ -7,6 +7,10 @@
   - Updated to omniauth-facebook 1.5.1
 
 ### Breaking Changes
+- Contour no longer overwrites the `$(document).ready()` event
+  - Contour ready javascript now encapsulated in the `contourReady()` function
+  - This allows contour to interact better with applications using turbolinks
+  - Add `$(document).ready(contourReady)` to load additional contour specific javascript
 - Removed HighCharts JavaScript to reduce the overall JavaScript footprint
 - Removed Bootstrap Timepicker to reduce the overall JavaScript footprint
 
