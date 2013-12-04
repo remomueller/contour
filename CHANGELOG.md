@@ -8,6 +8,7 @@
   - Updated to omniauth-facebook 1.5.1
   - Updated to devise 3.0.4
   - Updated to simplecov 0.8.2
+- Removed support for Ruby 1.9.3
 
 ### Breaking Changes
 - Contour no longer overwrites the `$(document).ready()` event

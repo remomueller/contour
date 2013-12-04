@@ -1,8 +1,5 @@
 language: ruby
 rvm:
-  - 1.9.3
   - 2.0.0
-before_install:
-  - "gem install bundler --version 1.3.0 --no-ri --no-rdoc"
 before_script:
   - "bundle exec rake db:migrate RAILS_ENV=test"
