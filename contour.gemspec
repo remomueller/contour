@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'devise',                  '~> 3.0.3'
   s.add_dependency 'omniauth',                '~> 1.1.4'
   s.add_dependency 'omniauth-cas',            '~> 1.0.4'
-  s.add_dependency 'omniauth-facebook',       '~> 1.4.1'
+  s.add_dependency 'omniauth-facebook',       '~> 1.5.1'
   s.add_dependency 'omniauth-ldap',           '~> 1.0.3'
   s.add_dependency 'omniauth-linkedin',       '~> 0.1.0'
   s.add_dependency 'omniauth-openid',         '~> 1.0.1'
