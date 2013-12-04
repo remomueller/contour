@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.platform = Gem::Platform::RUBY
 
   s.files = Dir['{app,config,db,lib}/**/*'] + ['CHANGELOG.md', 'contour.gemspec', 'LICENSE', 'Rakefile', 'README.md']
-  s.test_files = Dir['test/**/*']
+  s.test_files = Dir['test/**/*'] - Dir['test/dummy/{tmp,log}/**/*']
 
   s.add_dependency 'rails',                   '~> 4.0.2'
   s.add_dependency 'jquery-rails',            '>= 3.0.4'
