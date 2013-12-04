@@ -2,6 +2,8 @@
 
 ### Enhancements
 - Updated Bootstrap to 3.0.2
+- **Gem Changes**
+  - Updated to Rails 4.0.2
 
 ### Breaking Changes
 - Removed HighCharts JavaScript to reduce the overall JavaScript footprint
