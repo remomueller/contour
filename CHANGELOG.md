@@ -1,5 +1,8 @@
 ## 2.2.0
 
+### Enhancements
+- Updated Bootstrap to 3.0.2
+
 ### Breaking Changes
 - Removed HighCharts JavaScript to reduce the overall JavaScript footprint
 - Removed Bootstrap Timepicker to reduce the overall JavaScript footprint
