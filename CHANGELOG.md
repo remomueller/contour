@@ -14,6 +14,7 @@
   - Contour ready javascript now encapsulated in the `contourReady()` function
   - This allows contour to interact better with applications using turbolinks
   - Add `$(document).ready(contourReady)` to load additional contour specific javascript
+- JavaScript includes moved back to <head> to interfere less with turbolinks enabled applications
 - Removed HighCharts JavaScript to reduce the overall JavaScript footprint
 - Removed Bootstrap Timepicker to reduce the overall JavaScript footprint
 
