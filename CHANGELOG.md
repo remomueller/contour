@@ -6,6 +6,7 @@
   - Updated to Rails 4.0.2
   - Updated to coffee-rails 4.0.1
   - Updated to omniauth-facebook 1.5.1
+  - Updated to devise 3.0.4
 
 ### Breaking Changes
 - Contour no longer overwrites the `$(document).ready()` event
