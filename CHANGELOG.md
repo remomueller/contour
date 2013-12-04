@@ -4,6 +4,7 @@
 - Updated Bootstrap to 3.0.2
 - **Gem Changes**
   - Updated to Rails 4.0.2
+  - Updated to coffee-rails 4.0.1
   - Updated to omniauth-facebook 1.5.1
 
 ### Breaking Changes
