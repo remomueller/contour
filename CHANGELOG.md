@@ -8,6 +8,7 @@
   - Updated to omniauth-facebook 1.5.1
   - Updated to devise 3.0.4
   - Updated to simplecov 0.8.2
+  - Updated to omniauth-twitter 1.0.1
 - Removed support for Ruby 1.9.3
 - Use of Ruby 2.0.0-p353 is now recommended
 
