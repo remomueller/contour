@@ -9,6 +9,7 @@
   - Updated to devise 3.0.4
   - Updated to simplecov 0.8.2
 - Removed support for Ruby 1.9.3
+- Use of Ruby 2.0.0-p353 is now recommended
 
 ### Breaking Changes
 - Contour no longer overwrites the `$(document).ready()` event
