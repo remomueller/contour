@@ -1,4 +1,4 @@
-## 2.2.0
+## 2.2.0 (December 9, 2013)
 
 ### Enhancements
 - Updated Bootstrap to 3.0.2
