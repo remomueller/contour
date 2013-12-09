@@ -82,6 +82,17 @@ Edit your `app/assets/javascripts/application.js` manifest to use Contour JavaSc
 //= require contour
 ```
 
+Add contour javascript if desired to the `$(document).ready()` function: `app/controllers/my_app.js.coffee`
+
+```coffee
+@ready -> ()
+  contourReady()
+  ... # Your page-ready code
+
+$(document).ready(ready)
+$(document).on('page:load', ready) # For turbolinks
+```
+
 Edit your `app/assets/stylesheets/application.css` manifest to use Contour CSS (after `self`, before `tree`)
 
 ```
