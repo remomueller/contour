@@ -1,3 +1,5 @@
+## 2.2.1
+
 ## 2.2.0 (December 9, 2013)
 
 ### Enhancements
