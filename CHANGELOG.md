@@ -1,4 +1,4 @@
-## 2.2.1
+## 2.2.1 (January 7, 2014)
 
 ### Bug Fix
 - Glyphicons CSS path fix, (by @pmanko)
