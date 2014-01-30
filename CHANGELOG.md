@@ -2,6 +2,9 @@
 
 ### Enhancements
 - Use of Ruby 2.1.0 is now recommended
+- **Gem Changes**
+  - Updated to omniauth-facebook 1.6.0
+
 
 ### Breaking Changes
 - Updated to devise 3.1.2
