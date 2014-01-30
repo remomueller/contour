@@ -7,7 +7,7 @@ gemspec
 
 # jquery-rails is used by the dummy application
 gem 'jquery-rails'
-gem 'sqlite3'
+# gem 'sqlite3'
 
 # Testing
 group :test do

@@ -3,6 +3,12 @@
 ### Enhancements
 - Use of Ruby 2.1.0 is now recommended
 
+### Breaking Changes
+- Updated to devise 3.1.2
+  - TokenAuthenticatable deprecated
+  - Set `config.allow_insecure_token_lookup = true` in production for a couple of days to aid migration
+  - http://blog.plataformatec.com.br/2013/08/devise-3-1-now-with-more-secure-defaults/
+
 ## 2.2.1 (January 7, 2014)
 
 ### Bug Fix

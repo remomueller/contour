@@ -1,13 +1,14 @@
 class Contour::RegistrationsController < Devise::RegistrationsController
   prepend_before_filter :require_no_authentication, only: [ :new ]
+  before_filter :configure_permitted_parameters
 
   def create
     if signed_in?
       # TODO: Should use "Resource" and not "User"
       params[:user][:password] = params[:user][:password_confirmation] = Digest::SHA1.hexdigest(Time.now.usec.to_s)[0..19] if params[:user][:password].blank? and params[:user][:password_confirmation].blank?
 
-      # self.resource = build_resource(sign_up_params)
-      @user = build_resource(sign_up_params)
+      # self.resource = build_resource
+      @user = build_resource
 
       if @user.save
         respond_to do |format|
@@ -22,7 +23,7 @@ class Contour::RegistrationsController < Devise::RegistrationsController
       end
     elsif spam_field_used?
       Rails.logger.info "SPAM BOT SIGNUP: #{params.inspect}"
-      self.resource = build_resource(sign_up_params)
+      self.resource = build_resource
       redirect_to new_session_path(resource), notice: 'Thank you for your interest! Due to limited capacity you have been put on a waiting list. We will email you when we open up additional space.'
     else
       super
@@ -32,10 +33,9 @@ class Contour::RegistrationsController < Devise::RegistrationsController
 
   protected
 
-    def sign_up_params
+    def configure_permitted_parameters
       permitted_fields = Contour::sign_up_fields.collect{|a| a[:attribute].to_sym}  | [ :email, :password, :password_confirmation ]
       devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(*permitted_fields) }
-      devise_parameter_sanitizer.for(:sign_up)
     end
 
     def build_resource(hash=nil)
