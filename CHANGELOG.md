@@ -1,3 +1,5 @@
+## 2.4.0
+
 ## 2.3.0 (February 3, 2014)
 
 ### Enhancements
