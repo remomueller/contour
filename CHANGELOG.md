@@ -1,5 +1,9 @@
 ## 2.4.0
 
+### Enhancements
+- **Gem Changes**
+  - Updated to devise 3.2.2
+
 ## 2.3.0 (February 3, 2014)
 
 ### Enhancements
