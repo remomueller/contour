@@ -1,6 +1,7 @@
 ## 2.4.0
 
 ### Enhancements
+- Updated Bootstrap to 3.1.0
 - **Gem Changes**
   - Updated to devise 3.2.2
 

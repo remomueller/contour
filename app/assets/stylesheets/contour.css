@@ -3,7 +3,7 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
- *= require bootstrap/v3.0.2/bootstrap
+ *= require bootstrap/v3.1.0/bootstrap
  *= require bootstrap/bs-callout
  *= require glyphicons-overrides
  *= require bootstrap-overrides
