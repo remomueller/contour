@@ -49,7 +49,7 @@ class Contour::ScaffoldGenerator < Rails::Generators::NamedBase
   end
 
   def generate_views
-    ['_form.html.erb', 'new.html.erb', 'edit.html.erb', 'show.html.erb', 'index.html.erb', 'index.js.erb'].each do |view|
+    ['_form.html.erb', 'new.html.erb', 'edit.html.erb', 'show.html.erb', 'index.html.erb'].each do |view|
       template view, "app/views/#{resource_name_plural}/#{view}"
     end
     template '_paginate.html.erb', "app/views/#{resource_name_plural}/_#{resource_name_plural}.html.erb"

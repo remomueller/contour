@@ -1,10 +1,10 @@
-<%%= render partial: 'contour/layouts/per_page', locals: { type: '<%= resource_name_plural %>', per_page: 20, object_count: @<%= resource_name_plural %>.total_count } %>
+<%%= render partial: 'contour/layouts/per_page', locals: { per_page: 20, object_count: @<%= resource_name_plural %>.total_count } %>
 
 <table class="table table-striped">
   <thead>
     <tr>
       <%- columns.each do |column| -%>
-      <th style="white-space:nowrap"><%%== sort_field_helper(@order, '<%= resource_name_plural %>.<%= column.name %>', '<%= column.name.titleize %>', '<%= resource_name_plural %>_search') %></th>
+      <th style="white-space:nowrap"><%%== sort_field_helper(@order, '<%= resource_name_plural %>.<%= column.name %>', '<%= column.name.titleize %>') %></th>
       <%- end -%>
       <th>Actions</th>
     </tr>

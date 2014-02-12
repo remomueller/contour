@@ -2,14 +2,15 @@
 <div class="page-header">
   <h1>
     <%%= @title %>
-    <%%= link_to "Create <%= resource_title %>", new_<%= resource_name %>_path, class: 'btn btn-xs btn-primary' %>
+    <%%= link_to 'Create <%= resource_title %>', new_<%= resource_name %>_path, class: 'btn btn-xs btn-primary' %>
   </h1>
 </div>
 
-<%%= form_tag <%= resource_name_plural %>_path, method: :get, remote: true, id: "<%= resource_name_plural %>_search", class: 'form-inline', data: { object: 'form-load', no_turbolink: true } do %>
-  <%%= hidden_field_tag :order %>
+<%%= form_tag <%= resource_name_plural %>_path, method: :get, class: 'form-inline' do %>
+  <%%= hidden_field_tag :order, params[:order] %>
   <%%= text_field_tag 'search', params[:search], class: 'form-control' %>
-  <%%= submit_tag 'Search', class: 'btn btn-primary' %>
+  <%%= submit_tag 'Search', class: 'btn btn-primary', name: nil %>
+  <%%= link_to 'Reset', <%= resource_name_plural %>_path, class: 'btn btn-default' %>
 <%% end %>
 
-<div id="<%= resource_name_plural %>"><div class="center"><%%= image_tag "contour/ajax-loader.gif" %></div></div>
+<%%= render partial: '<%= resource_name_plural %>/<%= resource_name_plural %>' %>
