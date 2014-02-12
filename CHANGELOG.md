@@ -11,6 +11,9 @@
 ### Breaking Changes
 - Removed pagination AJAX methods to reduce overall contour JavaScript footprint
 - `sort_field_helper` updated to work with turbolinks and no longer uses AJAX
+- Removed individual omniauth gem dependencies, and updated omniauth to ~> 1.2.1
+  - Removed: `omniauth-cas`, `omniauth-facebook`, `omniauth-linkedin`, and `omniauth-twitter`
+  - These now need to be individually specified in the apps `Gemfile` to be included
 
 ### Bug Fix
 - Fixed the per page links to no longer include starting and ending links when the max page is reached
