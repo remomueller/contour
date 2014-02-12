@@ -4,12 +4,12 @@ module ContourHelper
     link_to 'Cancel', URI.parse(request.referer.to_s).path.blank? ? root_path : (URI.parse(request.referer.to_s).path), class: 'btn btn-default'
   end
 
-  def sort_field_helper(order, sort_field, display_name, search_form_id  = 'search_form')
+  def sort_field_helper(order, sort_field, display_name)
     sort_field_order = (order == sort_field) ? "#{sort_field} DESC" : sort_field
     symbol = (order == sort_field) ? '&raquo;' : (order == sort_field + ' DESC' ? '&laquo;' : '&laquo;&raquo;')
     selected_class = (order == sort_field) ? 'selected' : (order == sort_field + ' DESC' ? 'selected' : '')
     content_tag(:span, class: selected_class) do
-      display_name.to_s.html_safe + ' ' + link_to(raw(symbol), '#', data: { object: 'order', order: sort_field_order, form: "##{search_form_id}" }, style: 'text-decoration:none')
+      display_name.to_s.html_safe + ' ' + link_to(raw(symbol), url_for( params.merge( order: sort_field_order )  ), style: 'text-decoration:none')
     end.html_safe
   end
 

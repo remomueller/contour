@@ -30,11 +30,6 @@ $(document)
     catch error
       # Nothing
   )
-  .on('click', '[data-object~="order"]', () ->
-    $('#order').val($(this).data('order'))
-    $($(this).data('form')).submit()
-    false
-  )
   .on('click', '[data-object~="suppress-click"]', () ->
     false
   )

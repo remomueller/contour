@@ -10,6 +10,7 @@
 
 ### Breaking Changes
 - Removed pagination AJAX methods to reduce overall contour JavaScript footprint
+- `sort_field_helper` updated to work with turbolinks and no longer uses AJAX
 
 ### Bug Fix
 - Fixed the per page links to no longer include starting and ending links when the max page is reached
