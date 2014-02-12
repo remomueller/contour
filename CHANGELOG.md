@@ -10,6 +10,9 @@
 ### Breaking Changes
 - Removed pagination AJAX methods to reduce overall contour JavaScript footprint
 
+### Bug Fix
+- Fixed the per page links to no longer include starting and ending links when the max page is reached
+
 ## 2.3.0 (February 3, 2014)
 
 ### Enhancements
