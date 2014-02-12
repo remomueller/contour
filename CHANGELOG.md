@@ -5,6 +5,9 @@
 - **Gem Changes**
   - Updated to devise 3.2.2
 
+### Breaking Changes
+- Removed pagination AJAX methods to reduce overall contour JavaScript footprint
+
 ## 2.3.0 (February 3, 2014)
 
 ### Enhancements
