@@ -69,6 +69,10 @@ dt, dd {
   min-width: 100px;
 }
 
+.disabled a {
+  cursor: default !important;
+}
+
 /* Custom Classes */
 
 

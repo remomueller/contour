@@ -8,6 +8,7 @@
 - Added the suppress-click data-object
   - <a href="#" data-object="suppress-click">Ignore Click</a>
 - Updated layout for contour per page header
+- Cursors for disabled links now display as a default cursor
 
 ### Breaking Changes
 - Removed pagination AJAX methods to reduce overall contour JavaScript footprint
