@@ -6,7 +6,7 @@
 //
 //= require external/jquery-ui-1.10.0.custom.min.js
 //
-//= require bootstrap/v3.1.0/bootstrap
+//= require bootstrap/v3.1.1/bootstrap
 //
 //= require twitter-bootstrap/bootstrap
 //

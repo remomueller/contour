@@ -2,7 +2,7 @@
 
 ### Enhancements
 - Use of Ruby 2.1.1 is now recommended
-- Updated Bootstrap to 3.1.0
+- Updated Bootstrap to 3.1.1
 - **Gem Changes**
   - Updated to rails 4.0.3
   - Updated to devise 3.2.3
