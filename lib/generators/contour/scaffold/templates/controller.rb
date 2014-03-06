@@ -6,7 +6,7 @@ class <%= resource_class_name_plural %>Controller < ApplicationController
   # GET /<%= resource_name_plural %>.json
   def index
     @order = scrub_order(<%= resource_class_name %>, params[:order], "<%= resource_name_plural %>.name")
-    @<%= resource_name_plural %> = <%= resource_class_name %>.current.order(@order).page(params[:page]).per( 20 )
+    @<%= resource_name_plural %> = <%= resource_class_name %>.current.order(@order).page(params[:page]).per( 40 )
   end
 
   # GET /<%= resource_name_plural %>/1
