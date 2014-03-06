@@ -7,7 +7,7 @@
   - Updated to rails 4.0.3
   - Updated to devise 3.2.3
 - Added the suppress-click data-object
-  - <a href="#" data-object="suppress-click">Ignore Click</a>
+  - `<a href="#" data-object="suppress-click">Ignore Click</a>`
 - Updated layout for contour per page header
 - Cursors for disabled links now display as a default cursor
 
