@@ -5,7 +5,7 @@
 - Updated Bootstrap to 3.1.0
 - **Gem Changes**
   - Updated to rails 4.0.3
-  - Updated to devise 3.2.2
+  - Updated to devise 3.2.3
 - Added the suppress-click data-object
   - <a href="#" data-object="suppress-click">Ignore Click</a>
 - Updated layout for contour per page header
