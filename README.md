@@ -22,7 +22,7 @@ gem 'contour'
 
 ## Getting started
 
-Make sure you have Rails 4.0.3
+Make sure you have Rails 4.1.0
 
 ```
 rails -v
@@ -35,7 +35,7 @@ cd blank_rails_project
 Modify `Gemfile` and add
 
 ```ruby
-gem 'contour', '~> 2.4.0'
+gem 'contour', '~> 2.5.0'
 ```
 
 Run Bundle install
