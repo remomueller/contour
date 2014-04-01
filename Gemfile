@@ -12,8 +12,9 @@ gem 'jquery-rails'
 # Testing
 group :test do
   # Pretty printed test output
-  gem 'win32console',                             platforms: [ :mswin, :mingw ]
-  gem 'turn',               '~> 0.9.6'
+  gem 'minitest'
+  gem 'minitest-reporters'
+  # gem 'turn',               '~> 0.9.6'
   gem 'simplecov',          '~> 0.8.2',           require: false
 end
 
