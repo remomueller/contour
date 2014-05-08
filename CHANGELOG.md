@@ -3,6 +3,7 @@
 ### Enhancements
 - **Gem Changes**
   - Updated to rails ~> 4.1.1
+  - Updated to devise ~> 3.2.4
   - Removed turn, and replaced with minitest and minitest-reporters
 
 ## 2.4.0 (March 10, 2014)
