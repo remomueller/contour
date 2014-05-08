@@ -1,7 +1,7 @@
 # Contour
 
-[![Build Status](https://travis-ci.org/remomueller/contour.png?branch=master)](https://travis-ci.org/remomueller/contour)
-[![Dependency Status](https://gemnasium.com/remomueller/contour.png)](https://gemnasium.com/remomueller/contour)
+[![Build Status](https://travis-ci.org/remomueller/contour.svg?branch=master)](https://travis-ci.org/remomueller/contour)
+[![Dependency Status](https://gemnasium.com/remomueller/contour.svg)](https://gemnasium.com/remomueller/contour)
 [![Code Climate](https://codeclimate.com/github/remomueller/contour.png)](https://codeclimate.com/github/remomueller/contour)
 
 Basic Rails framework files and assets for layout and authentication
