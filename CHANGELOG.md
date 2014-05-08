@@ -1,4 +1,4 @@
-## 2.5.0
+## 2.5.0 (May 8, 2014)
 
 ### Enhancements
 - **Gem Changes**
