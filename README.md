@@ -22,7 +22,7 @@ gem 'contour'
 
 ## Getting started
 
-Make sure you have Rails 4.1.1
+Make sure you have Rails 4.1.5
 
 ```
 rails -v
