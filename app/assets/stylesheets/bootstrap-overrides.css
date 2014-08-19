@@ -102,8 +102,8 @@ dt, dd {
 }
 
 .btn-danger-inverse {
-  color:  #d43f3a;
-  border-color: #ffe3e3;
+  color: #d43f3a;
+  border: 1px solid #ffe3e3 !important;
   background-color: white;
 }
 
@@ -113,9 +113,9 @@ dt, dd {
 .btn-danger-inverse.active,
 .btn-danger-inverse.disabled,
 .btn-danger-inverse[disabled] {
-  color: #fff;
+  color: #fff !important;
   background-color: #d43f3a;
-  border-color: #c9302c;
+  border: 1px solid #c9302c !important;
 }
 
 .form-inline select,
