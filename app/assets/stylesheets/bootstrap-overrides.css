@@ -6,7 +6,7 @@ body { padding-top: 70px; padding-bottom: 90px; }
 /* Skinnier titles */
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 300;
+  font-weight: 300 !important;
 }
 
 /* Make sure navbar brand does not wrap onto two lines */
