@@ -1,6 +1,8 @@
 require "contour"
 require "rails"
 
+require 'bootstrap-sass'
+
 module Contour
   class Engine < Rails::Engine
     engine_name :contour
