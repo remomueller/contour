@@ -6,8 +6,6 @@
 //
 //= require external/jquery-ui-1.10.0.custom.min.js
 //
-//= require bootstrap/v3.1.1/bootstrap
-//
-//= require twitter-bootstrap/bootstrap
+//= require bootstrap-sprockets
 //
 //= require_tree .
