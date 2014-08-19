@@ -1,11 +1,4 @@
 # Global functions referenced from HTML
-@showWaiting = (element_id, text, centered) ->
-  element = $(element_id)
-  if element && centered
-    element.html("<div class='spinner-centered'><div class='spinner'>#{text}</div></div>")
-  else if element
-    element.html("<div class='spinner'>#{text}</div>")
-
 @flashMessage = (message, alert_type = 'success', overwrite = true) ->
   div_block = "<div class='navbar-alert alert alert-#{alert_type}'><button type='button' class='close' data-dismiss='alert'>&times;</button>#{message}</div>"
   flash_container = $('[data-object~="flash-container"]')
