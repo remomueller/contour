@@ -10,5 +10,8 @@ module Contour
     # Overwrite Rails errors to use Twitter/Contour CSS classes
     config.action_view.field_error_proc = Proc.new { |html_tag, instance| "<span class=\"has-error\">#{html_tag}</span>".html_safe }
 
+    # Add fonts folder to rails asset path
+    config.assets.paths << File.join('app', 'assets', 'fonts')
+
   end
 end

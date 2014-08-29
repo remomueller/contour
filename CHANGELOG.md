@@ -4,6 +4,7 @@
 - Removed the `showWaiting` JavaScript function and corresponding `ajax-loader.gif` image
 
 ### Enhancements
+- Added the OpenSans webfont as the default font
 - Simplified inclusion of Bootstrap using `bootstrap-sass`
   - This allows the app to be themed by including all or parts of a modified `variables.scss` in the application's `application.css.scss` file
 - Use of Ruby 2.1.2 is now recommended
