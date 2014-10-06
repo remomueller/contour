@@ -7,7 +7,7 @@
 - Added the OpenSans webfont as the default font
 - Simplified inclusion of Bootstrap using `bootstrap-sass`
   - This allows the app to be themed by including all or parts of a modified `variables.scss` in the application's `application.css.scss` file
-- Use of Ruby 2.1.2 is now recommended
+- Use of Ruby 2.1.3 is now recommended
 - **Gem Changes**
   - Updated to rails ~> 4.2.0.beta1
   - Updated to devise github branch: 'lm-rails-4-2'
