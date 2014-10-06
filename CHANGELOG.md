@@ -9,8 +9,8 @@
   - This allows the app to be themed by including all or parts of a modified `variables.scss` in the application's `application.css.scss` file
 - Use of Ruby 2.1.3 is now recommended
 - **Gem Changes**
-  - Updated to rails ~> 4.2.0.beta1
-  - Updated to devise github branch: 'lm-rails-4-2'
+  - Updated to rails ~> 4.2.0.beta2
+  - Updated to devise ~> 3.4.0
 
 ## 2.5.0 (May 8, 2014)
 
