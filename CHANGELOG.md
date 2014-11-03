@@ -11,6 +11,7 @@
 - **Gem Changes**
   - Updated to rails ~> 4.2.0.beta2
   - Updated to devise ~> 3.4.0
+  - Updated to coffee-rails ~> 4.1.0
 
 ## 2.5.0 (May 8, 2014)
 
