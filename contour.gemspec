@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails',                   '~> 4.2.0.beta4'
   s.add_dependency 'jquery-rails',            '>= 3.0.4'
   s.add_dependency 'coffee-rails',            '~> 4.1.0'
-  s.add_dependency 'devise',                  '~> 3.4.0'
+  s.add_dependency 'devise',                  '~> 3.4.1'
   s.add_dependency 'omniauth',                '~> 1.2.1'
   s.add_dependency 'omniauth-ldap',           '~> 1.0.4'
   s.add_dependency 'omniauth-openid',         '~> 1.0.1'
