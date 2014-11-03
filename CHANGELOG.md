@@ -12,6 +12,7 @@
   - Updated to rails ~> 4.2.0.beta4
   - Updated to devise ~> 3.4.1
   - Updated to coffee-rails ~> 4.1.0
+  - Updated to simplecov 0.9.1
 
 ## 2.5.0 (May 8, 2014)
 
