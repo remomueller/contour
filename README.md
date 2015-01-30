@@ -153,7 +153,7 @@ You can then sign in using your [Google Account](http://localhost:3000/auth/goog
 Add [Kaminari](https://github.com/amatsuda/kaminari) gem to your `Gemfile`
 
 ```ruby
-gem 'kaminari', '~> 0.15.1'
+gem 'kaminari', '~> 0.16.2'
 ```
 
 Update your gems
