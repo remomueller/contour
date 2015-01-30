@@ -1,3 +1,5 @@
+## 2.7.0
+
 ## 2.6.0 (January 30, 2015)
 
 ### Breaking Changes
