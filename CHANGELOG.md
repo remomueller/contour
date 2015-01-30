@@ -1,5 +1,9 @@
 ## 2.7.0
 
+### Enhancements
+- **Gem Changes**
+  - Updated to sass ~> 3.4.10
+
 ## 2.6.0 (January 30, 2015)
 
 ### Breaking Changes
