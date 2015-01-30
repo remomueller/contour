@@ -1,4 +1,4 @@
-## 2.6.0
+## 2.6.0 (January 30, 2015)
 
 ### Breaking Changes
 - Removed the `showWaiting` JavaScript function and corresponding `ajax-loader.gif` image
