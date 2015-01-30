@@ -3,6 +3,7 @@
 ### Enhancements
 - **Gem Changes**
   - Updated to sass ~> 3.4.10
+  - Updated to bootstrap-sass ~> 3.3.3
 
 ## 2.6.0 (January 30, 2015)
 
