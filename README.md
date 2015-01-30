@@ -242,4 +242,4 @@ For those interested in having better control on modifying the Twitter Bootstrap
 
 ## Copyright [![Creative Commons 3.0](http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png)](http://creativecommons.org/licenses/by-nc-sa/3.0)
 
-Copyright (c) 2014 Remo Mueller. See [LICENSE](https://github.com/remomueller/contour/blob/master/LICENSE) for further details.
+Copyright (c) 2015 Remo Mueller. See [LICENSE](https://github.com/remomueller/contour/blob/master/LICENSE) for further details.
