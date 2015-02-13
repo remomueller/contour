@@ -36,11 +36,6 @@
     <div class="col-md-offset-2 col-md-10">
       <%= f.submit "Sign in", class: 'btn btn-primary' %>
       <%= render partial: 'contour/links' %>
-      <% PROVIDERS.each do |provider| %>
-        <a href="<%= request.script_name + "/" + OmniAuth.config.path_prefix.split('/').last.to_s + "/" + provider.to_s.downcase %>" class="btn btn-large btn-default" style="white-space:nowrap">
-          <%= image_tag "contour/#{provider.to_s.downcase}_32.png", align: 'absmiddle' %>
-        </a>
-      <% end %>
     </div>
   </div>
 <% end %>

@@ -17,8 +17,4 @@ Contour requires some additional setup:
 
   4. Remove any scaffold.css files that exist in your application
 
-  5. Make a migration for Authentications
-
-       rails generate model Authentication user_id:integer provider:string uid:string
-
 ===============================================================================

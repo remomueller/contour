@@ -8,10 +8,6 @@ class Contour::InstallGenerator < Rails::Generators::Base
     template "contour.rb", "config/initializers/contour.rb"
   end
 
-  def copy_omniauth
-    template "omniauth.rb", "config/initializers/omniauth.rb"
-  end
-
   def install_devise
     generate("devise:install")
     model_name = ask("What would you like the user model to be called? [user]")
