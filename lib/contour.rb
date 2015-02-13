@@ -53,14 +53,6 @@ module Contour
   mattr_accessor :search_bar
   @@search_bar = {}
 
-  # Default news feed
-  mattr_accessor :news_feed
-  @@news_feed = nil
-
-  # Default max number of items displayed in the news feed
-  mattr_accessor :news_feed_items
-  @@news_feed_items = 5
-
   # A string or array of strings that represent a CSS color code for generic link color
   mattr_accessor :link_color
   @@link_color = nil

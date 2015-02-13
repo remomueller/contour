@@ -2,6 +2,7 @@
 
 ### Breaking Changes
 - Removed multiple authentication support as this is better handled directly with omniauth and devise
+- Removed news feed stream from new registration page
 
 ## 2.7.0 (February 13, 2015)
 

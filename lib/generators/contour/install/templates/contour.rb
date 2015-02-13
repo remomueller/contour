@@ -42,12 +42,6 @@ Contour.setup do |config|
   #   position: 'left'
   # }
 
-  # Enter an address of a valid RSS Feed if you would like to see news on the sign in page.
-  # config.news_feed = ''
-
-  # Enter the max number of items you want to see in the news feed.
-  # config.news_feed_items = 5
-
   # The following three parameters can be set as strings, which will rotate through the colors on a daily basis, selecting an index using (YearDay % ArraySize)
 
   # A string or array of strings that represent a CSS color code for generic link color
