@@ -5,6 +5,7 @@
 - Removed news feed stream from new registration page
 
 ### Enhancements
+- Simplified SCSS files using `asset-url`
 - **Gem Changes**
   - Removed omniauth, omniauth-ldap, and omniauth-openid
 
