@@ -4,6 +4,10 @@
 - Removed multiple authentication support as this is better handled directly with omniauth and devise
 - Removed news feed stream from new registration page
 
+### Enhancements
+- **Gem Changes**
+  - Removed omniauth, omniauth-ldap, and omniauth-openid
+
 ## 2.7.0 (February 13, 2015)
 
 ### Enhancements
