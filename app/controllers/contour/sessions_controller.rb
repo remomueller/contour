@@ -19,29 +19,15 @@ class Contour::SessionsController < Devise::SessionsController
     super
   end
 
-  # Overwrite Devise authentication to check if the user is typing another credential into the default box
-  # if so, find alternative login methods for that user and forward the user to those login screens
+  # Overwrite devise to provide JSON responses as well
   def create
-    # resource = warden.authenticate!(auth_options)
-    resource = warden.authenticate(auth_options)
-
-    if resource
-      set_flash_message(:notice, :signed_in) if is_navigational_format?
-      sign_in(resource_name, resource)
-
-      respond_to do |format|
-        format.html { respond_with resource, location: after_sign_in_path_for(resource) }
-        format.json { render json: { success: true, resource_name => { id: resource.id, email: resource.email, first_name: resource.first_name, last_name: resource.last_name, authentication_token: (resource.respond_to?(:authentication_token) ? resource.authentication_token : nil) } } }
-      end
-    else
-      resource = resource_name.to_s.titleize.constantize.find_by_email(params[resource_name][:email])
-      if resource and resource.respond_to?('authentications') and providers = resource.authentications.pluck(:provider).uniq and providers.size > 0
-        redirect_to request.script_name + '/auth/' + providers.first
-      elsif providers = Authentication.where(uid: params[resource_name][:email]).pluck(:provider).uniq and providers.size > 0
-        redirect_to request.script_name + '/auth/' + providers.first
-      else
-        resource = warden.authenticate!(auth_options)
-      end
+    self.resource = warden.authenticate!(auth_options)
+    set_flash_message(:notice, :signed_in) if is_flashing_format?
+    sign_in(resource_name, resource)
+    yield resource if block_given?
+    respond_to do |format|
+      format.html { respond_with resource, location: after_sign_in_path_for(resource) }
+      format.json { render json: { success: true, resource_name => { id: resource.id, email: resource.email, first_name: resource.first_name, last_name: resource.last_name, authentication_token: (resource.respond_to?(:authentication_token) ? resource.authentication_token : nil) } } }
     end
   end
 

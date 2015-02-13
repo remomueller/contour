@@ -21,15 +21,11 @@ Contour.setup do |config|
   # [
   #   {
   #     name: 'Login', display: 'not_signed_in', path: 'new_user_session_path', position: 'right', condition: 'true',
-  #     links: [{ name: 'Sign Up', path: 'new_user_registration_path' },
-  #             { divider: true },
-  #             { authentications: true }]
+  #     links: [{ name: 'Sign Up', path: 'new_user_registration_path' }]
   #   },
   #   {
   #     name: 'current_user.email', eval: true, display: 'signed_in', position: 'right', condition: 'true',
-  #     links: [{ name: 'Authentications', path: 'authentications_path', condition: 'not PROVIDERS.blank?' },
-  #             { divider: true },
-  #             { name: 'Logout', path: 'destroy_user_session_path' }]
+  #     links: [{ name: 'Logout', path: 'destroy_user_session_path' }]
   #   },
   #   {
   #     name: 'Home', display: 'always', path: 'root_path', position: 'left', condition: 'true', image: '', image_options: {},

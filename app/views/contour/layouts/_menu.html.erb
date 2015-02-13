@@ -32,8 +32,6 @@
                       <li class="divider"></li>
                     <% elsif not link[:header].blank? %>
                       <li class="dropdown-header"><%= link[:eval] ? eval(link[:header]) : link[:header] %></li>
-                    <% elsif link[:authentications] == true %>
-                      <%= render partial: 'contour/authentications/menu' %>
                     <% else %>
                       <li><%= link_to (link[:eval] ? eval(link[:html].blank? ? link[:name] : link[:html].html_safe) : (link[:html].blank? ? link[:name] : link[:html].html_safe) + (link[:image].blank? ? '' : image_tag(link[:image], link[:image_options]))).html_safe, link[:path].blank? ? '#' : eval(link[:path].to_s), target: link[:target] %></li>
                     <% end %>

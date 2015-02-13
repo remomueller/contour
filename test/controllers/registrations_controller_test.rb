@@ -64,18 +64,4 @@ class Contour::RegistrationsControllerTest < ActionController::TestCase
   #   assert_response :success
   # end
 
-  # test "an admin should be able to create new user" do
-  #   login(users(:admin))
-  #   assert_difference('User.count') do
-  #     post :create, user: { first_name: 'First Name', last_name: 'Last Name', status: 'active', email: 'new_registration@example.com', system_admin: false }
-  #   end
-
-  #   assert_not_nil assigns(:user)
-  #   assert_equal 'First Name', assigns(:user).first_name
-  #   assert_equal 'Last Name', assigns(:user).last_name
-  #   assert_equal 'active', assigns(:user).status
-  #   assert_equal 'new_registration@example.com', assigns(:user).email
-
-  #   assert_redirected_to user_path(assigns(:user))
-  # end
 end

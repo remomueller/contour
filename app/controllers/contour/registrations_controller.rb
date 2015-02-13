@@ -27,7 +27,7 @@ class Contour::RegistrationsController < Devise::RegistrationsController
       redirect_to new_session_path(resource), notice: 'Thank you for your interest! Due to limited capacity you have been put on a waiting list. We will email you when we open up additional space.'
     else
       super
-      session[:omniauth] = nil if @user and not @user.new_record?
+      # session[:omniauth] = nil if @user and not @user.new_record?
     end
   end
 
@@ -36,15 +36,6 @@ class Contour::RegistrationsController < Devise::RegistrationsController
     def configure_permitted_parameters
       permitted_fields = Contour::sign_up_fields.collect{|a| a[:attribute].to_sym}  | [ :email, :password, :password_confirmation ]
       devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(*permitted_fields) }
-    end
-
-    def build_resource(hash=nil)
-      object = super(hash)
-      if session[:omniauth]
-        @user.apply_omniauth(session[:omniauth])
-        @user.valid?
-      end
-      object
     end
 
     def after_inactive_sign_up_path_for(resource)

@@ -35,7 +35,7 @@ cd blank_rails_project
 Modify `Gemfile` and add
 
 ```ruby
-gem 'contour', '~> 2.7.0'
+gem 'contour', '~> 3.0.0'
 ```
 
 Run Bundle install
@@ -48,20 +48,6 @@ Install contour files
 
 ```
 rails generate contour:install
-```
-
-Add the authentication model
-
-```
-rails generate model Authentication user_id:integer provider:string uid:string
-```
-
-Migrate your database
-
-```
-bundle exec rake db:create
-
-bundle exec rake db:migrate
 ```
 
 Create a sample controller
@@ -117,20 +103,6 @@ Add the following to the top of your `app/controllers/welcome_controller.rb`
 
 ```ruby
 before_action :authenticate_user!
-```
-
-Add the following to your `app/models/user.rb`
-
-```ruby
-# Concerns
-include Contourable
-```
-
-Add the following to your `app/models/authentication.rb`
-
-```ruby
-# Concerns
-include ContourAuthenticatable
 ```
 
 Edit `config/initializers/devise.rb` to use `:get` for devise `sign_out_via`
