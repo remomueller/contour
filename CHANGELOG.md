@@ -2,8 +2,9 @@
 
 ### Enhancements
 - **Gem Changes**
-  - Updated to sass ~> 3.4.10
+  - Updated to sass ~> 3.4.11
   - Updated to bootstrap-sass ~> 3.3.3
+  - Updated to sass-rails ~> 5.0.1
 
 ## 2.6.0 (January 30, 2015)
 
