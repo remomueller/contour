@@ -15,6 +15,9 @@
   - Updated to sass ~> 3.4.14
   - Updated to sass-rails ~> 5.0.3
 
+### Bug Fix
+- Fixed an issue rendering calendar navigation icons
+
 ## 2.7.0 (February 13, 2015)
 
 ### Enhancements
