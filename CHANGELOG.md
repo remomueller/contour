@@ -13,6 +13,7 @@
   - Updated to rails ~> 4.2.1
   - Updated to devise ~> 3.5.1
   - Updated to sass ~> 3.4.14
+  - Updated to sass-rails ~> 5.0.3
 
 ## 2.7.0 (February 13, 2015)
 
