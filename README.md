@@ -68,10 +68,10 @@ Edit your `app/assets/javascripts/application.js` manifest to use Contour JavaSc
 //= require contour
 ```
 
-Add contour javascript if desired to the `$(document).ready()` function: `app/controllers/my_app.js.coffee`
+Add contour javascript if desired to the `$(document).ready()` function: `app/controllers/my_app.coffee`
 
 ```coffee
-@ready -> ()
+@ready = () ->
   contourReady()
   ... # Your page-ready code
 
