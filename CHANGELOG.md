@@ -6,6 +6,7 @@
 
 ### Enhancements
 - Simplified SCSS files using `asset-url`
+- Use of Ruby 2.2.2 is now recommended
 - **Gem Changes**
   - Removed omniauth, omniauth-ldap, and omniauth-openid
 
