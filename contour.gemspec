@@ -31,7 +31,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'bootstrap-sass',          '~> 3.3.3'
   s.add_dependency 'sass-rails',              '~> 5.0.1'
   s.add_dependency 'autoprefixer-rails'
-  s.add_dependency 'sass',                    '~> 3.4.11'
+  s.add_dependency 'sass',                    '~> 3.4.14'
 
 
   s.add_development_dependency 'sqlite3'
