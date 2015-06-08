@@ -9,6 +9,7 @@
 - Use of Ruby 2.2.2 is now recommended
 - **Gem Changes**
   - Removed omniauth, omniauth-ldap, and omniauth-openid
+  - Updated to simplecov 0.10.0
 
 ## 2.7.0 (February 13, 2015)
 
