@@ -2,6 +2,7 @@
 
 ### Breaking Changes
 - Removed multiple authentication support as this is better handled directly with omniauth and devise
+  - Also removed associated omniauth images
 - Removed news feed stream from new registration page
 
 ### Enhancements
