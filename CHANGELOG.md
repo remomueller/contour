@@ -11,7 +11,7 @@
 - **Gem Changes**
   - Removed omniauth, omniauth-ldap, and omniauth-openid
   - Updated to simplecov 0.10.0
-  - Updated to rails ~> 4.2.1
+  - Updated to rails ~> 4.2.3
   - Updated to devise ~> 3.5.1
   - Updated to sass ~> 3.4.14
   - Updated to sass-rails ~> 5.0.3
