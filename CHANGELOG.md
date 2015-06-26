@@ -1,4 +1,4 @@
-## 3.0.0
+## 3.0.0 (June 26, 2015)
 
 ### Breaking Changes
 - Removed multiple authentication support as this is better handled directly with omniauth and devise
