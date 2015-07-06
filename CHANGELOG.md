@@ -1,3 +1,5 @@
+## 3.0.1
+
 ## 3.0.0 (June 26, 2015)
 
 ### Breaking Changes
