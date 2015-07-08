@@ -1,4 +1,4 @@
-## 3.0.1
+## 3.0.1 (July 8, 2015)
 
 ### Bug Fix
 - Fixed OpenSans font not loading in Internet Explorere by adding `woff` format
