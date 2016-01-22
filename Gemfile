@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 # Declare your gem's dependencies in contour.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
@@ -13,7 +13,7 @@ gem 'jquery-rails'
 group :test do
   # Pretty printed test output
   gem 'minitest'
-  gem 'simplecov',          '~> 0.11.1',           require: false
+  gem 'simplecov', '~> 0.11.1', require: false
 end
 
 # Declare any dependencies that are still in development here instead of in
