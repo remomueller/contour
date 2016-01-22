@@ -2,6 +2,7 @@
 
 - **Gem Changes**
   - Updated to Ruby 2.3.0
+  - Removed minitest-reporters
 
 ## 3.0.1 (July 8, 2015)
 
