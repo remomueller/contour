@@ -6,7 +6,7 @@
 # gem list -r contour
 # gem install contour
 
-$:.push File.expand_path('../lib', __FILE__)
+$LOAD_PATH.push File.expand_path('../lib', __FILE__)
 require 'contour/version'
 
 Gem::Specification.new do |s|
@@ -21,18 +21,17 @@ Gem::Specification.new do |s|
 
   s.platform = Gem::Platform::RUBY
 
-  s.files = Dir['{app,config,db,lib}/**/*'] + ['CHANGELOG.md', 'contour.gemspec', 'LICENSE', 'Rakefile', 'README.md']
+  s.files = Dir['{app,config,db,lib}/**/*'] + %w(CHANGELOG.md contour.gemspec LICENSE Rakefile README.md)
   s.test_files = Dir['test/**/*'] - Dir['test/dummy/{tmp,log}/**/*']
 
-  s.add_dependency 'rails',                   '~> 4.2.3'
-  s.add_dependency 'jquery-rails',            '>= 3.0.4'
-  s.add_dependency 'coffee-rails',            '~> 4.1.0'
-  s.add_dependency 'devise',                  '~> 3.5.1'
-  s.add_dependency 'bootstrap-sass',          '~> 3.3.3'
-  s.add_dependency 'sass-rails',              '~> 5.0.3'
-  s.add_dependency 'autoprefixer-rails'
-  s.add_dependency 'sass',                    '~> 3.4.14'
-
+  # s.add_dependency 'rails',                   '~> 5.0.0.beta1'
+  # s.add_dependency 'jquery-rails',            '>= 3.0.4'
+  # s.add_dependency 'coffee-rails',            '~> 4.1.0'
+  # s.add_dependency 'devise',                  '~> 3.5.1'
+  # s.add_dependency 'bootstrap-sass',          '~> 3.3.3'
+  # s.add_dependency 'sass-rails',              '~> 5.0.3'
+  # s.add_dependency 'sass',                    '~> 3.4.14'
+  # s.add_dependency 'autoprefixer-rails'
 
   s.add_development_dependency 'sqlite3'
 end

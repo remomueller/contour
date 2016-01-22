@@ -9,11 +9,17 @@ gemspec
 gem 'jquery-rails'
 # gem 'sqlite3'
 
+# Temporary includes
+gem 'rails', '~> 5.0.0.beta1'
+gem 'bootstrap-sass'
+gem 'devise', github: 'plataformatec/devise', ref: 'b97b3e6'
+
 # Testing
 group :test do
   # Pretty printed test output
   gem 'minitest'
   gem 'simplecov', '~> 0.11.1', require: false
+  gem 'rails-controller-testing'
 end
 
 # Declare any dependencies that are still in development here instead of in

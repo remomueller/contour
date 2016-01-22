@@ -100,7 +100,7 @@ module Contour
 
   def self.retrieve_option(option_name)
     key = Date.today.month.to_s + "-" + Date.today.day.to_s
-    if month_day.kind_of?(Hash) and month_day[key] and not month_day[key][option_name.to_sym].blank?
+    if month_day.is_a?(Hash) and month_day[key] and not month_day[key][option_name.to_sym].blank?
       month_day[key][option_name.to_sym]
     else
       nil
