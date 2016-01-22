@@ -1,5 +1,8 @@
 ## 3.1.0
 
+- **Gem Changes**
+  - Updated to Ruby 2.3.0
+
 ## 3.0.1 (July 8, 2015)
 
 ### Bug Fix
